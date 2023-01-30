@@ -1,3 +1,38 @@
 2023-01-30 07:54:33 warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
 2023-01-30 07:54:33 warning: Unable to save request. Check your debug_kit datasource connection or ensure that PDO SQLite extension is enabled.
 2023-01-30 07:54:33 warning: The datasource configuration "debug_kit" was not found.
+2023-01-30 09:21:23 warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2023-01-30 09:21:23 error: [Cake\Http\Exception\MissingControllerException] Controller class Users could not be found. in /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 348
+Exception Attributes: array (
+  'class' => 'Users',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:74
+- /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/BaseApplication.php:318
+- /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:174
+- /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:157
+- /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:186
+- /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:131
+- /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/Property-Management/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /var/www/html/Property-Management/webroot/index.php:40
+
+Request URL: /users/login
+Client IP: 127.0.0.1
+2023-01-30 09:21:23 warning: Unable to save request. Check your debug_kit datasource connection or ensure that PDO SQLite extension is enabled.
+2023-01-30 09:21:23 warning: The datasource configuration "debug_kit" was not found.
+2023-01-30 09:21:27 warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2023-01-30 09:21:27 warning: Unable to save request. Check your debug_kit datasource connection or ensure that PDO SQLite extension is enabled.
+2023-01-30 09:21:27 warning: The datasource configuration "debug_kit" was not found.

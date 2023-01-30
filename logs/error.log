@@ -1,0 +1,3 @@
+2023-01-30 07:54:33 warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2023-01-30 07:54:33 warning: Unable to save request. Check your debug_kit datasource connection or ensure that PDO SQLite extension is enabled.
+2023-01-30 07:54:33 warning: The datasource configuration "debug_kit" was not found.

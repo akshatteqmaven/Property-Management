@@ -141,6 +141,7 @@ class UsersController extends AppController
             $users = $this->Auth->identify();
             if ($users) {
                 $this->Auth->setUser($users);
+                $this->Flash->success('You are logged in now');
                 return $this->redirect(['controller' => 'users']);
             }
             //not login

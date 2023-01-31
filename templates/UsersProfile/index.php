@@ -35,7 +35,7 @@
                         <td><?= h($usersProfile->contact) ?></td>
                         <td><?= h($usersProfile->address) ?></td>
                         <td><?= $this->Html->image(h($usersProfile->profile_image), (array('width' => '50px'))) ?></td>
-                        <td><?= h($user->status) ?></td>
+                        <td><?= h($users->status) ?></td>
                         <!-- <td><?= h($usersProfile->created_date) ?></td> -->
                         <!-- <td><?= h($usersProfile->modified_date) ?></td> -->
                         <td class="actions">

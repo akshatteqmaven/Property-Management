@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 /**
@@ -14,6 +15,7 @@ declare(strict_types=1);
  * @since         2.2.0
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
+
 namespace Cake\Validation;
 
 use ArrayAccess;
@@ -779,8 +781,8 @@ class Validator implements ArrayAccess, IteratorAggregate, Countable
     {
         deprecationWarning(
             'allowEmpty() is deprecated. '
-            . 'Use allowEmptyString(), allowEmptyArray(), allowEmptyFile(), allowEmptyDate(), allowEmptyTime(), '
-            . 'allowEmptyDateTime() or allowEmptyFor() instead.'
+                . 'Use allowEmptyString(), allowEmptyArray(), allowEmptyFile(), allowEmptyDate(), allowEmptyTime(), '
+                . 'allowEmptyDateTime() or allowEmptyFor() instead.'
         );
 
         $defaults = [
@@ -1236,8 +1238,8 @@ class Validator implements ArrayAccess, IteratorAggregate, Countable
     {
         deprecationWarning(
             'notEmpty() is deprecated. '
-            . 'Use notEmptyString(), notEmptyArray(), notEmptyFile(), notEmptyDate(), notEmptyTime() '
-            . 'or notEmptyDateTime() instead.'
+                . 'Use notEmptyString(), notEmptyArray(), notEmptyFile(), notEmptyDate(), notEmptyTime() '
+                . 'or notEmptyDateTime() instead.'
         );
 
         $defaults = [
@@ -2350,8 +2352,8 @@ class Validator implements ArrayAccess, IteratorAggregate, Countable
         $extra = array_filter(['on' => $when, 'message' => $message]);
 
         return $this->add($field, 'isArray', $extra + [
-                'rule' => 'isArray',
-            ]);
+            'rule' => 'isArray',
+        ]);
     }
 
     /**
@@ -2369,8 +2371,8 @@ class Validator implements ArrayAccess, IteratorAggregate, Countable
         $extra = array_filter(['on' => $when, 'message' => $message]);
 
         return $this->add($field, 'scalar', $extra + [
-                'rule' => 'isScalar',
-            ]);
+            'rule' => 'isScalar',
+        ]);
     }
 
     /**

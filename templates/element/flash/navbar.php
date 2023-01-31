@@ -81,7 +81,7 @@
                 <div class="nav-main">
                     <ul class="nav-links">
                         <li class="nav-link">
-                            <?= $this->Html->link(__('User'), ['action' => 'index']) ?>
+                            <?= $this->Html->link(__('User'), ['controller' => 'users', 'action' => 'index']) ?>
                         </li>
                         <li class="nav-link">
                             <?= $this->Html->link(__('Admin'), ['controller' => 'users', 'action' => 'admin']) ?>
@@ -96,13 +96,13 @@
                     <li class="nav-link dropdown"><a href="" class="dropdown">Profile <i class="bi bi-chevron-compact-down"></i></a>
                         <ul class="dropdown-list">
                             <li class="nav-link">
-                                <?= $this->Html->link(__('Logout'), ['action' => 'logout']) ?>
+                                <?= $this->Html->link(__('Logout'), ['controller' => 'users', 'action' => 'logout']) ?>
                             </li>
                             <li class="nav-link">
-                                <?= $this->Html->link(('Register'), ['action' => 'signup']) ?>
+                                <?= $this->Html->link(('Register'), ['controller' => 'users', 'action' => 'signup']) ?>
                             </li>
                             <li class="nav-link">
-                                <?= $this->Html->link(__('Login'), ['action' => 'user_login']) ?>
+                                <?= $this->Html->link(__('Login'), ['controller' => 'users', 'action' => 'user_login']) ?>
                             </li>
                         </ul>
                     </li>

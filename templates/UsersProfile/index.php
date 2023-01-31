@@ -6,7 +6,7 @@
  */
 ?>
 <div class="usersProfile index content">
-    <?= $this->Html->link(__('New Users Profile'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <!-- <?= $this->Html->link(__('New Users Profile'), ['action' => 'add'], ['class' => 'button float-right']) ?> -->
     <h3><?= __('Users Profile') ?></h3>
     <div class="table-responsive">
         <table>
@@ -19,8 +19,9 @@
                     <th><?= $this->Paginator->sort('contact') ?></th>
                     <th><?= $this->Paginator->sort('address') ?></th>
                     <th><?= $this->Paginator->sort('profile_image') ?></th>
-                    <th><?= $this->Paginator->sort('created_date') ?></th>
-                    <th><?= $this->Paginator->sort('modified_date') ?></th>
+                    <th><?= $this->Paginator->sort('status') ?></th>
+                    <!-- <th><?= $this->Paginator->sort('created_date') ?></th> -->
+                    <!-- <th><?= $this->Paginator->sort('modified_date') ?></th> -->
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
             </thead>
@@ -34,11 +35,12 @@
                         <td><?= h($usersProfile->contact) ?></td>
                         <td><?= h($usersProfile->address) ?></td>
                         <td><?= $this->Html->image(h($usersProfile->profile_image), (array('width' => '50px'))) ?></td>
-                        <td><?= h($usersProfile->created_date) ?></td>
-                        <td><?= h($usersProfile->modified_date) ?></td>
+                        <td><?= h($user->status) ?></td>
+                        <!-- <td><?= h($usersProfile->created_date) ?></td> -->
+                        <!-- <td><?= h($usersProfile->modified_date) ?></td> -->
                         <td class="actions">
-                            <?= $this->Html->link(__('View'), ['action' => 'view', $usersProfile->id]) ?>
-                            <?= $this->Html->link(__('Edit'), ['action' => 'edit', $usersProfile->id]) ?>
+                            <!-- <?= $this->Html->link(__('View'), ['action' => 'view', $usersProfile->id]) ?> -->
+                            <!-- <?= $this->Html->link(__('Edit'), ['action' => 'edit', $usersProfile->id]) ?> -->
                             <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $usersProfile->id], ['confirm' => __('Are you sure you want to delete # {0}?', $usersProfile->id)]) ?>
                         </td>
                     </tr>

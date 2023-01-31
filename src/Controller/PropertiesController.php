@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Controller;
@@ -51,6 +52,9 @@ class PropertiesController extends AppController
     {
         $property = $this->Properties->newEmptyEntity();
         if ($this->request->is('post')) {
+            $productImage = $this->request->getData("property_image");
+            $fileName = $productImage->getClientFilename();
+            $data["property_image"] = $fileName;
             $property = $this->Properties->patchEntity($property, $this->request->getData());
             if ($this->Properties->save($property)) {
                 $this->Flash->success(__('The property has been saved.'));

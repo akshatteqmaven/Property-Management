@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @var \App\View\AppView $this
  * @var iterable<\App\Model\Entity\UsersProfile> $usersProfile
@@ -12,7 +13,7 @@
             <thead>
                 <tr>
                     <th><?= $this->Paginator->sort('id') ?></th>
-                    <th><?= $this->Paginator->sort('user_id') ?></th>
+                    <!-- <th><?= $this->Paginator->sort('user_id') ?></th> -->
                     <th><?= $this->Paginator->sort('first_name') ?></th>
                     <th><?= $this->Paginator->sort('last_name') ?></th>
                     <th><?= $this->Paginator->sort('contact') ?></th>
@@ -24,23 +25,23 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($usersProfile as $usersProfile): ?>
-                <tr>
-                    <td><?= $this->Number->format($usersProfile->id) ?></td>
-                    <td><?= $usersProfile->has('user') ? $this->Html->link($usersProfile->user->id, ['controller' => 'Users', 'action' => 'view', $usersProfile->user->id]) : '' ?></td>
-                    <td><?= h($usersProfile->first_name) ?></td>
-                    <td><?= h($usersProfile->last_name) ?></td>
-                    <td><?= h($usersProfile->contact) ?></td>
-                    <td><?= h($usersProfile->address) ?></td>
-                    <td><?= h($usersProfile->profile_image) ?></td>
-                    <td><?= h($usersProfile->created_date) ?></td>
-                    <td><?= h($usersProfile->modified_date) ?></td>
-                    <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $usersProfile->id]) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $usersProfile->id]) ?>
-                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $usersProfile->id], ['confirm' => __('Are you sure you want to delete # {0}?', $usersProfile->id)]) ?>
-                    </td>
-                </tr>
+                <?php foreach ($usersProfile as $usersProfile) : ?>
+                    <tr>
+                        <td><?= $this->Number->format($usersProfile->id) ?></td>
+                        <!-- <td><?= $usersProfile->has('user') ? $this->Html->link($usersProfile->user->id, ['controller' => 'Users', 'action' => 'view', $usersProfile->user->id]) : '' ?></td> -->
+                        <td><?= h($usersProfile->first_name) ?></td>
+                        <td><?= h($usersProfile->last_name) ?></td>
+                        <td><?= h($usersProfile->contact) ?></td>
+                        <td><?= h($usersProfile->address) ?></td>
+                        <td><?= $this->Html->image(h($usersProfile->profile_image), (array('width' => '50px'))) ?></td>
+                        <td><?= h($usersProfile->created_date) ?></td>
+                        <td><?= h($usersProfile->modified_date) ?></td>
+                        <td class="actions">
+                            <?= $this->Html->link(__('View'), ['action' => 'view', $usersProfile->id]) ?>
+                            <?= $this->Html->link(__('Edit'), ['action' => 'edit', $usersProfile->id]) ?>
+                            <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $usersProfile->id], ['confirm' => __('Are you sure you want to delete # {0}?', $usersProfile->id)]) ?>
+                        </td>
+                    </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>

@@ -245,6 +245,17 @@ return [
             'tls' => false,
             'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
         ],
+        'gmail' => [
+            'host' => 'smtp.gmail.com',
+            'port' => 587,
+            'username' => 'akshatsood1234@gmail.com', //eg: sample[at]gmail.com
+            'password' => 'aejxrdknpwmunfoc
+', //email password
+            'className' => 'Smtp',
+            'tls' => true,
+            'client' => null,
+            'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
+        ],
     ],
 
     /*

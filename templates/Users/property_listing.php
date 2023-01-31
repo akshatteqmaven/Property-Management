@@ -1,0 +1,1 @@
+<h2> you are now in page where user canh see all properties detailes</h2>

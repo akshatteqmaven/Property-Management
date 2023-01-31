@@ -81,10 +81,10 @@
                 <div class="nav-main">
                     <ul class="nav-links">
                         <li class="nav-link">
-                            <?= $this->Html->link(__('Home'), ['action' => '#']) ?>
+                            <?= $this->Html->link(__('User'), ['action' => 'index']) ?>
                         </li>
                         <li class="nav-link">
-                            <?= $this->Html->link(__('Our Team'), ['action' => '#']) ?>
+                            <?= $this->Html->link(__('Admin'), ['controller' => 'users', 'action' => 'admin']) ?>
                         </li>
                         <li class="nav-link">
                             <?= $this->Html->link(__('Blog'), ['action' => '#']) ?>
@@ -99,16 +99,12 @@
                                 <?= $this->Html->link(__('Logout'), ['action' => 'logout']) ?>
                             </li>
                             <li class="nav-link">
-                                <?= $this->Html->link(__('Sign Up'), ['action' => 'signup']) ?>
+                                <?= $this->Html->link(('Register'), ['action' => 'signup']) ?>
                             </li>
                             <li class="nav-link">
-                                <?= $this->Html->link(__('Login(User)'), ['action' => 'user_login']) ?>
-                            </li>
-                            <li class="nav-link">
-                                <?= $this->Html->link(__('Login(Admin)'), ['action' => 'adminlogin']) ?>
+                                <?= $this->Html->link(__('Login'), ['action' => 'user_login']) ?>
                             </li>
                         </ul>
                     </li>
                 </div>
             </nav>
-            <!-- <button class="btn btn-secondary">Log In</button> -->

@@ -8,6 +8,9 @@ use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
+use Cake\ORM\TableRegistry;
+use Cake\Auth\DefaultPasswordHasher;
+
 
 /**
  * Users Model
@@ -117,5 +120,54 @@ class UsersTable extends Table
         $rules->add($rules->isUnique(['email']), ['errorField' => 'email']);
 
         return $rules;
+    }
+    public function checkemail($email)
+    {
+        $result = $this->find('all')->where(['email' => $email])->first();
+        if ($result) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function insertToken($email, $token)
+    {
+        $users = TableRegistry::get("Users");
+        $query = $users->query();
+        $result = $query->update()
+            ->set(['token' => $token])
+            ->where(['email' => $email])
+            ->execute();
+        if ($result) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public function resetPassword($token, $password)
+    {
+        $pass = (new DefaultPasswordHasher)->hash($password);
+        $users = TableRegistry::get("Users");
+        $query = $users->query();
+        $result = $query->update()
+            ->set(['password' => $pass, 'token' => ''])
+            ->where(['token' => $token])
+            ->execute();
+        if ($result) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function checktokenexist($token)
+    {
+        $result = $this->find('all')->where(['token' => $token])->first();
+        if ($result) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

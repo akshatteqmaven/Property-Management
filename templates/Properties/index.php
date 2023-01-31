@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @var \App\View\AppView $this
  * @var iterable<\App\Model\Entity\Property> $properties
@@ -12,7 +13,7 @@
             <thead>
                 <tr>
                     <th><?= $this->Paginator->sort('id') ?></th>
-                    <th><?= $this->Paginator->sort('user_id') ?></th>
+                    <!-- <th><?= $this->Paginator->sort('user_id') ?></th> -->
                     <th><?= $this->Paginator->sort('property_title') ?></th>
                     <th><?= $this->Paginator->sort('property_description') ?></th>
                     <th><?= $this->Paginator->sort('property_category') ?></th>
@@ -25,24 +26,24 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($properties as $property): ?>
-                <tr>
-                    <td><?= $this->Number->format($property->id) ?></td>
-                    <td><?= $property->has('user') ? $this->Html->link($property->user->id, ['controller' => 'Users', 'action' => 'view', $property->user->id]) : '' ?></td>
-                    <td><?= h($property->property_title) ?></td>
-                    <td><?= h($property->property_description) ?></td>
-                    <td><?= h($property->property_category) ?></td>
-                    <td><?= h($property->property_image) ?></td>
-                    <td><?= h($property->property_tags) ?></td>
-                    <td><?= h($property->status) ?></td>
-                    <td><?= h($property->created_date) ?></td>
-                    <td><?= h($property->modified_date) ?></td>
-                    <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $property->id]) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $property->id]) ?>
-                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $property->id], ['confirm' => __('Are you sure you want to delete # {0}?', $property->id)]) ?>
-                    </td>
-                </tr>
+                <?php foreach ($properties as $property) : ?>
+                    <tr>
+                        <td><?= $this->Number->format($property->id) ?></td>
+                        <!-- <td><?= $property->has('user') ? $this->Html->link($property->user->id, ['controller' => 'Users', 'action' => 'view', $property->user->id]) : '' ?></td> -->
+                        <td><?= h($property->property_title) ?></td>
+                        <td><?= h($property->property_description) ?></td>
+                        <td><?= h($property->property_category) ?></td>
+                        <td><?= h($property->property_image) ?></td>
+                        <td><?= h($property->property_tags) ?></td>
+                        <td><?= h($property->status) ?></td>
+                        <td><?= h($property->created_date) ?></td>
+                        <td><?= h($property->modified_date) ?></td>
+                        <td class="actions">
+                            <?= $this->Html->link(__('View'), ['action' => 'view', $property->id]) ?>
+                            <?= $this->Html->link(__('Edit'), ['action' => 'edit', $property->id]) ?>
+                            <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $property->id], ['confirm' => __('Are you sure you want to delete # {0}?', $property->id)]) ?>
+                        </td>
+                    </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>

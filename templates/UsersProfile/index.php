@@ -35,13 +35,10 @@
                         <td><?= h($usersProfile->contact) ?></td>
                         <td><?= h($usersProfile->address) ?></td>
                         <td><?= $this->Html->image(h($usersProfile->profile_image), (array('width' => '50px'))) ?></td>
-                        <td><?= h($users->status) ?></td>
-                        <!-- <td><?= h($usersProfile->created_date) ?></td> -->
-                        <!-- <td><?= h($usersProfile->modified_date) ?></td> -->
+                        <td><?= h($usersProfile->user->status) ?></td>
                         <td class="actions">
-                            <!-- <?= $this->Html->link(__('View'), ['action' => 'view', $usersProfile->id]) ?> -->
-                            <!-- <?= $this->Html->link(__('Edit'), ['action' => 'edit', $usersProfile->id]) ?> -->
-                            <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $usersProfile->id], ['confirm' => __('Are you sure you want to delete # {0}?', $usersProfile->id)]) ?>
+                            <?= $this->Html->link(__('View'), ['action' => 'view', $usersProfile->id]) ?>
+                            <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $usersProfile->id], ['confirm' => __('Are you sure you want to delete  {0}?', $usersProfile->first_name)]) ?>
                         </td>
                     </tr>
                 <?php endforeach; ?>

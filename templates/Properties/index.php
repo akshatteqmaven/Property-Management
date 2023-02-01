@@ -33,7 +33,7 @@
                         <td><?= h($property->property_title) ?></td>
                         <td><?= h($property->property_description) ?></td>
                         <td><?= h($property->property_category) ?></td>
-                        <td><?= h($property->property_image) ?></td>
+                        <td><?= $this->Html->image(h($property->property_image)) ?></td>
                         <td><?= h($property->property_tags) ?></td>
                         <td><?= h($property->status) ?></td>
                         <td><?= h($property->created_date) ?></td>
@@ -41,7 +41,7 @@
                         <td class="actions">
                             <?= $this->Html->link(__('View'), ['action' => 'view', $property->id]) ?>
                             <?= $this->Html->link(__('Edit'), ['action' => 'edit', $property->id]) ?>
-                            <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $property->id], ['confirm' => __('Are you sure you want to delete # {0}?', $property->id)]) ?>
+                            <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $property->id], ['confirm' => __('Are you sure you want to delete : {0}?', $property->property_title)]) ?>
                         </td>
                     </tr>
                 <?php endforeach; ?>

@@ -23,7 +23,6 @@ class UsersProfileController extends AppController
             'contain' => ['Users'],
         ];
         $usersProfile = $this->paginate($this->UsersProfile);
-
         $this->set(compact('usersProfile'));
     }
 
@@ -40,6 +39,7 @@ class UsersProfileController extends AppController
             'contain' => ['Users'],
         ]);
 
+
         $this->set(compact('usersProfile'));
     }
 
@@ -48,21 +48,21 @@ class UsersProfileController extends AppController
      *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      */
-    public function add()
-    {
-        $usersProfile = $this->UsersProfile->newEmptyEntity();
-        if ($this->request->is('post')) {
-            $usersProfile = $this->UsersProfile->patchEntity($usersProfile, $this->request->getData());
-            if ($this->UsersProfile->save($usersProfile)) {
-                $this->Flash->success(__('The users profile has been saved.'));
+    // public function add()
+    // {
+    //     $usersProfile = $this->UsersProfile->newEmptyEntity();
+    //     if ($this->request->is('post')) {
+    //         $usersProfile = $this->UsersProfile->patchEntity($usersProfile, $this->request->getData());
+    //         if ($this->UsersProfile->save($usersProfile)) {
+    //             $this->Flash->success(__('The users profile has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
-            }
-            $this->Flash->error(__('The users profile could not be saved. Please, try again.'));
-        }
-        $users = $this->UsersProfile->Users->find('list', ['limit' => 200])->all();
-        $this->set(compact('usersProfile', 'users'));
-    }
+    //             return $this->redirect(['action' => 'index']);
+    //         }
+    //         $this->Flash->error(__('The users profile could not be saved. Please, try again.'));
+    //     }
+    //     $users = $this->UsersProfile->Users->find('list', ['limit' => 200])->all();
+    //     $this->set(compact('usersProfile', 'users'));
+    // }
 
     /**
      * Edit method
@@ -71,23 +71,23 @@ class UsersProfileController extends AppController
      * @return \Cake\Http\Response|null|void Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function edit($id = null)
-    {
-        $usersProfile = $this->UsersProfile->get($id, [
-            'contain' => [],
-        ]);
-        if ($this->request->is(['patch', 'post', 'put'])) {
-            $usersProfile = $this->UsersProfile->patchEntity($usersProfile, $this->request->getData());
-            if ($this->UsersProfile->save($usersProfile)) {
-                $this->Flash->success(__('The users profile has been saved.'));
+    // public function edit($id = null)
+    // {
+    //     $usersProfile = $this->UsersProfile->get($id, [
+    //         'contain' => [],
+    //     ]);
+    //     if ($this->request->is(['patch', 'post', 'put'])) {
+    //         $usersProfile = $this->UsersProfile->patchEntity($usersProfile, $this->request->getData());
+    //         if ($this->UsersProfile->save($usersProfile)) {
+    //             $this->Flash->success(__('The users profile has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
-            }
-            $this->Flash->error(__('The users profile could not be saved. Please, try again.'));
-        }
-        $users = $this->UsersProfile->Users->find('list', ['limit' => 200])->all();
-        $this->set(compact('usersProfile', 'users'));
-    }
+    //             return $this->redirect(['action' => 'index']);
+    //         }
+    //         $this->Flash->error(__('The users profile could not be saved. Please, try again.'));
+    //     }
+    //     $users = $this->UsersProfile->Users->find('list', ['limit' => 200])->all();
+    //     $this->set(compact('usersProfile', 'users'));
+    // }
 
     /**
      * Delete method

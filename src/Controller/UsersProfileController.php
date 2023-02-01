@@ -108,4 +108,23 @@ class UsersProfileController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+    public function userStatus($id, $status)
+    {
+        //$this->request->allowMethod(['post']);
+        $this->loadModel('Users');
+        $user = $this->Users->get($id);
+
+        if ($status == 1)
+            $status = 0;
+        else
+            $status = 1;
+
+        $data = array();
+        $data['status'] = $status;
+        $user = $this->Users->patchEntity($user, $data);
+        if ($this->Users->save($user)) {
+            $this->Flash->success(__('The users status has changed.'));
+        }
+        return $this->redirect(['action' => 'index']);
+    }
 }

@@ -15,10 +15,7 @@
         <div class="usersProfile view content">
             <h3><?= h($usersProfile->first_name) ?></h3>
             <table>
-                <tr>
-                    <th><?= __('User') ?></th>
-                    <td><?= $usersProfile->has('user') ? $this->Html->link($usersProfile->user->id, ['controller' => 'Users', 'action' => 'view', $usersProfile->user->id]) : '' ?></td>
-                </tr>
+
                 <tr>
                     <th><?= __('First Name') ?></th>
                     <td><?= h($usersProfile->first_name) ?></td>
@@ -37,7 +34,15 @@
                 </tr>
                 <tr>
                     <th><?= __('Status') ?></th>
-                    <td><?= h($usersProfile->user->status) ?></td>
+                    <td>
+                        <?php if ($usersProfile->user->status == 0) {
+                            echo 'Activate';
+                        } else if ($usersProfile->user->status == 1) {
+                            echo 'Deactivate';
+                        }
+                        ?>
+
+                    </td>
                 </tr>
                 <tr>
                     <th><?= __('Profile Image') ?></th>

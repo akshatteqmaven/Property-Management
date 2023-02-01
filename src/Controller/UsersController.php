@@ -25,7 +25,7 @@ class UsersController extends AppController
      */
     public function index()
     {
-        $users = $this->paginate($this->Users);
+        $users = $this->paginate($this->Users, ['contain' => ['UsersProfile']]);
 
         $this->set(compact('users'));
     }
@@ -89,6 +89,7 @@ class UsersController extends AppController
         }
         $this->set(compact('user'));
     }
+    // ----------------------------------ended-------------------------------------------------//
 
     /**
      * Delete method
@@ -109,7 +110,8 @@ class UsersController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
-    // login page forgot password function 
+    // ----------------------------------ended-------------------------------------------------//
+    // login page forgot password function
     public function forgot()
     {
         // $this->viewBuilder()->setLayout('mydefault');
@@ -139,13 +141,12 @@ class UsersController extends AppController
         }
         $this->set(compact('user'));
     }
+    // ----------------------------------ended-------------------------------------------------//
     // function for getting the OTP
     public function getotp()
     {
-
         $user = $this->Users->newEmptyEntity();
         if ($this->request->is('post')) {
-
             $token = $this->request->getData('token');
             $result = $this->Users->checktokenexist($token);
 
@@ -160,6 +161,7 @@ class UsersController extends AppController
         }
         $this->set(compact('user'));
     }
+    // ----------------------------------ended-------------------------------------------------//
     //reset password
     public function reset()
     {
@@ -198,8 +200,9 @@ class UsersController extends AppController
             $image = $this->request->getData('users_profile.profile_image');
             $name = $image->getClientFilename();
             $path = WWW_ROOT . "img" . DS . $name;
-            if ($name)
+            if ($name) {
                 $image->moveTo($path);
+            }
             $user->users_profile->profile_image = $name;
             if ($this->Users->save($user)) {
                 $this->Flash->success('Your are registered now');
@@ -215,21 +218,31 @@ class UsersController extends AppController
     {
         $this->Auth->allow(['signup']);
         $this->Auth->allow(['userLogin']);
+        $this->Auth->allow(['adminLogin']);
         $this->Auth->allow(['admin']);
         $this->Auth->allow(['forgot']);
         $this->Auth->allow(['reset']);
         $this->Auth->allow(['getotp']);
         $this->Auth->allow('logout');
     }
+    // ----------------------------------ended-------------------------------------------------//
     //User login function
-    public function userLogin()
+    public function adminLogin()
     {
         if ($this->request->is('post')) {
             $users = $this->Auth->identify();
             if ($users) {
                 $this->Auth->setUser($users);
+
+                if ($users['status'] == 1) {
+                    $this->Flash->error(__('you have no permission to login'));
+                    return $this->redirect(['controller' => 'Users', 'action' => 'userLogin']);
+                } elseif ($users['user_type'] == 0) {
+                    $this->Flash->error(__('You are not autherized to login '));
+                    return $this->redirect(['controller' => 'Users', 'action' => 'userLogin']);
+                }
                 $this->Flash->success('You are logged in now');
-                return $this->redirect(['controller' => 'users/propertyListing']);
+                return $this->redirect(['controller' => 'Users', 'action' => 'admin']);
             }
             //not login
             $this->Flash->error('Please enter your correct login credentials');
@@ -241,11 +254,55 @@ class UsersController extends AppController
         $this->Flash->success('You are Loged out now ');
         return $this->redirect($this->Auth->logout());
     }
+    // ----------------------------------ended-------------------------------------------------//
     //index for users
     public function propertyListing()
     {
     }
+    // ----------------------------------ended-------------------------------------------------//
     public function admin()
     {
     }
+    // ----------------------------------ended-------------------------------------------------//
+    public function userStatus($id = null, $status)
+    {
+        $this->request->allowMethod(['post']);
+        $user = $this->Users->get($id);
+
+        if (
+            $status == 0
+        ) {
+            $user->status = 1;
+        } else {
+            $user->status = 0;
+        }
+
+        if ($this->Users->save($user)) {
+            $this->Flash->success(__('The users status has changed.'));
+        }
+        return $this->redirect(['action' => 'index']);
+    }
+    // --------------------------user Login------------------------------------------
+    public function userLogin()
+    {
+        if ($this->request->is('post')) {
+            $users = $this->Auth->identify();
+            if ($users) {
+                $this->Auth->setUser($users);
+
+                if ($users['status'] == 1) {
+                    $this->Flash->error(__('you have no permission to login'));
+                    return $this->redirect(['controller' => 'Users', 'action' => 'userLogin']);
+                } elseif ($users['user_type'] == 1) {
+                    $this->Flash->error(__('You are not autherized to login '));
+                    return $this->redirect(['controller' => 'Users', 'action' => 'userLogin']);
+                }
+                $this->Flash->success('You are logged in now');
+                return $this->redirect(['controller' => 'Users', 'action' => 'propertyListing']);
+            }
+            //not login
+            $this->Flash->error('Please enter your correct login credentials');
+        }
+    }
+    // ----------------------------------ended-------------------------------------------------//
 }

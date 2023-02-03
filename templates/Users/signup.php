@@ -31,7 +31,7 @@
 
         </div>
         <div class="col">
-            <?= $this->Form->control('users_profile.profile_image', ['type' => 'file', 'required' => false]); ?>
+            <?= $this->Form->control('users_profile.profile_image', ['type' => 'file']); ?>
         </div>
     </div>
     <div class="row">

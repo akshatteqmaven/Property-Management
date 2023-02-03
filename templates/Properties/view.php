@@ -71,13 +71,18 @@
                                 <th><?= __('Posted Date') ?></th>
                                 <th class="actions"><?= __('Actions') ?></th>
                             </tr>
-                            <?php foreach ($property->property_comments as $propertyComments) : ?>
+                            <?php
+                            $i = 1;
+                            foreach ($property->property_comments as $propertyComments) :
+
+                                // dd($property->user);
+                                // die; 
+                            ?>
                                 <tr>
-                                    <td><?= h($propertyComments->id) ?></td>
+                                    <td><?= $i++ ?></td>
                                     <td><?= h($propertyComments->comments) ?></td>
                                     <td><?= h($propertyComments->created_date) ?></td>
                                     <td class="actions">
-                                        <?= $this->Html->link(__('View'), ['controller' => 'PropertyComments', 'action' => 'view', $propertyComments->id]) ?>
                                         <?= $this->Form->postLink(__('Delete'), ['controller' => 'PropertyComments', 'action' => 'delete', $propertyComments->id], ['confirm' => __('Are you sure you want to delete # {0}?', $propertyComments->id)]) ?>
                                     </td>
                                 </tr>

@@ -107,6 +107,6 @@ class PropertyCommentsController extends AppController
             $this->Flash->error(__('The property comment could not be deleted. Please, try again.'));
         }
 
-        return $this->redirect(['action' => 'index']);
+        return $this->redirect(['controller' => 'Properties', 'action' => 'index']);
     }
 }

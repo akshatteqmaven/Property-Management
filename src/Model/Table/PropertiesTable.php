@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Model\Table;
@@ -51,6 +52,7 @@ class PropertiesTable extends Table
         $this->hasMany('PropertyComments', [
             'foreignKey' => 'property_id',
         ]);
+        $this->hasOne('UsersProfile');
     }
 
     /**
@@ -61,9 +63,6 @@ class PropertiesTable extends Table
      */
     public function validationDefault(Validator $validator): Validator
     {
-        $validator
-            ->integer('user_id')
-            ->notEmptyString('user_id');
 
         $validator
             ->scalar('property_title')
@@ -95,19 +94,6 @@ class PropertiesTable extends Table
             ->requirePresence('property_tags', 'create')
             ->notEmptyString('property_tags');
 
-        $validator
-            ->scalar('status')
-            ->maxLength('status', 155)
-            ->requirePresence('status', 'create')
-            ->notEmptyString('status');
-
-        $validator
-            ->dateTime('created_date')
-            ->notEmptyDateTime('created_date');
-
-        $validator
-            ->dateTime('modified_date')
-            ->allowEmptyDateTime('modified_date');
 
         return $validator;
     }

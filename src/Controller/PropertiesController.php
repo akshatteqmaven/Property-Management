@@ -39,10 +39,18 @@ class PropertiesController extends AppController
         $this->Model = $this->loadModel('UsersProfile');
 
         $property = $this->Properties->get($id, [
-            'contain' => ['Users', 'PropertyComments'],
+            'contain' => ['Users', 'PropertyComments']
         ]);
 
-        $this->set(compact('property'));
+        $this->paginate = [
+            'contain' => ['Users'],
+        ];
+        $usersProfile = $this->paginate($this->UsersProfile);
+
+        // echo "<pre>";
+        // print_r($property);
+        // die;
+        $this->set(compact('property', 'usersProfile'));
     }
 
     /**
@@ -152,7 +160,6 @@ class PropertiesController extends AppController
     }
     public function propertyStatus($id, $status)
     {
-
         $property = $this->Properties->get($id);
 
 
@@ -164,9 +171,6 @@ class PropertiesController extends AppController
 
         $arr = array();
         $arr['status'] = $status;
-        // echo "<br>";
-        // print_r($arr);
-        // exit;
         $property = $this->Properties->patchEntity($property, $arr);
         if ($this->Properties->save($property)) {
             $this->Flash->success(__('Property status has been changed.'));

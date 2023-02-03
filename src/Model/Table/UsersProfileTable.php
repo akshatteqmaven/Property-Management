@@ -58,27 +58,78 @@ class UsersProfileTable extends Table
      */
     public function validationDefault(Validator $validator): Validator
     {
-        // $validator
-        //     ->integer('user_id')
-        //     ->notEmptyString('user_id');
+
 
         $validator
             ->scalar('first_name')
             ->maxLength('first_name', 155)
             ->requirePresence('first_name', 'create')
-            ->notEmptyString('first_name', 'Please enter your First name');
+            ->notEmptyString('first_name', 'Please enter your First name')
+            ->add('first_name', [
+                'notBlank' => [
+                    'rule'    => ['notBlank'],
+                    'message' => 'Please enter your First name',
+                    'last' => true
+                ],
+                'characters' => [
+                    'rule'    => ['custom', '/^[A-Z_ ]+$/i'],
+                    'allowEmpty' => false,
+                    'last' => true,
+                    'message' => 'Please Enter characters only.'
+                ],
+                'length' => [
+                    'rule' => ['minLength', 2],
+                    'last' => true,
+                    'message' => 'First Name need to be at least 2 characters long',
+                ],
+            ]);
 
         $validator
             ->scalar('last_name')
             ->maxLength('last_name', 155)
             ->requirePresence('last_name', 'create')
-            ->notEmptyString('last_name', 'Please enter your last name');
+            ->notEmptyString('last_name', 'Please enter your last name')
+            ->add('last_name', [
+                'notBlank' => [
+                    'rule'    => ['notBlank'],
+                    'message' => 'Please enter your Last name',
+                    'last' => true
+                ],
+                'characters' => [
+                    'rule'    => ['custom', '/^[A-Z_ ]+$/i'],
+                    'allowEmpty' => false,
+                    'last' => true,
+                    'message' => 'Please Enter characters only.'
+                ],
+                'length' => [
+                    'rule' => ['minLength', 2],
+                    'last' => true,
+                    'message' => 'First Name need to be at least 2 characters long',
+                ],
+            ]);
 
         $validator
             ->scalar('contact')
             ->maxLength('contact', 155)
             ->requirePresence('contact', 'create')
-            ->notEmptyString('contact', 'Please enter your contact details');
+            ->notEmptyString('contact', 'Please enter your Contact details')
+            ->add('contact', [
+
+                'number' => [
+                    'rule'    => ['custom', '/^[0-9]+$/i'],
+                    'allowEmpty' => false,
+                    'last' => true,
+                    'message' => 'Please Enter numbers only.'
+                ],
+                'minLength' => [
+                    'rule' => ['minLength', 10],
+                    'message' => 'Contact Number needs to be 10 characters long',
+                ],
+                'maxLength' => [
+                    'rule' => ['maxLength', 10],
+                    'message' => 'Contact Number needs to be only 10 characters long',
+                ]
+            ]);
 
         $validator
             ->scalar('address')
@@ -88,19 +139,8 @@ class UsersProfileTable extends Table
 
         $validator
             ->scalar('profile_image')
-            ->maxLength('profile_image', 500)
             ->requirePresence('profile_image', 'create')
             ->notEmptyFile('profile_image', 'Please select an image');
-
-
-        // $validator
-        //     ->dateTime('created_date')
-        //     ->notEmptyDateTime('created_date');
-
-        // $validator
-        //     ->dateTime('modified_date')
-        //     ->allowEmptyDateTime('modified_date');
-
         return $validator;
     }
 

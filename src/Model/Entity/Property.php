@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Model\Entity;
@@ -45,5 +46,9 @@ class Property extends Entity
         'modified_date' => true,
         'user' => true,
         'property_comments' => true,
+        'user' => true,
+        'users_profile' => true,
+
+
     ];
 }

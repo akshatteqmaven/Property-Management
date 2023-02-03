@@ -56,9 +56,11 @@
                                 <th><?= __('Comments') ?></th>
                                 <th><?= __('Posted date') ?></th>
                             </tr>
-                            <?php foreach ($property->property_comments as $propertyComments) : ?>
+                            <?php
+                            $i = 1;
+                            foreach ($property->property_comments as $propertyComments) : ?>
                                 <tr>
-                                    <td><?= h($propertyComments->id) ?></td>
+                                    <td><?= $i++ ?></td>
                                     <td><?= h($propertyComments->comments) ?></td>
                                     <td><?= h($propertyComments->created_date) ?></td>
 

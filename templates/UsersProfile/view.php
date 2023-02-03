@@ -15,7 +15,6 @@
         <div class="usersProfile view content">
             <h3><?= h($usersProfile->first_name) ?></h3>
             <table>
-
                 <tr>
                     <th><?= __('First Name') ?></th>
                     <td><?= h($usersProfile->first_name) ?></td>

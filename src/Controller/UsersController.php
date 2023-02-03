@@ -205,9 +205,10 @@ class UsersController extends AppController
             $user = $this->Users->patchEntity($user, $this->request->getData());
             $image = $this->request->getData('users_profile.profile_image');
             $name = $image->getClientFilename();
-            $path = WWW_ROOT . "img" . DS . $name;
+            $fileSize = $image->getSize();
+            $targetpath = WWW_ROOT . "img" . DS . $name;
             if ($name) {
-                $image->moveTo($path);
+                $image->moveTo($targetpath);
             }
             $user->users_profile->profile_image = $name;
             if ($this->Users->save($user)) {
@@ -270,7 +271,7 @@ class UsersController extends AppController
         $this->set(compact('properties'));
     }
     // ----------------------------------ended-------------------------------------------------//
-    public function propertyListView($id=null,$property_id=null )
+    public function propertyListView($id = null, $property_id = null)
     {
 
 

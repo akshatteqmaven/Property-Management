@@ -19,8 +19,8 @@
                     <th><?= $this->Paginator->sort('id') ?></th>
                     <th><?= $this->Paginator->sort('property_title') ?></th>
                     <th><?= $this->Paginator->sort('property_description') ?></th>
-                    <th><?= $this->Paginator->sort('property_category ') ?></th>
                     <th><?= $this->Paginator->sort('property_image') ?></th>
+                    <th><?= $this->Paginator->sort('property_category ') ?></th>
                     <th><?= $this->Paginator->sort('property_tags') ?></th>
                     <th><?= $this->Paginator->sort('posted_date') ?></th>
                     <th class="actions"><?= __('Property links') ?></th>

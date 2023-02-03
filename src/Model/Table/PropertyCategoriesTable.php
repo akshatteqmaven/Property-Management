@@ -12,19 +12,19 @@ use Cake\Validation\Validator;
 /**
  * PropertyCategories Model
  *
- * @method \App\Model\Entity\Propertyproperty_category newEmptyEntity()
- * @method \App\Model\Entity\Propertyproperty_category newEntity(array $data, array $options = [])
- * @method \App\Model\Entity\Propertyproperty_category[] newEntities(array $data, array $options = [])
- * @method \App\Model\Entity\Propertyproperty_category get($primaryKey, $options = [])
- * @method \App\Model\Entity\Propertyproperty_category findOrCreate($search, ?callable $callback = null, $options = [])
- * @method \App\Model\Entity\Propertyproperty_category patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \App\Model\Entity\Propertyproperty_category[] patchEntities(iterable $entities, array $data, array $options = [])
- * @method \App\Model\Entity\Propertyproperty_category|false save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\Propertyproperty_category saveOrFail(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\Propertyproperty_category[]|\Cake\Datasource\ResultSetInterface|false saveMany(iterable $entities, $options = [])
- * @method \App\Model\Entity\Propertyproperty_category[]|\Cake\Datasource\ResultSetInterface saveManyOrFail(iterable $entities, $options = [])
- * @method \App\Model\Entity\Propertyproperty_category[]|\Cake\Datasource\ResultSetInterface|false deleteMany(iterable $entities, $options = [])
- * @method \App\Model\Entity\Propertyproperty_category[]|\Cake\Datasource\ResultSetInterface deleteManyOrFail(iterable $entities, $options = [])
+ * @method \App\Model\Entity\PropertyCategory newEmptyEntity()
+ * @method \App\Model\Entity\PropertyCategory newEntity(array $data, array $options = [])
+ * @method \App\Model\Entity\PropertyCategory[] newEntities(array $data, array $options = [])
+ * @method \App\Model\Entity\PropertyCategory get($primaryKey, $options = [])
+ * @method \App\Model\Entity\PropertyCategory findOrCreate($search, ?callable $callback = null, $options = [])
+ * @method \App\Model\Entity\PropertyCategory patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \App\Model\Entity\PropertyCategory[] patchEntities(iterable $entities, array $data, array $options = [])
+ * @method \App\Model\Entity\PropertyCategory|false save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\PropertyCategory saveOrFail(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\PropertyCategory[]|\Cake\Datasource\ResultSetInterface|false saveMany(iterable $entities, $options = [])
+ * @method \App\Model\Entity\PropertyCategory[]|\Cake\Datasource\ResultSetInterface saveManyOrFail(iterable $entities, $options = [])
+ * @method \App\Model\Entity\PropertyCategory[]|\Cake\Datasource\ResultSetInterface|false deleteMany(iterable $entities, $options = [])
+ * @method \App\Model\Entity\PropertyCategory[]|\Cake\Datasource\ResultSetInterface deleteManyOrFail(iterable $entities, $options = [])
  */
 class PropertyCategoriesTable extends Table
 {
@@ -40,9 +40,8 @@ class PropertyCategoriesTable extends Table
 
         $this->setTable('property_categories');
         $this->setDisplayField('id');
-        $this->setPrimaryKey('id');;
+        $this->setPrimaryKey('id');
     }
-
 
     /**
      * Default validation rules.
@@ -53,10 +52,12 @@ class PropertyCategoriesTable extends Table
     public function validationDefault(Validator $validator): Validator
     {
         $validator
-            ->scalar('property_category_name')
-            ->maxLength('property_category_name', 155)
-            ->requirePresence('property_category_name', 'create')
-            ->notEmptyString('property_category_name');
+            ->scalar('category_name')
+            ->maxLength('category_name', 155)
+            ->requirePresence('category_name', 'create')
+            ->notEmptyString('category_name');
+
+
 
         return $validator;
     }

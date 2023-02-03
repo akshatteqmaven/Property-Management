@@ -84,9 +84,7 @@ class PropertyCommentsTable extends Table
             ->dateTime('created_date')
             ->notEmptyDateTime('created_date');
 
-        $validator
-            ->dateTime('modified_date')
-            ->allowEmptyDateTime('modified_date');
+
 
         return $validator;
     }

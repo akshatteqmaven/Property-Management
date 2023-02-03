@@ -141,27 +141,63 @@ class UsersTable extends Table
             ->scalar('confirm_password')
             ->maxLength('confirm_password', 155)
             ->requirePresence('confirm_password', 'create')
-            ->notEmptyString('confirm_password', 'please enter your confirm password');
+            ->notEmptyString('confirm_password', 'please enter your confirm password')
+            ->add('confirm_password', [
+                'compare' => [
+                    'rule' => ['compareWith', 'password'],
+                    'message' => 'Passwords do not match',
+                ],
+                'upperCase' => [
+                    'rule' => function ($value) {
+                        $count = mb_strlen(preg_replace('![^A-Z]+!', '', $value));
+                        if ($count > 0) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    },
+                    'message' => 'Please enter at least one uppercase',
+                ],
+                'lowerCase' => [
+                    'rule' => function ($value) {
+                        $count = mb_strlen(preg_replace('![^a-z]+!', '', $value));
+                        if ($count > 0) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    },
+                    'message' => 'Please enter at least one lowercase',
+                ],
+                'numeric' => [
+                    'rule' => function ($value) {
+                        $count = mb_strlen(preg_replace('![^0-9]+!', '', $value));
+                        if ($count > 0) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    },
+                    'message' => 'Please enter at least one numeric',
+                ],
+                'special' => [
+                    'rule' => function ($value) {
+                        $count = mb_strlen(preg_replace('![^@#*]+!', '', $value));
+                        if ($count > 0) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    },
+                    'message' => 'Please enter at least one special character',
+                ],
+                'minLength' => [
+                    'rule' => ['minLength', 8],
+                    'message' => 'Password need to be 8 characters long',
+                ],
+            ]);
 
-        // $validator
-        //     ->scalar('user_type')
-        //     ->maxLength('user_type', 100)
-        //     ->requirePresence('user_type', 'create')
-        //     ->notEmptyString('user_type');
 
-        // $validator
-        //     ->scalar('status')
-        //     ->maxLength('status', 100)
-        //     ->requirePresence('status', 'create')
-        //     ->notEmptyString('status');
-
-        // $validator
-        //     ->dateTime('created_date')
-        //     ->notEmptyDateTime('created_date');
-
-        // $validator
-        //     ->dateTime('modified_date')
-        //     ->allowEmptyDateTime('modified_date');
 
         return $validator;
     }

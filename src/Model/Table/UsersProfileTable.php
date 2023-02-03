@@ -140,7 +140,9 @@ class UsersProfileTable extends Table
         $validator
             ->scalar('profile_image')
             ->requirePresence('profile_image', 'create')
-            ->notEmptyFile('profile_image', 'Please select an image');
+            ->notEmptyFile('profile_image', 'Please select an image')
+            ->add('image', 'size', ['rule' => ['filesize', '2MB']]);
+
         return $validator;
     }
 

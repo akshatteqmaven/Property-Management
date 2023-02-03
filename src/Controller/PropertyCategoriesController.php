@@ -8,7 +8,7 @@ namespace App\Controller;
  * PropertyCategories Controller
  *
  * @property \App\Model\Table\PropertyCategoriesTable $PropertyCategories
- * @method \App\Model\Entity\Propertyproperty_category[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
+ * @method \App\Model\Entity\Propertycategory[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
 class PropertyCategoriesController extends AppController
 {
@@ -27,17 +27,17 @@ class PropertyCategoriesController extends AppController
     /**
      * View method
      *
-     * @param string|null $id Property property_category id.
+     * @param string|null $id Property category id.
      * @return \Cake\Http\Response|null|void Renders view
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     // public function view($id = null)
     // {
-    //     $propertyproperty_category = $this->PropertyCategories->get($id, [
+    //     $propertycategory = $this->PropertyCategories->get($id, [
     //         'contain' => [],
     //     ]);
 
-    //     $this->set(compact('propertyproperty_category'));
+    //     $this->set(compact('propertycategory'));
     // }
 
     /**
@@ -47,58 +47,58 @@ class PropertyCategoriesController extends AppController
      */
     public function add()
     {
-        $propertyproperty_category = $this->PropertyCategories->newEmptyEntity();
+        $propertycategory = $this->PropertyCategories->newEmptyEntity();
         if ($this->request->is('post')) {
-            $propertyproperty_category = $this->PropertyCategories->patchEntity($propertyproperty_category, $this->request->getData());
-            if ($this->PropertyCategories->save($propertyproperty_category)) {
-                $this->Flash->success(__('The property property_category has been saved.'));
+            $propertycategory = $this->PropertyCategories->patchEntity($propertycategory, $this->request->getData());
+            if ($this->PropertyCategories->save($propertycategory)) {
+                $this->Flash->success(__('The property category has been saved.'));
 
-                return $this->redirect(['controller' => 'Properties', 'action' => 'index']);
+                return $this->redirect(['controller' => 'Users', 'action' => 'admin']);
             }
-            $this->Flash->error(__('The property property_category could not be saved. Please, try again.'));
+            $this->Flash->error(__('The property category could not be saved. Please, try again.'));
         }
-        $this->set(compact('propertyproperty_category'));
+        $this->set(compact('propertycategory'));
     }
 
     /**
      * Edit method
      *
-     * @param string|null $id Property property_category id.
+     * @param string|null $id Property category id.
      * @return \Cake\Http\Response|null|void Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     // public function edit($id = null)
     // {
-    //     $propertyproperty_category = $this->PropertyCategories->get($id, [
+    //     $propertycategory = $this->PropertyCategories->get($id, [
     //         'contain' => [],
     //     ]);
     //     if ($this->request->is(['patch', 'post', 'put'])) {
-    //         $propertyproperty_category = $this->PropertyCategories->patchEntity($propertyproperty_category, $this->request->getData());
-    //         if ($this->PropertyCategories->save($propertyproperty_category)) {
-    //             $this->Flash->success(__('The property property_category has been saved.'));
+    //         $propertycategory = $this->PropertyCategories->patchEntity($propertycategory, $this->request->getData());
+    //         if ($this->PropertyCategories->save($propertycategory)) {
+    //             $this->Flash->success(__('The property category has been saved.'));
 
     //             return $this->redirect(['action' => 'index']);
     //         }
-    //         $this->Flash->error(__('The property property_category could not be saved. Please, try again.'));
+    //         $this->Flash->error(__('The property category could not be saved. Please, try again.'));
     //     }
-    //     $this->set(compact('propertyproperty_category'));
+    //     $this->set(compact('propertycategory'));
     // }
 
     /**
      * Delete method
      *
-     * @param string|null $id Property property_category id.
+     * @param string|null $id Property category id.
      * @return \Cake\Http\Response|null|void Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     // public function delete($id = null)
     // {
     //     $this->request->allowMethod(['post', 'delete']);
-    //     $propertyproperty_category = $this->PropertyCategories->get($id);
-    //     if ($this->PropertyCategories->delete($propertyproperty_category)) {
-    //         $this->Flash->success(__('The property property_category has been deleted.'));
+    //     $propertycategory = $this->PropertyCategories->get($id);
+    //     if ($this->PropertyCategories->delete($propertycategory)) {
+    //         $this->Flash->success(__('The property category has been deleted.'));
     //     } else {
-    //         $this->Flash->error(__('The property property_category could not be deleted. Please, try again.'));
+    //         $this->Flash->error(__('The property category could not be deleted. Please, try again.'));
     //     }
 
     //     return $this->redirect(['action' => 'index']);

@@ -12,11 +12,11 @@
     </aside>
     <div class="column-responsive column-80">
         <div class="propertyCategories form content">
-            <?= $this->Form->create($propertyproperty_category) ?>
+            <?= $this->Form->create($propertycategory) ?>
             <fieldset>
-                <legend><?= __('Add Property property_category') ?></legend>
+                <legend><?= __('Add Property category') ?></legend>
                 <?php
-                echo $this->Form->control('property_category_name');
+                echo $this->Form->control('category_name');
 
                 ?>
             </fieldset>

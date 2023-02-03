@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Controller;
@@ -54,7 +55,6 @@ class PropertyCommentsController extends AppController
             $propertyComment = $this->PropertyComments->patchEntity($propertyComment, $this->request->getData());
             if ($this->PropertyComments->save($propertyComment)) {
                 $this->Flash->success(__('The property comment has been saved.'));
-
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The property comment could not be saved. Please, try again.'));

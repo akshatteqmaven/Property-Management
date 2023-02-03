@@ -1632,3 +1632,553 @@ Cake\Http\Runner::run() /var/www/html/Property-Management/vendor/cakephp/cakephp
 Cake\Http\Server::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Server.php, line 90
 [main] /var/www/html/Property-Management/webroot/index.php, line 40
 
+2023-02-02 03:49:24 notice: Optional parameter $id declared before required parameter $status is implicitly treated as a required parameter
+Request URL: /users/admin-login
+Referer URL: http://localhost:8765/users/admin-login
+Client IP: 127.0.0.1
+Trace:
+include /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\includeFile /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\ClassLoader::loadClass() /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 428
+class_exists [internal], line ??
+Cake\Core\App::_classExistsInBase() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 161
+Cake\Core\App::className() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 68
+Cake\Controller\ControllerFactory::getControllerClass() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 337
+Cake\Controller\ControllerFactory::create() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 72
+Cake\Http\BaseApplication::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 318
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 174
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 186
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 131
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 58
+Cake\Http\Server::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Server.php, line 90
+[main] /var/www/html/Property-Management/webroot/index.php, line 40
+
+2023-02-02 03:49:41 notice: Optional parameter $id declared before required parameter $status is implicitly treated as a required parameter
+Request URL: /users/admin-login
+Referer URL: http://localhost:8765/users/admin-login
+Client IP: 127.0.0.1
+Trace:
+include /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\includeFile /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\ClassLoader::loadClass() /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 428
+class_exists [internal], line ??
+Cake\Core\App::_classExistsInBase() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 161
+Cake\Core\App::className() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 68
+Cake\Controller\ControllerFactory::getControllerClass() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 337
+Cake\Controller\ControllerFactory::create() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 72
+Cake\Http\BaseApplication::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 318
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 174
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 186
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 131
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 58
+Cake\Http\Server::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Server.php, line 90
+[main] /var/www/html/Property-Management/webroot/index.php, line 40
+
+2023-02-02 03:59:51 notice: Optional parameter $id declared before required parameter $status is implicitly treated as a required parameter
+Request URL: /users/admin-login
+Referer URL: http://localhost:8765/users/admin-login
+Client IP: 127.0.0.1
+Trace:
+include /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\includeFile /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\ClassLoader::loadClass() /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 428
+class_exists [internal], line ??
+Cake\Core\App::_classExistsInBase() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 161
+Cake\Core\App::className() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 68
+Cake\Controller\ControllerFactory::getControllerClass() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 337
+Cake\Controller\ControllerFactory::create() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 72
+Cake\Http\BaseApplication::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 318
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 174
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 186
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 131
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 58
+Cake\Http\Server::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Server.php, line 90
+[main] /var/www/html/Property-Management/webroot/index.php, line 40
+
+2023-02-02 04:35:00 notice: Optional parameter $id declared before required parameter $status is implicitly treated as a required parameter
+Request URL: /users/user-login
+Referer URL: http://localhost:8765/users/admin
+Client IP: 127.0.0.1
+Trace:
+include /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\includeFile /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\ClassLoader::loadClass() /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 428
+class_exists [internal], line ??
+Cake\Core\App::_classExistsInBase() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 161
+Cake\Core\App::className() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 68
+Cake\Controller\ControllerFactory::getControllerClass() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 337
+Cake\Controller\ControllerFactory::create() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 72
+Cake\Http\BaseApplication::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 318
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 174
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 186
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 131
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 58
+Cake\Http\Server::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Server.php, line 90
+[main] /var/www/html/Property-Management/webroot/index.php, line 40
+
+2023-02-02 04:35:40 notice: Optional parameter $id declared before required parameter $status is implicitly treated as a required parameter
+Request URL: /users/indexpage
+Client IP: 127.0.0.1
+Trace:
+include /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\includeFile /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\ClassLoader::loadClass() /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 428
+class_exists [internal], line ??
+Cake\Core\App::_classExistsInBase() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 161
+Cake\Core\App::className() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 68
+Cake\Controller\ControllerFactory::getControllerClass() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 337
+Cake\Controller\ControllerFactory::create() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 72
+Cake\Http\BaseApplication::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 318
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 174
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 186
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 131
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 58
+Cake\Http\Server::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Server.php, line 90
+[main] /var/www/html/Property-Management/webroot/index.php, line 40
+
+2023-02-02 05:38:48 notice: Optional parameter $id declared before required parameter $status is implicitly treated as a required parameter
+Request URL: /users/user-login
+Referer URL: http://localhost:8765/users/user-login
+Client IP: 127.0.0.1
+Trace:
+include /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\includeFile /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\ClassLoader::loadClass() /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 428
+class_exists [internal], line ??
+Cake\Core\App::_classExistsInBase() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 161
+Cake\Core\App::className() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 68
+Cake\Controller\ControllerFactory::getControllerClass() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 337
+Cake\Controller\ControllerFactory::create() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 72
+Cake\Http\BaseApplication::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 318
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 174
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 186
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 131
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 58
+Cake\Http\Server::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Server.php, line 90
+[main] /var/www/html/Property-Management/webroot/index.php, line 40
+
+2023-02-02 06:20:42 notice: Optional parameter $id declared before required parameter $status is implicitly treated as a required parameter
+Request URL: /users/user-login
+Referer URL: http://localhost:8765/users/admin
+Client IP: 127.0.0.1
+Trace:
+include /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\includeFile /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\ClassLoader::loadClass() /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 428
+class_exists [internal], line ??
+Cake\Core\App::_classExistsInBase() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 161
+Cake\Core\App::className() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 68
+Cake\Controller\ControllerFactory::getControllerClass() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 337
+Cake\Controller\ControllerFactory::create() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 72
+Cake\Http\BaseApplication::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 318
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 174
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 186
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 131
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 58
+Cake\Http\Server::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Server.php, line 90
+[main] /var/www/html/Property-Management/webroot/index.php, line 40
+
+2023-02-02 06:31:12 notice: Undefined property: UsersController::$Authentication in /var/www/html/Property-Management/src/Controller/UsersController.php on line 307
+Request URL: /users/user-login
+Referer URL: http://localhost:8765/users/user-login
+Client IP: 127.0.0.1
+Trace:
+Cake\Controller\Controller::__get() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/Controller.php, line 337
+App\Controller\UsersController::userLogin() /var/www/html/Property-Management/src/Controller/UsersController.php, line 307
+Cake\Controller\Controller::invokeAction() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/Controller.php, line 547
+Cake\Controller\ControllerFactory::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 139
+Cake\Controller\ControllerFactory::invoke() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 114
+Cake\Http\BaseApplication::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 320
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 174
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 186
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 131
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 58
+Cake\Http\Server::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Server.php, line 90
+[main] /var/www/html/Property-Management/webroot/index.php, line 40
+
+2023-02-02 06:32:39 notice: Optional parameter $id declared before required parameter $status is implicitly treated as a required parameter
+Request URL: /users/user-login
+Referer URL: http://localhost:8765/users/user-login
+Client IP: 127.0.0.1
+Trace:
+include /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\includeFile /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\ClassLoader::loadClass() /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 428
+class_exists [internal], line ??
+Cake\Core\App::_classExistsInBase() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 161
+Cake\Core\App::className() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 68
+Cake\Controller\ControllerFactory::getControllerClass() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 337
+Cake\Controller\ControllerFactory::create() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 72
+Cake\Http\BaseApplication::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 318
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 174
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 186
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 131
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 58
+Cake\Http\Server::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Server.php, line 90
+[main] /var/www/html/Property-Management/webroot/index.php, line 40
+
+2023-02-02 06:39:48 notice: Optional parameter $id declared before required parameter $status is implicitly treated as a required parameter
+Request URL: /users/user-login
+Referer URL: http://localhost:8765/users/user-login
+Client IP: 127.0.0.1
+Trace:
+include /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\includeFile /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\ClassLoader::loadClass() /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 428
+class_exists [internal], line ??
+Cake\Core\App::_classExistsInBase() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 161
+Cake\Core\App::className() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 68
+Cake\Controller\ControllerFactory::getControllerClass() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 337
+Cake\Controller\ControllerFactory::create() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 72
+Cake\Http\BaseApplication::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 318
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 174
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 186
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 131
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 58
+Cake\Http\Server::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Server.php, line 90
+[main] /var/www/html/Property-Management/webroot/index.php, line 40
+
+2023-02-02 06:40:33 notice: Optional parameter $id declared before required parameter $status is implicitly treated as a required parameter
+Request URL: /users/user-login
+Referer URL: http://localhost:8765/users/user-login
+Client IP: 127.0.0.1
+Trace:
+include /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\includeFile /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\ClassLoader::loadClass() /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 428
+class_exists [internal], line ??
+Cake\Core\App::_classExistsInBase() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 161
+Cake\Core\App::className() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 68
+Cake\Controller\ControllerFactory::getControllerClass() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 337
+Cake\Controller\ControllerFactory::create() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 72
+Cake\Http\BaseApplication::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 318
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 174
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 186
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 131
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 58
+Cake\Http\Server::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Server.php, line 90
+[main] /var/www/html/Property-Management/webroot/index.php, line 40
+
+2023-02-02 06:42:46 notice: Optional parameter $id declared before required parameter $status is implicitly treated as a required parameter
+Request URL: /users/user-login
+Referer URL: http://localhost:8765/users/admin
+Client IP: 127.0.0.1
+Trace:
+include /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\includeFile /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\ClassLoader::loadClass() /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 428
+class_exists [internal], line ??
+Cake\Core\App::_classExistsInBase() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 161
+Cake\Core\App::className() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 68
+Cake\Controller\ControllerFactory::getControllerClass() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 337
+Cake\Controller\ControllerFactory::create() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 72
+Cake\Http\BaseApplication::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 318
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 174
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 186
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 131
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 58
+Cake\Http\Server::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Server.php, line 90
+[main] /var/www/html/Property-Management/webroot/index.php, line 40
+
+2023-02-02 06:44:50 notice: Optional parameter $id declared before required parameter $status is implicitly treated as a required parameter
+Request URL: /users/user-login
+Referer URL: http://localhost:8765/users/user-login
+Client IP: 127.0.0.1
+Trace:
+include /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\includeFile /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\ClassLoader::loadClass() /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 428
+class_exists [internal], line ??
+Cake\Core\App::_classExistsInBase() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 161
+Cake\Core\App::className() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 68
+Cake\Controller\ControllerFactory::getControllerClass() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 337
+Cake\Controller\ControllerFactory::create() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 72
+Cake\Http\BaseApplication::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 318
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 174
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 186
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 131
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 58
+Cake\Http\Server::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Server.php, line 90
+[main] /var/www/html/Property-Management/webroot/index.php, line 40
+
+2023-02-02 06:45:05 notice: Optional parameter $id declared before required parameter $status is implicitly treated as a required parameter
+Request URL: /users/user-login
+Referer URL: http://localhost:8765/users/user-login
+Client IP: 127.0.0.1
+Trace:
+include /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\includeFile /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\ClassLoader::loadClass() /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 428
+class_exists [internal], line ??
+Cake\Core\App::_classExistsInBase() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 161
+Cake\Core\App::className() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 68
+Cake\Controller\ControllerFactory::getControllerClass() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 337
+Cake\Controller\ControllerFactory::create() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 72
+Cake\Http\BaseApplication::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 318
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 174
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 186
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 131
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 58
+Cake\Http\Server::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Server.php, line 90
+[main] /var/www/html/Property-Management/webroot/index.php, line 40
+
+2023-02-02 06:47:14 notice: Optional parameter $id declared before required parameter $status is implicitly treated as a required parameter
+Request URL: /users/user-login
+Referer URL: http://localhost:8765/users/property-listing
+Client IP: 127.0.0.1
+Trace:
+include /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\includeFile /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\ClassLoader::loadClass() /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 428
+class_exists [internal], line ??
+Cake\Core\App::_classExistsInBase() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 161
+Cake\Core\App::className() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 68
+Cake\Controller\ControllerFactory::getControllerClass() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 337
+Cake\Controller\ControllerFactory::create() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 72
+Cake\Http\BaseApplication::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 318
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 174
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 186
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 131
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 58
+Cake\Http\Server::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Server.php, line 90
+[main] /var/www/html/Property-Management/webroot/index.php, line 40
+
+2023-02-02 06:48:15 notice: Optional parameter $id declared before required parameter $status is implicitly treated as a required parameter
+Request URL: /users/user-login
+Referer URL: http://localhost:8765/users/admin-login
+Client IP: 127.0.0.1
+Trace:
+include /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\includeFile /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\ClassLoader::loadClass() /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 428
+class_exists [internal], line ??
+Cake\Core\App::_classExistsInBase() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 161
+Cake\Core\App::className() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 68
+Cake\Controller\ControllerFactory::getControllerClass() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 337
+Cake\Controller\ControllerFactory::create() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 72
+Cake\Http\BaseApplication::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 318
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 174
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 186
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 131
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 58
+Cake\Http\Server::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Server.php, line 90
+[main] /var/www/html/Property-Management/webroot/index.php, line 40
+
+2023-02-02 09:41:56 notice: Optional parameter $id declared before required parameter $status is implicitly treated as a required parameter
+Request URL: /properties
+Client IP: 127.0.0.1
+Trace:
+include /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\includeFile /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 571
+Composer\Autoload\ClassLoader::loadClass() /var/www/html/Property-Management/vendor/composer/ClassLoader.php, line 428
+class_exists [internal], line ??
+Cake\Core\App::_classExistsInBase() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 161
+Cake\Core\App::className() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Core/App.php, line 68
+Cake\Controller\ControllerFactory::getControllerClass() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 337
+Cake\Controller\ControllerFactory::create() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 72
+Cake\Http\BaseApplication::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 318
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 174
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 157
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 186
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 131
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 58
+Cake\Http\Server::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Server.php, line 90
+[main] /var/www/html/Property-Management/webroot/index.php, line 40
+
+2023-02-02 13:04:01 notice: Undefined property: UsersController::$property_id in /var/www/html/Property-Management/src/Controller/UsersController.php on line 294
+Request URL: /users/property-list-view/6
+Referer URL: http://localhost:8765/users/property-list-view/6
+Client IP: 127.0.0.1
+Trace:
+Cake\Controller\Controller::__get() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/Controller.php, line 337
+App\Controller\UsersController::propertyListView() /var/www/html/Property-Management/src/Controller/UsersController.php, line 294
+Cake\Controller\Controller::invokeAction() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/Controller.php, line 547
+Cake\Controller\ControllerFactory::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 139
+Cake\Controller\ControllerFactory::invoke() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php, line 114
+Cake\Http\BaseApplication::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/BaseApplication.php, line 320
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php, line 174
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php, line 162
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php, line 186
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php, line 131
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() /var/www/html/Property-Management/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Runner.php, line 58
+Cake\Http\Server::run() /var/www/html/Property-Management/vendor/cakephp/cakephp/src/Http/Server.php, line 90
+[main] /var/www/html/Property-Management/webroot/index.php, line 40
+

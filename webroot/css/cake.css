@@ -268,7 +268,7 @@ th {
     width: 50%;
     text-align: center;
     background-color: seashell;
-    margin-left: 23rem;
+    margin-left: 29rem;
     margin-top: 13rem;
 }
 
@@ -285,13 +285,14 @@ label {
     border: 0.5rem solid;
     padding: 19px;
     background-color: cornsilk;
-    margin-top: 6rem;
+    margin-top: 1rem;
 }
 
 .test {
-    margin-left: 39rem;
+
     margin-top: 1rem;
     font-size: xx-large;
     border-radius: 5rem;
     padding: 3px 23px;
+    margin-left: 50rem;
 }

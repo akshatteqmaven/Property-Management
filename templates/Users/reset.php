@@ -1,3 +1,5 @@
+<?= $this->Html->css(['color']); ?>
+
 <div class="container">
     <div class="row">
         <aside class="column">

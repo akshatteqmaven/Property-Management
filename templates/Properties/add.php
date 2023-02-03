@@ -10,7 +10,7 @@
     <aside class="column">
         <div class="side-nav">
             <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Properties'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('Go back'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
     <div class="column-responsive column-80">
@@ -22,10 +22,8 @@
                 // echo $this->Form->control('user_id', ['options' => $users]);
                 echo $this->Form->control('property_title');
                 echo $this->Form->control('property_description');
-                echo $this->Form->control('property_tags');
-                echo $this->Form->control('property_image', ['type' => 'file', 'required' => false]);
-                echo $this->Form->select('property_category', [
-                    '' => [
+                echo $this->Form->control('property_category', [
+                    'options' => [
                         'Residential' => 'Residential',
                         'Industrial' => 'Industrial',
                         'Commercial' => 'Commercial',
@@ -33,12 +31,8 @@
                         'Other' => 'Other'
                     ]
                 ]);
-                echo $this->Form->select('status', [
-                    '' => [
-                        'Active' => 'Active',
-                        'Inactive' => 'Inactive'
-                    ]
-                ]);
+                echo $this->Form->control('property_image', ['type' => 'file', 'required' => false]);
+                echo $this->Form->control('property_tags');
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>

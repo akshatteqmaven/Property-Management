@@ -44,6 +44,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <body>
 
     <?= $this->element('flash/navbar'); ?>
+
+
     <main class="main">
         <div class="container">
             <?= $this->Flash->render() ?>

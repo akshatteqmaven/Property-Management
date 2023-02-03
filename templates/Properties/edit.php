@@ -24,9 +24,9 @@
                 <legend><?= __('Edit Property') ?></legend>
                 <?php
                 // echo $this->Form->control('user_id', ['options' => $users]);
+                echo $this->Form->control('property_image', ['type' => 'file', 'required' => false]);
                 echo $this->Form->control('property_title');
                 echo $this->Form->control('property_description');
-                echo $this->Form->control('property_image', ['type' => 'file', 'required' => false]);
                 echo $this->Form->control('property_category', [
                     'options' => [
                         'Residential' => 'Residential',
@@ -36,12 +36,7 @@
                         'Other' => 'Other'
                     ]
                 ]);
-                echo $this->Form->control('status', [
-                    'options' => [
-                        'Active' => 'Active',
-                        'Inactive' => 'Inactive'
-                    ]
-                ]);
+
                 echo $this->Form->control('property_tags');
                 ?>
             </fieldset>

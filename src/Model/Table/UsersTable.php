@@ -72,13 +72,71 @@ class UsersTable extends Table
         $validator
             ->email('email')
             ->requirePresence('email', 'create')
-            ->notEmptyString('email', 'please enter your email');
+            ->notEmptyString('email', 'Please enter your email')
+            ->add('email', 'unique', [
+                'rule' => 'validateUnique', 'provider' => 'table',
+                'message' => 'Email already exist please enter another email',
+            ]);
 
         $validator
             ->scalar('password')
-            ->maxLength('password', 155)
+            ->maxLength('password', 100)
             ->requirePresence('password', 'create')
-            ->notEmptyString('password', 'please enter your password');
+            ->add('password', [
+                'notBlank' => [
+                    'rule'    => ['notBlank'],
+                    'message' => 'Please enter your password',
+                    'last' => true,
+                ],
+                'upperCase' => [
+                    'rule' => function ($value) {
+                        $count = mb_strlen(preg_replace('![^A-Z]+!', '', $value));
+                        if ($count > 0) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    },
+                    'message' => 'Please enter at least one uppercase',
+                ],
+                'lowerCase' => [
+                    'rule' => function ($value) {
+                        $count = mb_strlen(preg_replace('![^a-z]+!', '', $value));
+                        if ($count > 0) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    },
+                    'message' => 'Please enter at least one lowercase',
+                ],
+                'numeric' => [
+                    'rule' => function ($value) {
+                        $count = mb_strlen(preg_replace('![^0-9]+!', '', $value));
+                        if ($count > 0) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    },
+                    'message' => 'Please enter at least one numeric',
+                ],
+                'special' => [
+                    'rule' => function ($value) {
+                        $count = mb_strlen(preg_replace('![^@#*]+!', '', $value));
+                        if ($count > 0) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    },
+                    'message' => 'Please enter at least one special character',
+                ],
+                'minLength' => [
+                    'rule' => ['minLength', 8],
+                    'message' => 'Password need to be 8 characters long',
+                ],
+            ]);
         $validator
             ->scalar('confirm_password')
             ->maxLength('confirm_password', 155)

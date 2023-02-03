@@ -1,3 +1,4 @@
+<?= $this->Html->css(['color']); ?>
 <div class="panel_main" style="background-color: lightsteelblue;">
     <h2 class="text-center">login</h2>
     <?= $this->Form->create(); ?>

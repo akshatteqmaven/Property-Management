@@ -13,7 +13,6 @@
             <thead>
                 <tr>
                     <th><?= $this->Paginator->sort('id') ?></th>
-                    <!-- <th><?= $this->Paginator->sort('user_id') ?></th> -->
                     <th><?= $this->Paginator->sort('property_title') ?></th>
                     <th><?= $this->Paginator->sort('property_description') ?></th>
                     <th><?= $this->Paginator->sort('property_category') ?></th>
@@ -29,13 +28,19 @@
                 <?php foreach ($properties as $property) : ?>
                     <tr>
                         <td><?= $this->Number->format($property->id) ?></td>
-                        <!-- <td><?= $property->has('user') ? $this->Html->link($property->user->id, ['controller' => 'Users', 'action' => 'view', $property->user->id]) : '' ?></td> -->
                         <td><?= h($property->property_title) ?></td>
                         <td><?= h($property->property_description) ?></td>
                         <td><?= h($property->property_category) ?></td>
                         <td><?= $this->Html->image(h($property->property_image)) ?></td>
                         <td><?= h($property->property_tags) ?></td>
-                        <td><?= h($property->status) ?></td>
+                        <td>
+                            <?php if ($property->status == 1) : ?>
+                                <?= $this->Form->postLink(__('Active'), ['action' => 'propertyStatus', $property->id, $property->status], ['confirm' => __('Are you sure you want to change the status of : {0}?', $property->property_title)]) ?>
+                            <?php else : ?>
+                                <?= $this->Form->postLink(__('Inactive'), ['action' => 'propertyStatus', $property->id, $property->status], ['confirm' => __('Are you sure you want to  change the status of : {0}?', $property->property_title)]) ?>
+                            <?php endif; ?>
+
+                        </td>
                         <td><?= h($property->created_date) ?></td>
                         <td><?= h($property->modified_date) ?></td>
                         <td class="actions">

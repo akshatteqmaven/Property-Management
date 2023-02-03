@@ -75,3 +75,31 @@ a:hover {
     list-style: none;
     transition: all 0.5s ease;
 }
+
+/* -----------------------------color changing css--------------------------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+
+
+.nav {
+
+    background: linear-gradient(-45deg, #de3c0a, #e73c7e, #6bde0d, #23d5ab);
+    background-size: 400% 400%;
+    position: relative;
+    animation: animate 5.5s ease-in-out infinite;
+
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

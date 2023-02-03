@@ -1,5 +1,7 @@
 <br>
-<!-- <div class="index large-4 medium-4 large-offset-4 medium-offset-4 columns"> -->
+<?= $this->Html->css(['color']); ?>
+
+
 <div class="panel_reg">
     <h2 class="text-center">Registration Form</h2>
     <?= $this->Form->create($user, ['enctype' => 'multipart/form-data']); ?>
@@ -15,17 +17,17 @@
     </div>
     <div class="row">
         <div class="col">
-            <?= $this->Form->control('users_profile.contact', ['required' => false]); ?>
+            <?= $this->Form->control('email', ['required' => false]); ?>
 
         </div>
         <div class="col">
-            <?= $this->Form->control('users_profile.address', ['required' => false]); ?>
+            <?= $this->Form->control('users_profile.contact', ['required' => false]); ?>
 
         </div>
     </div>
     <div class="row">
         <div class="col">
-            <?= $this->Form->control('email', ['required' => false]); ?>
+            <?= $this->Form->control('users_profile.address', ['required' => false]); ?>
 
         </div>
         <div class="col">

@@ -36,6 +36,8 @@ class PropertiesController extends AppController
      */
     public function view($id = null)
     {
+        $this->Model = $this->loadModel('UsersProfile');
+
         $property = $this->Properties->get($id, [
             'contain' => ['Users', 'PropertyComments'],
         ]);
@@ -80,7 +82,6 @@ class PropertiesController extends AppController
                 $this->Flash->success(__('The property has been saved.'));
                 return $this->redirect(['action' => 'index']);
             } else {
-
                 $this->Flash->error(__('The property could not be saved. Please, try again.'));
             }
         }
@@ -147,6 +148,29 @@ class PropertiesController extends AppController
             $this->Flash->error(__('The property could not be deleted. Please, try again.'));
         }
 
+        return $this->redirect(['action' => 'index']);
+    }
+    public function propertyStatus($id, $status)
+    {
+
+        $property = $this->Properties->get($id);
+
+
+        if ($status == 1) {
+            $status = 0;
+        } else {
+            $status = 1;
+        }
+
+        $arr = array();
+        $arr['status'] = $status;
+        // echo "<br>";
+        // print_r($arr);
+        // exit;
+        $property = $this->Properties->patchEntity($property, $arr);
+        if ($this->Properties->save($property)) {
+            $this->Flash->success(__('Property status has been changed.'));
+        }
         return $this->redirect(['action' => 'index']);
     }
 }

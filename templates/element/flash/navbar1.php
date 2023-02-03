@@ -5,10 +5,8 @@
                         <li class="nav-link">
                         </li>
                         <li class="nav-link">
-                            <?= $this->Html->link(__('Index'), ['controller' => 'users', 'action' => 'admin']) ?>
                         </li>
                         <li class="nav-link">
-                            <?= $this->Html->link(__('Blog'), ['action' => '#']) ?>
                         </li>
                     </ul>
                 </div>

@@ -25,7 +25,10 @@ class UsersController extends AppController
      */
     public function index()
     {
-        $users = $this->paginate($this->Users, ['contain' => ['UsersProfile']]);
+        $this->load = $this->loadModel('Properties');
+
+        $users = $this->paginate($this->Users, ['contain' => ['Properties']]);
+        // dd($users);
 
         $this->set(compact('users'));
     }
@@ -189,6 +192,9 @@ class UsersController extends AppController
         }
         $this->set(compact('user'));
     }
+    public function indexpage()
+    {
+    }
 
     // -------------------------------------end here----------------------------------------------
 
@@ -219,11 +225,10 @@ class UsersController extends AppController
         $this->Auth->allow(['signup']);
         $this->Auth->allow(['userLogin']);
         $this->Auth->allow(['adminLogin']);
-        $this->Auth->allow(['admin']);
         $this->Auth->allow(['forgot']);
         $this->Auth->allow(['reset']);
         $this->Auth->allow(['getotp']);
-        $this->Auth->allow('logout');
+        $this->Auth->allow(['indexpage']);
     }
     // ----------------------------------ended-------------------------------------------------//
     //User login function
@@ -234,15 +239,12 @@ class UsersController extends AppController
             if ($users) {
                 $this->Auth->setUser($users);
 
-                if ($users['status'] == 1) {
-                    $this->Flash->error(__('you have no permission to login'));
-                    return $this->redirect(['controller' => 'Users', 'action' => 'userLogin']);
-                } elseif ($users['user_type'] == 0) {
+                if ($users['user_type'] == 0) {
                     $this->Flash->error(__('You are not autherized to login '));
-                    return $this->redirect(['controller' => 'Users', 'action' => 'userLogin']);
+                } else {
+                    $this->Flash->success('You are logged in now');
+                    return $this->redirect(['controller' => 'Users', 'action' => 'admin']);
                 }
-                $this->Flash->success('You are logged in now');
-                return $this->redirect(['controller' => 'Users', 'action' => 'admin']);
             }
             //not login
             $this->Flash->error('Please enter your correct login credentials');
@@ -258,13 +260,63 @@ class UsersController extends AppController
     //index for users
     public function propertyListing()
     {
+        $this->load = $this->loadModel('Properties');
+
+        $this->paginate = [
+            'contain' => ['Users'],
+        ];
+        $properties = $this->paginate($this->Properties);
+
+        $this->set(compact('properties'));
+    }
+    // ----------------------------------ended-------------------------------------------------//
+    public function propertyListView($id=null,$property_id=null )
+    {
+
+
+        $this->Model = $this->loadModel('PropertyComments');
+        $this->Model = $this->loadModel('Properties');
+
+        $property = $this->Properties->get($id, [
+            'contain' => ['Users', 'PropertyComments'],
+        ]);
+        $this->paginate = [
+            'contain' => ['Properties', 'Users'],
+        ];
+        // pr($property->id);
+        // die;
+        $propertyComments = $this->paginate($this->PropertyComments);
+
+
+
+        $propertyComments = $this->PropertyComments->newEmptyEntity();
+
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $data = $this->request->getData();
+            $data['property_id'] = $id;
+            $data['user_id'] = $id;
+
+            $propertyComments = $this->PropertyComments->patchEntity($propertyComments, $data);
+
+            if ($this->PropertyComments->save($propertyComments)) {
+                $this->Flash->success('Your comment is saved');
+                return $this->redirect(['action' => 'propertyListing']);
+            }
+            $this->Flash->error(__('The property comment could not be saved. Please, try again.'));
+        }
+        $properties = $this->PropertyComments->Properties->find('list', ['limit' => 200])->all();
+        $users = $this->PropertyComments->Users->find('list', ['limit' => 200])->all();
+
+
+
+        $this->set(compact('property', 'propertyComments', 'properties', 'users'));
     }
     // ----------------------------------ended-------------------------------------------------//
     public function admin()
     {
     }
     // ----------------------------------ended-------------------------------------------------//
-    public function userStatus($id = null, $status)
+    public function userStatus($id, $status)
     {
         $this->request->allowMethod(['post']);
         $user = $this->Users->get($id);
@@ -292,17 +344,58 @@ class UsersController extends AppController
 
                 if ($users['status'] == 1) {
                     $this->Flash->error(__('you have no permission to login'));
-                    return $this->redirect(['controller' => 'Users', 'action' => 'userLogin']);
-                } elseif ($users['user_type'] == 1) {
+                } else if ($users['user_type'] == 1) {
                     $this->Flash->error(__('You are not autherized to login '));
-                    return $this->redirect(['controller' => 'Users', 'action' => 'userLogin']);
+                } else {
+                    $this->Flash->success('You are logged in now');
+                    return $this->redirect(['controller' => 'Users', 'action' => 'propertyListing']);
                 }
-                $this->Flash->success('You are logged in now');
-                return $this->redirect(['controller' => 'Users', 'action' => 'propertyListing']);
             }
             //not login
             $this->Flash->error('Please enter your correct login credentials');
         }
     }
     // ----------------------------------ended-------------------------------------------------//
+
+
+    public function home6($id = null)
+    {
+
+        $this->Model = $this->loadModel('PropertyComments');
+        $this->Model = $this->loadModel('Properties');
+
+        $property = $this->Properties->get($id, [
+            'contain' => ['Users', 'PropertyCategories', 'PropertyComments'],
+        ]);
+        $this->paginate = [
+            'contain' => ['Properties', 'Users'],
+        ];
+        $propertyComments = $this->paginate($this->PropertyComments);
+
+        $this->set(compact('propertyComments'));
+
+
+
+        $propertyComment = $this->PropertyComments->newEmptyEntity();
+
+        if ($this->request->is(['patch', 'post', 'put'])) {
+
+            $propertyComment = $this->PropertyComments->patchEntity($propertyComment, $this->request->getData());
+
+            if ($this->PropertyComments->save($propertyComment)) {
+                print_r($this->PropertyComments->save($propertyComment));
+                // die;
+                // $this->Flash->success(__('The property comment has been saved.'));
+
+                return $this->redirect(['action' => 'propertyListing']);
+            }
+            $this->Flash->error(__('The property comment could not be saved. Please, try again.'));
+        }
+        $properties = $this->PropertyComments->Properties->find('list', ['limit' => 200])->all();
+        $users = $this->PropertyComments->Users->find('list', ['limit' => 200])->all();
+
+
+
+        $this->set(compact('property', 'propertyComment', 'properties', 'users'));
+    }
 }

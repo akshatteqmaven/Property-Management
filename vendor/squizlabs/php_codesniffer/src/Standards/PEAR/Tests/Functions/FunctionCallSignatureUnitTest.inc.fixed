@@ -394,7 +394,7 @@ function foo()
 }
 
 $deprecated_functions = [
-    'the_category_ID'
+    'the_property_category_ID'
     => function_call( // 7 spaces, not 8. This is the problem line.
         $a,
         $b
@@ -402,7 +402,7 @@ $deprecated_functions = [
 ];
 
 $deprecated_functions = [
-    'the_category_ID'
+    'the_property_category_ID'
         => function_call( // 9 spaces, not 8. This is the problem line.
             $a,
             $b
@@ -414,7 +414,7 @@ $deprecated_functions = [
 printf(
     '<select name="%1$s" id="%2$s">%3$s</select>',
     $obj->getName(), // Trailing comment.
-    $obj->getID(), // phpcs:ignore Standard.Category.SniffName -- for reasons.
+    $obj->getID(), // phpcs:ignore Standard.property_category.SniffName -- for reasons.
     $option
 );
 

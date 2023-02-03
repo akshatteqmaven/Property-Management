@@ -9,9 +9,9 @@
                 • Fields: id, user_id (foreign key to users table),
                 •  first_name, last_name, contact, address, profile_image, created_date, modified_date
             iii. property_categories
-                • Fields: id, category_name, status, created_date, modified_date
+                • Fields: id, property_category_name, status, created_date, modified_date
             iv. properties
-                • Fields: id, property_title, property_description, property_category, property_image, property_tags, status (active/inactive), created_date, modified_date
+                • Fields: id, property_title, property_description, property_category , property_image, property_tags, status (active/inactive), created_date, modified_date
             v. property_comments
                 • Fields: id, property_id (foreign key to properties table), user_id (foreign key to users table), comments, , created_date, modified_date
     5. Modules/features
@@ -26,38 +26,38 @@
                 • User will be able to see listing of active properties with respective categories.
                 • User will be able to click on any property link from listing page, and will be redirected to Property detail page.
             iv. View Property detail page
-                • User will be able to see Property Title, Description, Image (thumbnail), Category and posted date.
+                • User will be able to see Property Title, Description, Image (thumbnail), property_category and posted date.
                 • User will be able to see all previous posted comments on particular property.
                 • User will be able to post comments on the particular property (add a Textarea for adding a new comment below the Comments listing).
         b. Admin
             i. Login and Logout
-            ii. Category Management
-                • Category Listing
+            ii. property_category Management
+                • property_category Listing
                     a. Admin will see listing of all categories (active/inactive)
-                    b. Admin will be able to mark any category active/inactive from the listing page itself.
-                • Add/Edit Category
-                    a. Admin will be able to add/edit new category having form fields as: Category Name, Status
-                    b. You can use same page for Add and Edit category.
+                    b. Admin will be able to mark any property_category active/inactive from the listing page itself.
+                • Add/Edit property_category
+                    a. Admin will be able to add/edit new property_category having form fields as: property_category Name, Status
+                    b. You can use same page for Add and Edit property_category.
                 • Delete Property
-                    a. Admin will be able to delete any category from the listing itself. 
-                    b. A confirmation alert should be shown to the admin before deleting any category.
+                    a. Admin will be able to delete any property_category from the listing itself.
+                    b. A confirmation alert should be shown to the admin before deleting any property_category.
             iii. User Management
                 • Users Listing
                     a. Admin will be able to see listing of all users (active/inactive).
                     b. Admin will be able to mark any user active/inactive from the listing page itself.
                 • Delete User
-                    a. Admin will be able to delete any user from the listing itself. 
-                    b. A confirmation alert should be shown to the admin before deleting any user. 
+                    a. Admin will be able to delete any user from the listing itself.
+                    b. A confirmation alert should be shown to the admin before deleting any user.
             iv. Property Management
                 • Property Listing
                     a. Admin will be able to see listing of all properties (active/inactive) with respective categories.
                     b. Admin will be able to mark any property active/inactive from the listing page itself.
                 • Add/Edit Property
-                    a. Admin will be able to add/edit new property item having form fields as: Property Title, Property Description, Property Category (Dropdown), Property Image (Admin can upload), Property Tags (Multiple separated by comma)
+                    a. Admin will be able to add/edit new property item having form fields as: Property Title, Property Description, Property property_category (Dropdown), Property Image (Admin can upload), Property Tags (Multiple separated by comma)
                     b. Separate pages to be created for Add and Edit property forms.
                 • Delete Property
-                    a. Admin will be able to delete any property item from the listing itself. 
-                    b. A confirmation alert should be shown to the admin before deleting any property item. 
+                    a. Admin will be able to delete any property item from the listing itself.
+                    b. A confirmation alert should be shown to the admin before deleting any property item.
     6. Points to take care
         a. Separate login URL for Frontend and Admin.
         b. On frontend, only logged-in user will be able to access the property listing and detail page.

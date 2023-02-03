@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Notify-send report for PHP_CodeSniffer.
  *
@@ -75,10 +76,9 @@ class Notifysend implements Report
         $this->version = str_replace(
             'notify-send ',
             '',
-            exec($this->path.' --version')
+            exec($this->path . ' --version')
         );
-
-    }//end __construct()
+    } //end __construct()
 
 
     /**
@@ -95,15 +95,14 @@ class Notifysend implements Report
      *
      * @return bool
      */
-    public function generateFileReport($report, File $phpcsFile, $showSources=false, $width=80)
+    public function generateFileReport($report, File $phpcsFile, $showSources = false, $width = 80)
     {
-        echo $report['filename'].PHP_EOL;
+        echo $report['filename'] . PHP_EOL;
 
         // We want this file counted in the total number
         // of checked files even if it has no errors.
         return true;
-
-    }//end generateFileReport()
+    } //end generateFileReport()
 
 
     /**
@@ -128,10 +127,10 @@ class Notifysend implements Report
         $totalErrors,
         $totalWarnings,
         $totalFixable,
-        $showSources=false,
-        $width=80,
-        $interactive=false,
-        $toScreen=true
+        $showSources = false,
+        $width = 80,
+        $interactive = false,
+        $toScreen = true
     ) {
         $checkedFiles = explode(PHP_EOL, trim($cachedData));
 
@@ -143,8 +142,7 @@ class Notifysend implements Report
         } else {
             $this->notifyErrors($msg);
         }
-
-    }//end generate()
+    } //end generate()
 
 
     /**
@@ -167,22 +165,21 @@ class Notifysend implements Report
 
         $msg = '';
         if ($totalFiles > 1) {
-            $msg .= 'Checked '.$totalFiles.' files'.PHP_EOL;
+            $msg .= 'Checked ' . $totalFiles . ' files' . PHP_EOL;
         } else {
-            $msg .= $checkedFiles[0].PHP_EOL;
+            $msg .= $checkedFiles[0] . PHP_EOL;
         }
 
         if ($totalWarnings > 0) {
-            $msg .= $totalWarnings.' warnings'.PHP_EOL;
+            $msg .= $totalWarnings . ' warnings' . PHP_EOL;
         }
 
         if ($totalErrors > 0) {
-            $msg .= $totalErrors.' errors'.PHP_EOL;
+            $msg .= $totalErrors . ' errors' . PHP_EOL;
         }
 
         return $msg;
-
-    }//end generateMessage()
+    } //end generateMessage()
 
 
     /**
@@ -197,8 +194,7 @@ class Notifysend implements Report
         $cmd .= ' "PHP CodeSniffer: Ok"';
         $cmd .= ' "All fine"';
         exec($cmd);
-
-    }//end notifyAllFine()
+    } //end notifyAllFine()
 
 
     /**
@@ -213,10 +209,9 @@ class Notifysend implements Report
         $cmd  = $this->getBasicCommand();
         $cmd .= ' -i error';
         $cmd .= ' "PHP CodeSniffer: Error"';
-        $cmd .= ' '.escapeshellarg(trim($msg));
+        $cmd .= ' ' . escapeshellarg(trim($msg));
         exec($cmd);
-
-    }//end notifyErrors()
+    } //end notifyErrors()
 
 
     /**
@@ -227,16 +222,15 @@ class Notifysend implements Report
     protected function getBasicCommand()
     {
         $cmd  = $this->path;
-        $cmd .= ' --category dev.validate';
+        $cmd .= ' --property_category dev.validate';
         $cmd .= ' -h int:transient:1';
-        $cmd .= ' -t '.(int) $this->timeout;
+        $cmd .= ' -t ' . (int) $this->timeout;
         if (version_compare($this->version, '0.7.3', '>=') === true) {
             $cmd .= ' -a phpcs';
         }
 
         return $cmd;
-
-    }//end getBasicCommand()
+    } //end getBasicCommand()
 
 
 }//end class

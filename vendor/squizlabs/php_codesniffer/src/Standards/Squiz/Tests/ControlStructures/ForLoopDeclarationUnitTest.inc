@@ -68,7 +68,7 @@ for (
 // Test multi-line FOR control structure with comments and annotations.
 for (
     $i = 0; /* Start */
-    $i < 10; /* phpcs:ignore Standard.Category.SniffName -- for reasons. */
+    $i < 10; /* phpcs:ignore Standard.property_category.SniffName -- for reasons. */
     $i++ // comment
 
 ) {}
@@ -112,18 +112,9 @@ for (
 // phpcs:set Squiz.ControlStructures.ForLoopDeclaration requiredSpacesBeforeClose 0
 
 // Test with semi-colon not belonging to for.
-for ($i = function() { return $this->i  ;    }; $i < function() { return $this->max; }; $i++) {}
-for ($i = function() { return $this->i; }; $i < function() { return $this->max; }  ;   $i++) {}
-
-// phpcs:set Squiz.ControlStructures.ForLoopDeclaration ignoreNewlines true
-for (
-    $i = 0;
-    $i < 5;
-    $i++
-) {
-    // body here
-}
-// phpcs:set Squiz.ControlStructures.ForLoopDeclaration ignoreNewlines false
-
-// This test has to be the last one in the file! Intentional parse error check.
-for
+for ($i = function() { return $this->i ; }; $i < function() { return $this->max;
+}; $i++) {} for ($i = function() { return $this->i; }; $i < function() { return
+$this->max; } ; $i++) {} // phpcs:set Squiz.ControlStructures.ForLoopDeclaration
+ignoreNewlines true for ( $i = 0; $i < 5; $i++ ) { // body here } // phpcs:set
+Squiz.ControlStructures.ForLoopDeclaration ignoreNewlines false // This test has
+to be the last one in the file! Intentional parse error check. for

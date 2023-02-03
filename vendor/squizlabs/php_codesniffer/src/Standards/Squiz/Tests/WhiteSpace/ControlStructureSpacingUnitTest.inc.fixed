@@ -233,7 +233,7 @@ echo 'hi';
 
 if ($true) {
     echo 'hi 2';
-} // phpcs:enable Standard.Category.Sniff -- for reasons.
+} // phpcs:enable Standard.property_category.Sniff -- for reasons.
 
 echo 'hi';
 

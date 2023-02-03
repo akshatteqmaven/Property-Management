@@ -59,26 +59,9 @@ class PropertiesController extends AppController
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      */
     public function add()
+
     {
         $property = $this->Properties->newEmptyEntity();
-        // if ($this->request->is('post')) {
-        //     $data = $this->request->getData();
-        //     $property = $this->Properties->patchEntity($property, $data);
-        //     $propertyImage = $this->request->getData("property_image");
-        //     $fileName = $propertyImage->getClientFilename();
-        //     $fileSize = $propertyImage->getSize();
-        //     $data["property_image"] = $fileName;
-        //     $imagepath = WWW_ROOT . "img" . DS . $fileName;
-        //     if ($fileName)
-        //         $fileName->moveTo($imagepath);
-        //     $property->Properties->property_image = $fileName;
-        //     if ($this->Properties->save($property)) {
-        //         $this->Flash->success(__('The property has been saved.'));
-
-        //         return $this->redirect(['action' => 'index']);
-        //     }
-        //     $this->Flash->error(__('The property could not be saved. Please, try again.'));
-        // }
         if ($this->request->is('post')) {
             $data = $this->request->getData();
             $propertyimage = $this->request->getData("property_image");
@@ -106,19 +89,15 @@ class PropertiesController extends AppController
      */
     public function edit($id = null)
     {
+        // $propertyCategories = $this->paginate($this->PropertyCategories);
+        // $this->set(compact('propertyCategories'));
+
         $property = $this->Properties->get($id, [
             'contain' => [],
         ]);
         $fileName2 = $property['property_image'];
 
         if ($this->request->is(['patch', 'post', 'put'])) {
-            // $property = $this->Properties->patchEntity($property, $this->request->getData());
-            // if ($this->Properties->save($property)) {
-            //     $this->Flash->success(__('The property has been saved.'));
-
-            //     return $this->redirect(['action' => 'index']);
-            // }
-            // $this->Flash->error(__('The property could not be saved. Please, try again.'));
             $data = $this->request->getData();
             $propertyimage = $this->request->getData("property_image");
             $filename = $propertyimage->getClientFilename();

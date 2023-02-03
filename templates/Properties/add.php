@@ -18,22 +18,32 @@
             <?= $this->Form->create($property, ['enctype' => 'multipart/form-data']) ?>
             <fieldset>
                 <legend><?= __('Add Property') ?></legend>
-                <?php
-                // echo $this->Form->control('user_id', ['options' => $users]);
-                echo $this->Form->control('property_title');
-                echo $this->Form->control('property_description');
-                echo $this->Form->control('property_category', [
-                    'options' => [
-                        'Residential' => 'Residential',
-                        'Industrial' => 'Industrial',
-                        'Commercial' => 'Commercial',
-                        'Institutional' => 'Institutional',
-                        'Other' => 'Other'
-                    ]
-                ]);
-                echo $this->Form->control('property_image', ['type' => 'file', 'required' => false]);
-                echo $this->Form->control('property_tags');
-                ?>
+                <div class="row">
+                    <div class="col">
+                        <?= $this->Form->control('property_title'); ?>
+                    </div>
+                    <div class="col">
+                        <?= $this->Form->control('property_description'); ?>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+
+                        <?= $this->Form->control('property_category', [
+                            'options' => [
+                                'Residential' => 'Residential',
+                                'Industrial' => 'Industrial',
+                                'Commercial' => 'Commercial',
+                                'Institutional' => 'Institutional',
+                                'Other' => 'Other'
+                            ]
+                        ]); ?>
+                    </div>
+                    <div class="col">
+                        <?= $this->Form->control('property_tags'); ?>
+                    </div>
+                </div>
+                <?= $this->Form->control('property_image', ['type' => 'file', 'required' => false]); ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>
             <?= $this->Form->end() ?>

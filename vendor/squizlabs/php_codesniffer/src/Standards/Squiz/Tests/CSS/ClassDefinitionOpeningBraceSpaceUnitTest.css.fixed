@@ -96,7 +96,7 @@ float: left; } }
 
 @media screen and (max-device-width: 769px) {
 
-    /* phpcs:ignore Standard.Category.Sniffname -- for reasons */
+    /* phpcs:ignore Standard.property_category.Sniffname -- for reasons */
     .blank-line-and-annotation-after-nesting-class-opening {
     }
 }

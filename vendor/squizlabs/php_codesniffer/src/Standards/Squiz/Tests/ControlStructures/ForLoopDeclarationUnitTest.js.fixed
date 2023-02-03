@@ -69,7 +69,7 @@ for (i = 0; i < 10; i++) {}
 
 // Test multi-line FOR control structure with comments and annotations.
 for (i = 0; /* Start */
-    i < 10; /* phpcs:ignore Standard.Category.SniffName -- for reasons. */
+    i < 10; /* phpcs:ignore Standard.property_category.SniffName -- for reasons. */
     i++ // comment
 
 ) {}

@@ -254,7 +254,7 @@ class RuleInclusionTest extends TestCase
             ],
             'ValidVariableNameSniff'                          => [
                 'PHP_CodeSniffer\Standards\Zend\Sniffs\NamingConventions\ValidVariableNameSniff',
-                'setforallincategory',
+                'setforallinproperty_category',
                 true,
             ],
             'ArrayIndentSniff'                                => [

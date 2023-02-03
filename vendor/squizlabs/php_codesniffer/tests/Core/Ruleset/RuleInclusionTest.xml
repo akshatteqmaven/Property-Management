@@ -9,7 +9,7 @@
 
     <rule ref="Zend.NamingConventions">
         <properties>
-            <property name="setforallincategory" value="true" />
+            <property name="setforallinproperty_category" value="true" />
         </properties>
     </rule>
 

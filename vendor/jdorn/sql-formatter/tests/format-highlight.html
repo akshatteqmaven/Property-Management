@@ -1,4 +1,6 @@
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">SELECT</span> 
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">SELECT</span> 
   <span style="color: #333;">customer_id</span><span >,</span> 
   <span style="color: #333;">customer_name</span><span >,</span> 
   <span style="font-weight:bold;">COUNT</span>(<span style="color: #333;">order_id</span>) <span style="font-weight:bold;">as</span> <span style="color: #333;">total</span> 
@@ -13,7 +15,9 @@
 <span style="font-weight:bold;">ORDER BY</span> 
   <span style="font-weight:bold;">COUNT</span>(<span style="color: #333;">order_id</span>) <span style="font-weight:bold;">DESC</span><span >;</span></pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">UPDATE</span> 
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">UPDATE</span> 
   <span style="color: #333;">customers</span> 
 <span style="font-weight:bold;">SET</span> 
   <span style="color: #333;">totalorders</span> <span >=</span> <span style="color: #333;">ordersummary</span><span >.</span><span style="color: #333;">total</span> 
@@ -30,7 +34,9 @@
 <span style="font-weight:bold;">WHERE</span> 
   <span style="color: #333;">customers</span><span >.</span><span style="color: #333;">customer_id</span> <span >=</span> <span style="color: #333;">ordersummary</span><span >.</span><span style="color: #333;">customer_id</span></pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">SELECT</span> 
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">SELECT</span> 
   <span >*</span> 
 <span style="font-weight:bold;">FROM</span> 
   <span style="color: #333;">sometable</span> 
@@ -40,10 +46,14 @@
 <span style="font-weight:bold;">FROM</span> 
   <span style="color: #333;">someothertable</span><span >;</span></pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">SET</span> 
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">SET</span> 
   <span style="font-weight:bold;">NAMES</span> <span style="color: blue;">'utf8'</span><span >;</span></pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">CREATE</span> <span style="font-weight:bold;">TABLE</span> <span style="color: purple;">`PREFIX_address`</span> (
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">CREATE</span> <span style="font-weight:bold;">TABLE</span> <span style="color: purple;">`PREFIX_address`</span> (
   <span style="color: purple;">`id_address`</span> <span style="color: #333;">int</span>(<span style="color: green;">10</span>) <span style="font-weight:bold;">unsigned</span> <span style="font-weight:bold;">NOT</span> <span style="font-weight:bold;">NULL</span> <span style="font-weight:bold;">auto_increment</span><span >,</span> 
   <span style="color: purple;">`id_country`</span> <span style="color: #333;">int</span>(<span style="color: green;">10</span>) <span style="font-weight:bold;">unsigned</span> <span style="font-weight:bold;">NOT</span> <span style="font-weight:bold;">NULL</span><span >,</span> 
   <span style="color: purple;">`id_state`</span> <span style="color: #333;">int</span>(<span style="color: green;">10</span>) <span style="font-weight:bold;">unsigned</span> <span style="font-weight:bold;">default</span> <span style="font-weight:bold;">NULL</span><span >,</span> 
@@ -77,7 +87,9 @@
   <span style="font-weight:bold;">KEY</span> <span style="color: purple;">`id_warehouse`</span> (<span style="color: purple;">`id_warehouse`</span>)
 ) <span style="font-weight:bold;">ENGINE</span> <span >=</span> <span style="font-weight:bold;">ENGINE_TYPE</span> <span style="font-weight:bold;">DEFAULT</span> <span style="font-weight:bold;">CHARSET</span> <span >=</span> <span style="color: #333;">utf8</span></pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">CREATE</span> <span style="font-weight:bold;">TABLE</span> <span style="color: purple;">`PREFIX_alias`</span> (
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">CREATE</span> <span style="font-weight:bold;">TABLE</span> <span style="color: purple;">`PREFIX_alias`</span> (
   <span style="color: purple;">`id_alias`</span> <span style="color: #333;">int</span>(<span style="color: green;">10</span>) <span style="font-weight:bold;">unsigned</span> <span style="font-weight:bold;">NOT</span> <span style="font-weight:bold;">NULL</span> <span style="font-weight:bold;">auto_increment</span><span >,</span> 
   <span style="color: purple;">`alias`</span> <span style="color: #333;">varchar</span>(<span style="color: green;">255</span>) <span style="font-weight:bold;">NOT</span> <span style="font-weight:bold;">NULL</span><span >,</span> 
   <span style="color: purple;">`search`</span> <span style="color: #333;">varchar</span>(<span style="color: green;">255</span>) <span style="font-weight:bold;">NOT</span> <span style="font-weight:bold;">NULL</span><span >,</span> 
@@ -86,7 +98,9 @@
   <span style="font-weight:bold;">UNIQUE</span> <span style="font-weight:bold;">KEY</span> <span style="color: purple;">`alias`</span> (<span style="color: purple;">`alias`</span>)
 ) <span style="font-weight:bold;">ENGINE</span> <span >=</span> <span style="font-weight:bold;">ENGINE_TYPE</span> <span style="font-weight:bold;">DEFAULT</span> <span style="font-weight:bold;">CHARSET</span> <span >=</span> <span style="color: #333;">utf8</span></pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">CREATE</span> <span style="font-weight:bold;">TABLE</span> <span style="color: purple;">`PREFIX_carrier`</span> (
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">CREATE</span> <span style="font-weight:bold;">TABLE</span> <span style="color: purple;">`PREFIX_carrier`</span> (
   <span style="color: purple;">`id_carrier`</span> <span style="color: #333;">int</span>(<span style="color: green;">10</span>) <span style="font-weight:bold;">unsigned</span> <span style="font-weight:bold;">NOT</span> <span style="font-weight:bold;">NULL</span> <span style="font-weight:bold;">AUTO_INCREMENT</span><span >,</span> 
   <span style="color: purple;">`id_reference`</span> <span style="color: #333;">int</span>(<span style="color: green;">10</span>) <span style="font-weight:bold;">unsigned</span> <span style="font-weight:bold;">NOT</span> <span style="font-weight:bold;">NULL</span><span >,</span> 
   <span style="color: purple;">`id_tax_rules_group`</span> <span style="color: #333;">int</span>(<span style="color: green;">10</span>) <span style="font-weight:bold;">unsigned</span> <span style="font-weight:bold;">DEFAULT</span> <span style="color: blue;">'0'</span><span >,</span> 
@@ -113,7 +127,9 @@
   <span style="font-weight:bold;">KEY</span> <span style="color: purple;">`id_tax_rules_group`</span> (<span style="color: purple;">`id_tax_rules_group`</span>)
 ) <span style="font-weight:bold;">ENGINE</span> <span >=</span> <span style="font-weight:bold;">ENGINE_TYPE</span> <span style="font-weight:bold;">DEFAULT</span> <span style="font-weight:bold;">CHARSET</span> <span >=</span> <span style="color: #333;">utf8</span></pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">CREATE</span> <span style="font-weight:bold;">TABLE</span> <span style="font-weight:bold;">IF</span> <span style="font-weight:bold;">NOT</span> <span style="font-weight:bold;">EXISTS</span> <span style="color: purple;">`PREFIX_specific_price_rule`</span> (
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">CREATE</span> <span style="font-weight:bold;">TABLE</span> <span style="font-weight:bold;">IF</span> <span style="font-weight:bold;">NOT</span> <span style="font-weight:bold;">EXISTS</span> <span style="color: purple;">`PREFIX_specific_price_rule`</span> (
   <span style="color: purple;">`id_specific_price_rule`</span> <span style="color: #333;">int</span>(<span style="color: green;">10</span>) <span style="font-weight:bold;">unsigned</span> <span style="font-weight:bold;">NOT</span> <span style="font-weight:bold;">NULL</span> <span style="font-weight:bold;">AUTO_INCREMENT</span><span >,</span> 
   <span style="color: purple;">`name`</span> <span style="color: #333;">VARCHAR</span>(<span style="color: green;">255</span>) <span style="font-weight:bold;">NOT</span> <span style="font-weight:bold;">NULL</span><span >,</span> 
   <span style="color: purple;">`id_shop`</span> <span style="color: #333;">int</span>(<span style="color: green;">11</span>) <span style="font-weight:bold;">unsigned</span> <span style="font-weight:bold;">NOT</span> <span style="font-weight:bold;">NULL</span> <span style="font-weight:bold;">DEFAULT</span> <span style="color: blue;">'1'</span><span >,</span> 
@@ -134,14 +150,18 @@
   )
 ) <span style="font-weight:bold;">ENGINE</span> <span >=</span> <span style="font-weight:bold;">ENGINE_TYPE</span> <span style="font-weight:bold;">DEFAULT</span> <span style="font-weight:bold;">CHARSET</span> <span >=</span> <span style="color: #333;">utf8</span></pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">UPDATE</span> 
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">UPDATE</span> 
   <span style="color: purple;">`PREFIX_configuration`</span> 
 <span style="font-weight:bold;">SET</span> 
   <span style="color: #333;">value</span> <span >=</span> <span style="color: blue;">'6'</span> 
 <span style="font-weight:bold;">WHERE</span> 
   <span style="color: #333;">name</span> <span >=</span> <span style="color: blue;">'PS_SEARCH_WEIGHT_PNAME'</span></pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">UPDATE</span> 
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">UPDATE</span> 
   <span style="color: purple;">`PREFIX_hook_module`</span> 
 <span style="font-weight:bold;">SET</span> 
   <span style="color: #333;">position</span> <span >=</span> <span style="color: green;">1</span> 
@@ -360,7 +380,7 @@
     <span style="font-weight:bold;">FROM</span> 
       <span style="color: purple;">`PREFIX_hook`</span> 
     <span style="font-weight:bold;">WHERE</span> 
-      <span style="color: #333;">name</span> <span >=</span> <span style="color: blue;">'actionCategoryAdd'</span>
+      <span style="color: #333;">name</span> <span >=</span> <span style="color: blue;">'actionproperty_categoryAdd'</span>
   ) 
   <span style="font-weight:bold;">AND</span> <span style="color: #333;">id_module</span> <span >=</span> (
     <span style="font-weight:bold;">SELECT</span> 
@@ -376,7 +396,7 @@
     <span style="font-weight:bold;">FROM</span> 
       <span style="color: purple;">`PREFIX_hook`</span> 
     <span style="font-weight:bold;">WHERE</span> 
-      <span style="color: #333;">name</span> <span >=</span> <span style="color: blue;">'actionCategoryUpdate'</span>
+      <span style="color: #333;">name</span> <span >=</span> <span style="color: blue;">'actionproperty_categoryUpdate'</span>
   ) 
   <span style="font-weight:bold;">AND</span> <span style="color: #333;">id_module</span> <span >=</span> (
     <span style="font-weight:bold;">SELECT</span> 
@@ -392,7 +412,7 @@
     <span style="font-weight:bold;">FROM</span> 
       <span style="color: purple;">`PREFIX_hook`</span> 
     <span style="font-weight:bold;">WHERE</span> 
-      <span style="color: #333;">name</span> <span >=</span> <span style="color: blue;">'actionCategoryDelete'</span>
+      <span style="color: #333;">name</span> <span >=</span> <span style="color: blue;">'actionproperty_categoryDelete'</span>
   ) 
   <span style="font-weight:bold;">AND</span> <span style="color: #333;">id_module</span> <span >=</span> (
     <span style="font-weight:bold;">SELECT</span> 
@@ -451,44 +471,58 @@
       <span style="color: #333;">name</span> <span >=</span> <span style="color: blue;">'blockreinsurance'</span>
   )</pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">ALTER TABLE</span> 
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">ALTER TABLE</span> 
   <span style="color: purple;">`PREFIX_employee`</span> 
 <span style="font-weight:bold;">ADD</span> 
   <span style="color: purple;">`bo_color`</span> <span style="color: #333;">varchar</span>(<span style="color: green;">32</span>) <span style="font-weight:bold;">default</span> <span style="font-weight:bold;">NULL</span> 
 <span style="font-weight:bold;">AFTER</span> 
   <span style="color: purple;">`stats_date_to`</span></pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">INSERT</span> <span style="font-weight:bold;">INTO</span> <span style="color: purple;">`PREFIX_cms_category_lang`</span> 
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">INSERT</span> <span style="font-weight:bold;">INTO</span> <span style="color: purple;">`PREFIX_cms_property_category_lang`</span> 
 <span style="font-weight:bold;">VALUES</span> 
   (
     <span style="color: green;">1</span><span >,</span> <span style="color: green;">3</span><span >,</span> <span style="color: blue;">'Inicio'</span><span >,</span> <span style="color: blue;">''</span><span >,</span> <span style="color: blue;">'home'</span><span >,</span> <span style="font-weight:bold;">NULL</span><span >,</span> <span style="font-weight:bold;">NULL</span><span >,</span> 
     <span style="font-weight:bold;">NULL</span>
   )</pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">INSERT</span> <span style="font-weight:bold;">INTO</span> <span style="color: purple;">`PREFIX_cms_category`</span> 
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">INSERT</span> <span style="font-weight:bold;">INTO</span> <span style="color: purple;">`PREFIX_cms_property_category`</span> 
 <span style="font-weight:bold;">VALUES</span> 
   (<span style="color: green;">1</span><span >,</span> <span style="color: green;">0</span><span >,</span> <span style="color: green;">0</span><span >,</span> <span style="color: green;">1</span><span >,</span> <span style="font-weight:bold;">NOW()</span><span >,</span> <span style="font-weight:bold;">NOW()</span><span >,</span> <span style="color: green;">0</span>)</pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">UPDATE</span> 
-  <span style="color: purple;">`PREFIX_cms_category`</span> 
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">UPDATE</span> 
+  <span style="color: purple;">`PREFIX_cms_property_category`</span> 
 <span style="font-weight:bold;">SET</span> 
   <span style="color: purple;">`position`</span> <span >=</span> <span style="color: green;">0</span></pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">ALTER TABLE</span> 
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">ALTER TABLE</span> 
   <span style="color: purple;">`PREFIX_customer`</span> 
 <span style="font-weight:bold;">ADD</span> 
   <span style="color: purple;">`note`</span> <span style="color: #333;">text</span> 
 <span style="font-weight:bold;">AFTER</span> 
   <span style="color: purple;">`secure_key`</span></pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">ALTER TABLE</span> 
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">ALTER TABLE</span> 
   <span style="color: purple;">`PREFIX_contact`</span> 
 <span style="font-weight:bold;">ADD</span> 
   <span style="color: purple;">`customer_service`</span> <span style="color: #333;">tinyint</span>(<span style="color: green;">1</span>) <span style="font-weight:bold;">NOT</span> <span style="font-weight:bold;">NULL</span> <span style="font-weight:bold;">DEFAULT</span> <span style="color: green;">0</span> 
 <span style="font-weight:bold;">AFTER</span> 
   <span style="color: purple;">`email`</span></pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">INSERT</span> <span style="font-weight:bold;">INTO</span> <span style="color: purple;">`PREFIX_specific_price`</span> (
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">INSERT</span> <span style="font-weight:bold;">INTO</span> <span style="color: purple;">`PREFIX_specific_price`</span> (
   <span style="color: purple;">`id_product`</span><span >,</span> <span style="color: purple;">`id_shop`</span><span >,</span> <span style="color: purple;">`id_currency`</span><span >,</span> 
   <span style="color: purple;">`id_country`</span><span >,</span> <span style="color: purple;">`id_group`</span><span >,</span> <span style="color: purple;">`priority`</span><span >,</span> 
   <span style="color: purple;">`price`</span><span >,</span> <span style="color: purple;">`from_quantity`</span><span >,</span> <span style="color: purple;">`reduction`</span><span >,</span> 
@@ -518,10 +552,14 @@
     <span style="font-weight:bold;">INNER JOIN</span> <span style="color: purple;">`PREFIX_product`</span> <span style="color: #333;">p</span> <span style="font-weight:bold;">ON</span> (<span style="color: #333;">p</span><span >.</span><span style="color: purple;">`id_product`</span> <span >=</span> <span style="color: #333;">dq</span><span >.</span><span style="color: purple;">`id_product`</span>)
 )</pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">DROP</span> 
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">DROP</span> 
   <span style="font-weight:bold;">TABLE</span> <span style="color: purple;">`PREFIX_discount_quantity`</span></pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">INSERT</span> <span style="font-weight:bold;">INTO</span> <span style="color: purple;">`PREFIX_specific_price`</span> (
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">INSERT</span> <span style="font-weight:bold;">INTO</span> <span style="color: purple;">`PREFIX_specific_price`</span> (
   <span style="color: purple;">`id_product`</span><span >,</span> <span style="color: purple;">`id_shop`</span><span >,</span> <span style="color: purple;">`id_currency`</span><span >,</span> 
   <span style="color: purple;">`id_country`</span><span >,</span> <span style="color: purple;">`id_group`</span><span >,</span> <span style="color: purple;">`priority`</span><span >,</span> 
   <span style="color: purple;">`price`</span><span >,</span> <span style="color: purple;">`from_quantity`</span><span >,</span> <span style="color: purple;">`reduction`</span><span >,</span> 
@@ -559,7 +597,9 @@
     <span style="font-weight:bold;">OR</span> <span style="color: #333;">p</span><span >.</span><span style="color: purple;">`reduction_percent`</span>
 )</pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">ALTER TABLE</span> 
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">ALTER TABLE</span> 
   <span style="color: purple;">`PREFIX_product`</span> 
 <span style="font-weight:bold;">DROP</span> 
   <span style="color: purple;">`reduction_price`</span><span >,</span> 
@@ -570,7 +610,9 @@
 <span style="font-weight:bold;">DROP</span> 
   <span style="color: purple;">`reduction_to`</span></pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">INSERT</span> <span style="font-weight:bold;">INTO</span> <span style="color: purple;">`PREFIX_configuration`</span> (
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">INSERT</span> <span style="font-weight:bold;">INTO</span> <span style="color: purple;">`PREFIX_configuration`</span> (
   <span style="color: purple;">`name`</span><span >,</span> <span style="color: purple;">`value`</span><span >,</span> <span style="color: purple;">`date_add`</span><span >,</span> <span style="color: purple;">`date_upd`</span>
 ) 
 <span style="font-weight:bold;">VALUES</span> 
@@ -612,7 +654,9 @@
     <span style="font-weight:bold;">NOW()</span>
   )</pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">INSERT</span> <span style="font-weight:bold;">INTO</span> <span style="color: purple;">`PREFIX_configuration`</span> (
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">INSERT</span> <span style="font-weight:bold;">INTO</span> <span style="color: purple;">`PREFIX_configuration`</span> (
   <span style="color: purple;">`name`</span><span >,</span> <span style="color: purple;">`value`</span><span >,</span> <span style="color: purple;">`date_add`</span><span >,</span> <span style="color: purple;">`date_upd`</span>
 ) 
 <span style="font-weight:bold;">VALUES</span> 
@@ -633,9 +677,13 @@
     <span style="font-weight:bold;">NOW()</span>
   )</pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">CREATE</span> <span style="font-weight:bold;">TEMPORARY</span> <span style="font-weight:bold;">TABLE</span> <span style="color: purple;">`PREFIX_configuration_tmp`</span> (<span style="color: purple;">`value`</span> <span style="color: #333;">text</span>)</pre>
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">CREATE</span> <span style="font-weight:bold;">TEMPORARY</span> <span style="font-weight:bold;">TABLE</span> <span style="color: purple;">`PREFIX_configuration_tmp`</span> (<span style="color: purple;">`value`</span> <span style="color: #333;">text</span>)</pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">SET</span> 
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">SET</span> 
   <span style="color: orange;">@defaultOOS</span> <span >=</span> (
     <span style="font-weight:bold;">SELECT</span> 
       <span style="color: #333;">value</span> 
@@ -645,7 +693,9 @@
       <span style="color: #333;">name</span> <span >=</span> <span style="color: blue;">'PS_ORDER_OUT_OF_STOCK'</span>
   )</pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">UPDATE</span> 
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">UPDATE</span> 
   <span style="color: purple;">`PREFIX_product`</span> <span style="color: #333;">p</span> 
 <span style="font-weight:bold;">SET</span> 
   <span style="color: purple;">`cache_default_attribute`</span> <span >=</span> <span style="color: green;">0</span> 
@@ -657,7 +707,9 @@
       <span style="color: purple;">`PREFIX_product_attribute`</span>
   )</pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">INSERT</span> <span style="font-weight:bold;">INTO</span> <span style="color: purple;">`PREFIX_hook`</span> (
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">INSERT</span> <span style="font-weight:bold;">INTO</span> <span style="color: purple;">`PREFIX_hook`</span> (
   <span style="color: purple;">`name`</span><span >,</span> <span style="color: purple;">`title`</span><span >,</span> <span style="color: purple;">`description`</span><span >,</span> <span style="color: purple;">`position`</span>
 ) 
 <span style="font-weight:bold;">VALUES</span> 
@@ -666,7 +718,9 @@
     <span style="font-weight:bold;">NULL</span><span >,</span> <span style="color: green;">0</span>
   )</pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">INSERT</span> <span style="font-weight:bold;">INTO</span> <span style="color: purple;">`PREFIX_stock_mvt_reason_lang`</span> (
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">INSERT</span> <span style="font-weight:bold;">INTO</span> <span style="color: purple;">`PREFIX_stock_mvt_reason_lang`</span> (
   <span style="color: purple;">`id_stock_mvt_reason`</span><span >,</span> <span style="color: purple;">`id_lang`</span><span >,</span> 
   <span style="color: purple;">`name`</span>
 ) 
@@ -680,7 +734,9 @@
   (<span style="color: green;">3</span><span >,</span> <span style="color: green;">1</span><span >,</span> <span style="color: blue;">'Restocking'</span>)<span >,</span> 
   (<span style="color: green;">3</span><span >,</span> <span style="color: green;">2</span><span >,</span> <span style="color: blue;">'R&Atilde;&copy;assort'</span>)</pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">INSERT</span> <span style="font-weight:bold;">INTO</span> <span style="color: purple;">`PREFIX_meta_lang`</span> (
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">INSERT</span> <span style="font-weight:bold;">INTO</span> <span style="color: purple;">`PREFIX_meta_lang`</span> (
   <span style="color: purple;">`id_lang`</span><span >,</span> <span style="color: purple;">`id_meta`</span><span >,</span> <span style="color: purple;">`title`</span><span >,</span> <span style="color: purple;">`url_rewrite`</span>
 ) 
 <span style="font-weight:bold;">VALUES</span> 
@@ -724,14 +780,22 @@
     <span style="color: blue;">'autenticacion'</span>
   )</pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">LOCK</span> <span style="font-weight:bold;">TABLES</span> <span style="color: purple;">`admin_assert`</span> <span style="font-weight:bold;">WRITE</span></pre>
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">LOCK</span> <span style="font-weight:bold;">TABLES</span> <span style="color: purple;">`admin_assert`</span> <span style="font-weight:bold;">WRITE</span></pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">UNLOCK</span> <span style="font-weight:bold;">TABLES</span></pre>
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">UNLOCK</span> <span style="font-weight:bold;">TABLES</span></pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">DROP</span> 
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">DROP</span> 
   <span style="font-weight:bold;">TABLE</span> <span style="font-weight:bold;">IF</span> <span style="font-weight:bold;">EXISTS</span> <span style="color: purple;">`admin_role`</span></pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">SELECT</span> 
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">SELECT</span> 
   <span >*</span> 
 <span style="font-weight:bold;">FROM</span> 
   <span style="color: #aaa;">-- This is another comment</span>
@@ -742,10 +806,14 @@
 <span style="font-weight:bold;">WHERE</span> 
   <span style="color: green;">1</span> <span >=</span> <span style="color: green;">2</span><span >;</span></pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">SELECT</span> 
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">SELECT</span> 
   <span style="color: #aaa;">-- This is a test</span></pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">SELECT</span> 
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">SELECT</span> 
   <span style="color: #333;">Test</span> 
 <span style="font-weight:bold;">FROM</span> 
   <span style="color: #333;">Test</span> 
@@ -757,7 +825,9 @@
     (<span style="color: #333;">SomeOtherColumn</span> <span >=</span> <span style="color: green;">2</span>)<span >;</span> 
 <span style="background-color: red;">WARNING: unclosed parentheses or section</span></pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">SELECT</span> 
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">SELECT</span> 
   <span >*</span> 
 <span style="font-weight:bold;">LIMIT</span> 
   <span style="color: green;">1</span><span >;</span> 
@@ -778,7 +848,9 @@
   <span style="color: #333;">a</span> <span style="font-weight:bold;">in</span> (<span style="color: green;">1</span><span >,</span> <span style="color: green;">2</span><span >,</span> <span style="color: green;">3</span><span >,</span> <span style="color: green;">4</span><span >,</span> <span style="color: green;">5</span>) 
   <span style="font-weight:bold;">and</span> <span style="color: #333;">b</span> <span >=</span> <span style="color: green;">5</span><span >;</span></pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">SELECT</span> 
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">SELECT</span> 
   <span style="color: #333;">count</span> <span >-</span> <span style="color: green;">50</span> 
 <span style="font-weight:bold;">WHERE</span> 
   <span style="color: #333;">a</span> <span >-</span> <span style="color: green;">50</span> <span >=</span> <span style="color: #333;">b</span> 
@@ -797,13 +869,19 @@
   <span style="color: green;">1</span> 
   <span style="font-weight:bold;">and</span> <span >-</span><span style="color: green;">50</span><span >;</span></pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">SELECT</span> 
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">SELECT</span> 
   <span style="color: #333;">@</span> 
   <span style="font-weight:bold;">and</span> <span style="color: #333;">b</span><span >;</span></pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">SELECT</span> 
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">SELECT</span> 
   <span style="color: orange;">@&quot;weird variable name&quot;</span><span >;</span></pre>
 
-<pre style="color: black; background-color: white;"><span style="font-weight:bold;">SELECT</span> 
+<pre
+  style="color: black; background-color: white"
+><span style="font-weight:bold;">SELECT</span> 
   <span style="color: blue;">&quot;no closing quote
 </span></pre>

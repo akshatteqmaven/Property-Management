@@ -1,6 +1,6 @@
 <?php
 use Foo\Bar; // trailing comment
-/* phpcs:ignore Standard.Category.Sniff -- for reasons */
+/* phpcs:ignore Standard.property_category.Sniff -- for reasons */
 
 class Baz
 {

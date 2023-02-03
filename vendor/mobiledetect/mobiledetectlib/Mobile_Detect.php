@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Mobile Detect Library
  * Motto: "Every business should have a mobile detection script to detect mobile readers"
@@ -323,32 +324,32 @@ class Mobile_Detect
      */
     protected static $mobileHeaders = array(
 
-            'HTTP_ACCEPT'                  => array('matches' => array(
-                                                                        // Opera Mini; @reference: http://dev.opera.com/articles/view/opera-binary-markup-language/
-                                                                        'application/x-obml2d',
-                                                                        // BlackBerry devices.
-                                                                        'application/vnd.rim.html',
-                                                                        'text/vnd.wap.wml',
-                                                                        'application/vnd.wap.xhtml+xml'
-                                            )),
-            'HTTP_X_WAP_PROFILE'           => null,
-            'HTTP_X_WAP_CLIENTID'          => null,
-            'HTTP_WAP_CONNECTION'          => null,
-            'HTTP_PROFILE'                 => null,
-            // Reported by Opera on Nokia devices (eg. C3).
-            'HTTP_X_OPERAMINI_PHONE_UA'    => null,
-            'HTTP_X_NOKIA_GATEWAY_ID'      => null,
-            'HTTP_X_ORANGE_ID'             => null,
-            'HTTP_X_VODAFONE_3GPDPCONTEXT' => null,
-            'HTTP_X_HUAWEI_USERID'         => null,
-            // Reported by Windows Smartphones.
-            'HTTP_UA_OS'                   => null,
-            // Reported by Verizon, Vodafone proxy system.
-            'HTTP_X_MOBILE_GATEWAY'        => null,
-            // Seen this on HTC Sensation. SensationXE_Beats_Z715e.
-            'HTTP_X_ATT_DEVICEID'          => null,
-            // Seen this on a HTC.
-            'HTTP_UA_CPU'                  => array('matches' => array('ARM')),
+        'HTTP_ACCEPT'                  => array('matches' => array(
+            // Opera Mini; @reference: http://dev.opera.com/articles/view/opera-binary-markup-language/
+            'application/x-obml2d',
+            // BlackBerry devices.
+            'application/vnd.rim.html',
+            'text/vnd.wap.wml',
+            'application/vnd.wap.xhtml+xml'
+        )),
+        'HTTP_X_WAP_PROFILE'           => null,
+        'HTTP_X_WAP_CLIENTID'          => null,
+        'HTTP_WAP_CONNECTION'          => null,
+        'HTTP_PROFILE'                 => null,
+        // Reported by Opera on Nokia devices (eg. C3).
+        'HTTP_X_OPERAMINI_PHONE_UA'    => null,
+        'HTTP_X_NOKIA_GATEWAY_ID'      => null,
+        'HTTP_X_ORANGE_ID'             => null,
+        'HTTP_X_VODAFONE_3GPDPCONTEXT' => null,
+        'HTTP_X_HUAWEI_USERID'         => null,
+        // Reported by Windows Smartphones.
+        'HTTP_UA_OS'                   => null,
+        // Reported by Verizon, Vodafone proxy system.
+        'HTTP_X_MOBILE_GATEWAY'        => null,
+        // Seen this on HTC Sensation. SensationXE_Beats_Z715e.
+        'HTTP_X_ATT_DEVICEID'          => null,
+        // Seen this on a HTC.
+        'HTTP_UA_CPU'                  => array('matches' => array('ARM')),
     );
 
     /**
@@ -388,8 +389,8 @@ class Mobile_Detect
         // Added simvalley mobile just for fun. They have some interesting devices.
         // http://www.simvalley.fr/telephonie---gps-_22_telephonie-mobile_telephones_.html
         'SimValley'     => '\b(SP-80|XT-930|SX-340|XT-930|SX-310|SP-360|SP60|SPT-800|SP-120|SPT-800|SP-140|SPX-5|SPX-8|SP-100|SPX-8|SPX-12)\b',
-         // Wolfgang - a brand that is sold by Aldi supermarkets.
-         // http://www.wolfgangmobile.com/
+        // Wolfgang - a brand that is sold by Aldi supermarkets.
+        // http://www.wolfgangmobile.com/
         'Wolfgang'      => 'AT-B24D|AT-AS50HD|AT-AS40W|AT-AS55HD|AT-AS45q2|AT-B26D|AT-AS50Q',
         'Alcatel'       => 'Alcatel',
         'Nintendo'      => 'Nintendo (3DS|Switch)',
@@ -422,7 +423,7 @@ class Mobile_Detect
         // Only the Surface tablets with Windows RT are considered mobile.
         // http://msdn.microsoft.com/en-us/library/ie/hh920767(v=vs.85).aspx
         'SurfaceTablet'     => 'Windows NT [0-9.]+; ARM;.*(Tablet|ARMBJS)',
-        // http://shopping1.hp.com/is-bin/INTERSHOP.enfinity/WFS/WW-USSMBPublicStore-Site/en_US/-/USD/ViewStandardCatalog-Browse?CatalogCategoryID=JfIQ7EN5lqMAAAEyDcJUDwMT
+        // http://shopping1.hp.com/is-bin/INTERSHOP.enfinity/WFS/WW-USSMBPublicStore-Site/en_US/-/USD/ViewStandardCatalog-Browse?Catalogproperty_categoryID=JfIQ7EN5lqMAAAEyDcJUDwMT
         'HPTablet'          => 'HP Slate (7|8|10)|HP ElitePad 900|hp-tablet|EliteBook.*Touch|HP 8|Slate 21|HP SlateBook 10',
         // Watch out for PadFone, see #132.
         // http://www.asus.com/de/Tablets_Mobile/Memo_Pad_Products/
@@ -476,7 +477,7 @@ class Mobile_Detect
         // Readers http://www.atsuhiro-me.net/ebook/sony-reader/sony-reader-web-browser
         // http://www.sony.jp/support/tablet/
         'SonyTablet'        => 'Sony.*Tablet|Xperia Tablet|Sony Tablet S|SO-03E|SGPT12|SGPT13|SGPT114|SGPT121|SGPT122|SGPT123|SGPT111|SGPT112|SGPT113|SGPT131|SGPT132|SGPT133|SGPT211|SGPT212|SGPT213|SGP311|SGP312|SGP321|EBRD1101|EBRD1102|EBRD1201|SGP351|SGP341|SGP511|SGP512|SGP521|SGP541|SGP551|SGP621|SGP641|SGP612|SOT31|SGP771|SGP611|SGP612|SGP712',
-        // http://www.support.philips.com/support/catalog/worldproducts.jsp?userLanguage=en&userCountry=cn&categoryid=3G_LTE_TABLET_SU_CN_CARE&title=3G%20tablets%20/%20LTE%20range&_dyncharset=UTF-8
+        // http://www.support.philips.com/support/catalog/worldproducts.jsp?userLanguage=en&userCountry=cn&property_categoryid=3G_LTE_TABLET_SU_CN_CARE&title=3G%20tablets%20/%20LTE%20range&_dyncharset=UTF-8
         'PhilipsTablet'     => '\b(PI2010|PI3000|PI3100|PI3105|PI3110|PI3205|PI3210|PI3900|PI4010|PI7000|PI7100)\b',
         // db + http://www.cube-tablet.com/buy-products.html
         'CubeTablet'        => 'Android.*(K8GT|U9GT|U10GT|U16GT|U17GT|U18GT|U19GT|U20GT|U23GT|U30GT)|CUBE U8GT',
@@ -488,9 +489,9 @@ class Mobile_Detect
         // @todo Research the Windows Tablets.
         'MSITablet' => 'MSI \b(Primo 73K|Primo 73L|Primo 81L|Primo 77|Primo 93|Primo 75|Primo 76|Primo 73|Primo 81|Primo 91|Primo 90|Enjoy 71|Enjoy 7|Enjoy 10)\b',
         // @todo http://www.kyoceramobile.com/support/drivers/
-    //    'KyoceraTablet' => null,
-        // @todo http://intexuae.com/index.php/category/mobile-devices/tablets-products/
-    //    'IntextTablet' => null,
+        //    'KyoceraTablet' => null,
+        // @todo http://intexuae.com/index.php/property_category/mobile-devices/tablets-products/
+        //    'IntextTablet' => null,
         // http://pdadb.net/index.php?m=pdalist&list=SMiT (NoName Chinese Tablets)
         // http://www.imp3.net/14/show.php?itemid=20454
         'SMiTTablet'        => 'Android.*(\bMID\b|MID-560|MTV-T1200|MTV-PND531|MTV-P1101|MTV-PND530)',
@@ -531,7 +532,7 @@ class Mobile_Detect
         // http://www.advandigital.com/index.php?link=content-product&jns=JP001
         // because of the short codenames we have to include whitespaces to reduce the possible conflicts.
         'AdvanTablet'       => 'Android.* \b(E3A|T3X|T5C|T5B|T3E|T3C|T3B|T1J|T1F|T2A|T1H|T1i|E1C|T1-E|T5-A|T4|E1-B|T2Ci|T1-B|T1-D|O1-A|E1-A|T1-A|T3A|T4i)\b ',
-        // http://www.danytech.com/category/tablet-pc
+        // http://www.danytech.com/property_category/tablet-pc
         'DanyTechTablet' => 'Genius Tab G3|Genius Tab S2|Genius Tab Q3|Genius Tab G4|Genius Tab Q4|Genius Tab G-II|Genius TAB GII|Genius TAB GIII|Genius Tab S1',
         // http://www.galapad.net/product.html ; https://github.com/serbanghita/Mobile-Detect/issues/761
         'GalapadTablet'     => 'Android [0-9.]+; [a-z-]+; \bG1\b',
@@ -554,7 +555,7 @@ class Mobile_Detect
         // @todo: Softwiner tablets?
         // aka. Cute or Cool tablets. Not sure yet, must research to avoid collisions.
         'GUTablet'          => 'TX-A1301|TX-M9002|Q702|kf026', // A12R|D75A|D77|D79|R83|A95|A106C|R15|A75|A76|D71|D72|R71|R73|R77|D82|R85|D92|A97|D92|R91|A10F|A77F|W71F|A78F|W78F|W81F|A97F|W91F|W97F|R16G|C72|C73E|K72|K73|R96G
-        // http://www.pointofview-online.com/showroom.php?shop_mode=product_listing&category_id=118
+        // http://www.pointofview-online.com/showroom.php?shop_mode=product_listing&property_category_id=118
         'PointOfViewTablet' => 'TAB-P506|TAB-navi-7-3G-M|TAB-P517|TAB-P-527|TAB-P701|TAB-P703|TAB-P721|TAB-P731N|TAB-P741|TAB-P825|TAB-P905|TAB-P925|TAB-PR945|TAB-PL1015|TAB-P1025|TAB-PI1045|TAB-P1325|TAB-PROTAB[0-9]+|TAB-PROTAB25|TAB-PROTAB26|TAB-PROTAB27|TAB-PROTAB26XL|TAB-PROTAB2-IPS9|TAB-PROTAB30-IPS9|TAB-PROTAB25XXL|TAB-PROTAB26-IPS10|TAB-PROTAB30-IPS10',
         // http://www.overmax.pl/pl/katalog-produktow,p8/tablety,c14/
         // @todo: add more tests.
@@ -577,7 +578,7 @@ class Mobile_Detect
         'ModecomTablet' => 'FreeTAB 9000|FreeTAB 7.4|FreeTAB 7004|FreeTAB 7800|FreeTAB 2096|FreeTAB 7.5|FreeTAB 1014|FreeTAB 1001 |FreeTAB 8001|FreeTAB 9706|FreeTAB 9702|FreeTAB 7003|FreeTAB 7002|FreeTAB 1002|FreeTAB 7801|FreeTAB 1331|FreeTAB 1004|FreeTAB 8002|FreeTAB 8014|FreeTAB 9704|FreeTAB 1003',
         // Vonino Tablets
         'VoninoTablet'  => '\b(Argus[ _]?S|Diamond[ _]?79HD|Emerald[ _]?78E|Luna[ _]?70C|Onyx[ _]?S|Onyx[ _]?Z|Orin[ _]?HD|Orin[ _]?S|Otis[ _]?S|SpeedStar[ _]?S|Magnet[ _]?M9|Primus[ _]?94[ _]?3G|Primus[ _]?94HD|Primus[ _]?QS|Android.*\bQ8\b|Sirius[ _]?EVO[ _]?QS|Sirius[ _]?QS|Spirit[ _]?S)\b',
-        // ECS Tablets - http://www.ecs.com.tw/ECSWebSite/Product/Product_Tablet_List.aspx?CategoryID=14&MenuID=107&childid=M_107&LanID=0
+        // ECS Tablets - http://www.ecs.com.tw/ECSWebSite/Product/Product_Tablet_List.aspx?property_categoryID=14&MenuID=107&childid=M_107&LanID=0
         'ECSTablet'     => 'V07OT2|TM105A|S10OT1|TR10CS1',
         // Storex Tablets - http://storex.fr/espace_client/support.html
         // @note: no need to add all the tablet codes since they are guided by the first regex.
@@ -594,9 +595,9 @@ class Mobile_Detect
         // http://www.tolino.de/de/vergleichen/
         'TolinoTablet'  => 'tolino tab [0-9.]+|tolino shine',
         // AudioSonic - a Kmart brand
-        // http://www.kmart.com.au/webapp/wcs/stores/servlet/Search?langId=-1&storeId=10701&catalogId=10001&categoryId=193001&pageSize=72&currentPage=1&searchCategory=193001%2b4294965664&sortBy=p_MaxPrice%7c1
+        // http://www.kmart.com.au/webapp/wcs/stores/servlet/Search?langId=-1&storeId=10701&catalogId=10001&property_categoryId=193001&pageSize=72&currentPage=1&searchproperty_category=193001%2b4294965664&sortBy=p_MaxPrice%7c1
         'AudioSonicTablet' => '\bC-22Q|T7-QC|T-17B|T-17P\b',
-        // AMPE Tablets - http://www.ampe.com.my/product-category/tablets/
+        // AMPE Tablets - http://www.ampe.com.my/product-property_category/tablets/
         // @todo: add them gradually to avoid conflicts.
         'AMPETablet' => 'Android.* A78 ',
         // Skk Mobile - http://skkmobile.com.ph/product_tablets.php
@@ -641,7 +642,7 @@ class Mobile_Detect
         'AocTablet' => 'MW0811|MW0812|MW0922|MTK8382|MW1031|MW0831|MW0821|MW0931|MW0712',
         // http://www.mpmaneurope.com/en/products/internet-tablets-14/android-tablets-14/
         'MpmanTablet' => 'MP11 OCTA|MP10 OCTA|MPQC1114|MPQC1004|MPQC994|MPQC974|MPQC973|MPQC804|MPQC784|MPQC780|\bMPG7\b|MPDCG75|MPDCG71|MPDC1006|MP101DC|MPDC9000|MPDC905|MPDC706HD|MPDC706|MPDC705|MPDC110|MPDC100|MPDC99|MPDC97|MPDC88|MPDC8|MPDC77|MP709|MID701|MID711|MID170|MPDC703|MPQC1010',
-        // https://www.celkonmobiles.com/?_a=categoryphones&sid=2
+        // https://www.celkonmobiles.com/?_a=property_categoryphones&sid=2
         'CelkonTablet' => 'CT695|CT888|CT[\s]?910|CT7 Tab|CT9 Tab|CT3 Tab|CT2 Tab|CT1 Tab|C820|C720|\bCT-1\b',
         // http://www.wolderelectronics.com/productos/manuales-y-guias-rapidas/categoria-2-miTab
         'WolderTablet' => 'miTab \b(DIAMOND|SPACE|BROOKLYN|NEO|FLY|MANHATTAN|FUNK|EVOLUTION|SKY|GOCAR|IRON|GENIUS|POP|MINT|EPSILON|BROADWAY|JUMP|HOP|LEGEND|NEW AGE|LINE|ADVANCE|FEEL|FOLLOW|LIKE|LINK|LIVE|THINK|FREEDOM|CHICAGO|CLEVELAND|BALTIMORE-GH|IOWA|BOSTON|SEATTLE|PHOENIX|DALLAS|IN 101|MasterChef)\b',
@@ -653,7 +654,7 @@ class Mobile_Detect
         // http://navroad.com/products/produkty/tablety/
         // http://navroad.com/products/produkty/tablety/
         'NexoTablet' => 'NEXO NOVA|NEXO 10|NEXO AVIO|NEXO FREE|NEXO GO|NEXO EVO|NEXO 3G|NEXO SMART|NEXO KIDDO|NEXO MOBI',
-        // http://leader-online.com/new_site/product-category/tablets/
+        // http://leader-online.com/new_site/product-property_category/tablets/
         // http://www.leader-online.net.au/List/Tablet
         'LeaderTablet' => 'TBLT10Q|TBLT10I|TBL-10WDKB|TBL-10WDKBO2013|TBL-W230V2|TBL-W450|TBL-W500|SV572|TBLT7I|TBA-AC7-8G|TBLT79|TBL-8W16|TBL-10W32|TBL-10WKB|TBL-W100',
         // http://www.datawind.com/ubislate/
@@ -834,10 +835,10 @@ class Mobile_Detect
         // http://en.wikipedia.org/wiki/NetFront
         'NetFront'      => 'NetFront/[VER]',
         'NokiaBrowser'  => 'NokiaBrowser/[VER]',
-        'Opera'         => array( ' OPR/[VER]', 'Opera Mini/[VER]', 'Version/[VER]' ),
+        'Opera'         => array(' OPR/[VER]', 'Opera Mini/[VER]', 'Version/[VER]'),
         'Opera Mini'    => 'Opera Mini/[VER]',
         'Opera Mobi'    => 'Version/[VER]',
-        'UCBrowser'    => array( 'UCWEB[VER]', 'UC.*Browser/[VER]' ),
+        'UCBrowser'    => array('UCWEB[VER]', 'UC.*Browser/[VER]'),
         'MQQBrowser'    => 'MQQBrowser/[VER]',
         'MicroMessenger' => 'MicroMessenger/[VER]',
         'baiduboxapp'   => 'baiduboxapp/[VER]',
@@ -846,7 +847,7 @@ class Mobile_Detect
         'Iron'          => 'Iron/[VER]',
         // @note: Safari 7534.48.3 is actually Version 5.1.
         // @note: On BlackBerry the Version is overwriten by the OS.
-        'Safari'        => array( 'Version/[VER]', 'Safari/[VER]' ),
+        'Safari'        => array('Version/[VER]', 'Safari/[VER]'),
         'Skyfire'       => 'Skyfire/[VER]',
         'Tizen'         => 'Tizen/[VER]',
         'Webkit'        => 'webkit[ /][VER]',
@@ -868,7 +869,7 @@ class Mobile_Detect
         'Java'             => 'Java/[VER]',
         // @reference: http://windowsteamblog.com/windows_phone/b/wpdev/archive/2011/08/29/introducing-the-ie9-on-windows-phone-mango-user-agent-string.aspx
         // @reference: http://en.wikipedia.org/wiki/Windows_NT#Releases
-        'Windows Phone OS' => array( 'Windows Phone OS [VER]', 'Windows Phone [VER]'),
+        'Windows Phone OS' => array('Windows Phone OS [VER]', 'Windows Phone [VER]'),
         'Windows Phone'    => 'Windows Phone [VER]',
         'Windows CE'       => 'Windows CE/[VER]',
         // http://social.msdn.microsoft.com/Forums/en-US/windowsdeveloperpreviewgeneral/thread/6be392da-4d2f-41b4-8354-8dcee20c85cd
@@ -1000,7 +1001,8 @@ class Mobile_Detect
      *
      * @return  boolean If there were CloudFront headers to be set
      */
-    public function setCfHeaders($cfHeaders = null) {
+    public function setCfHeaders($cfHeaders = null)
+    {
         // use global _SERVER if $cfHeaders aren't defined
         if (!is_array($cfHeaders) || !count($cfHeaders)) {
             $cfHeaders = $_SERVER;
@@ -1036,7 +1038,8 @@ class Mobile_Detect
      * @param string $userAgent
      * @return string
      */
-    private function prepareUserAgent($userAgent) {
+    private function prepareUserAgent($userAgent)
+    {
         $userAgent = trim($userAgent);
         $userAgent = substr($userAgent, 0, 500);
         return $userAgent;
@@ -1188,7 +1191,6 @@ class Mobile_Detect
         }
 
         return $rules;
-
     }
 
     /**
@@ -1272,7 +1274,6 @@ class Mobile_Detect
         }
 
         return false;
-
     }
 
     /**
@@ -1371,7 +1372,7 @@ class Mobile_Detect
         // Check specifically for cloudfront headers if the useragent === 'Amazon CloudFront'
         if ($this->getUserAgent() === 'Amazon CloudFront') {
             $cfHeaders = $this->getCfHeaders();
-            if(array_key_exists('HTTP_CLOUDFRONT_IS_MOBILE_VIEWER', $cfHeaders) && $cfHeaders['HTTP_CLOUDFRONT_IS_MOBILE_VIEWER'] === 'true') {
+            if (array_key_exists('HTTP_CLOUDFRONT_IS_MOBILE_VIEWER', $cfHeaders) && $cfHeaders['HTTP_CLOUDFRONT_IS_MOBILE_VIEWER'] === 'true') {
                 return true;
             }
         }
@@ -1383,7 +1384,6 @@ class Mobile_Detect
         } else {
             return $this->matchDetectionRulesAgainstUA();
         }
-
     }
 
     /**
@@ -1399,7 +1399,7 @@ class Mobile_Detect
         // Check specifically for cloudfront headers if the useragent === 'Amazon CloudFront'
         if ($this->getUserAgent() === 'Amazon CloudFront') {
             $cfHeaders = $this->getCfHeaders();
-            if(array_key_exists('HTTP_CLOUDFRONT_IS_TABLET_VIEWER', $cfHeaders) && $cfHeaders['HTTP_CLOUDFRONT_IS_TABLET_VIEWER'] === 'true') {
+            if (array_key_exists('HTTP_CLOUDFRONT_IS_TABLET_VIEWER', $cfHeaders) && $cfHeaders['HTTP_CLOUDFRONT_IS_TABLET_VIEWER'] === 'true') {
                 return true;
             }
         }
@@ -1552,9 +1552,7 @@ class Mobile_Detect
 
                     return $version;
                 }
-
             }
-
         }
 
         return false;
@@ -1579,7 +1577,7 @@ class Mobile_Detect
             // Android 3.1 (Honeycomb)  - Tested on the Samsung Galaxy Tab 10.1 and Motorola XOOM
             // Android 4.0 (ICS)  - Tested on a Galaxy Nexus. Note: transition performance can be poor on upgraded devices
             // Android 4.1 (Jelly Bean)  - Tested on a Galaxy Nexus and Galaxy 7
-            ( $this->version('Android', self::VERSION_TYPE_FLOAT)>2.1 && $this->is('Webkit') ) ||
+            ($this->version('Android', self::VERSION_TYPE_FLOAT) > 2.1 && $this->is('Webkit')) ||
 
             // Windows Phone 7.5-8 - Tested on the HTC Surround (7.5), HTC Trophy (7.5), LG-E900 (7.5), Nokia 800 (7.8), HTC Mazaa (7.8), Nokia Lumia 520 (8), Nokia Lumia 920 (8), HTC 8x (8)
             $this->version('Windows Phone OS', self::VERSION_TYPE_FLOAT) >= 7.5 ||
@@ -1590,21 +1588,21 @@ class Mobile_Detect
             $this->match('Playbook.*Tablet') ||
 
             // Palm WebOS (1.4-3.0) - Tested on the Palm Pixi (1.4), Pre (1.4), Pre 2 (2.0), HP TouchPad (3.0)
-            ( $this->version('webOS', self::VERSION_TYPE_FLOAT) >= 1.4 && $this->match('Palm|Pre|Pixi') ) ||
+            ($this->version('webOS', self::VERSION_TYPE_FLOAT) >= 1.4 && $this->match('Palm|Pre|Pixi')) ||
             // Palm WebOS 3.0  - Tested on HP TouchPad
             $this->match('hp.*TouchPad') ||
 
             // Firefox Mobile 18 - Tested on Android 2.3 and 4.1 devices
-            ( $this->is('Firefox') && $this->version('Firefox', self::VERSION_TYPE_FLOAT) >= 18 ) ||
+            ($this->is('Firefox') && $this->version('Firefox', self::VERSION_TYPE_FLOAT) >= 18) ||
 
             // Chrome for Android - Tested on Android 4.0, 4.1 device
-            ( $this->is('Chrome') && $this->is('AndroidOS') && $this->version('Android', self::VERSION_TYPE_FLOAT) >= 4.0 ) ||
+            ($this->is('Chrome') && $this->is('AndroidOS') && $this->version('Android', self::VERSION_TYPE_FLOAT) >= 4.0) ||
 
             // Skyfire 4.1 - Tested on Android 2.3 device
-            ( $this->is('Skyfire') && $this->version('Skyfire', self::VERSION_TYPE_FLOAT) >= 4.1 && $this->is('AndroidOS') && $this->version('Android', self::VERSION_TYPE_FLOAT) >= 2.3 ) ||
+            ($this->is('Skyfire') && $this->version('Skyfire', self::VERSION_TYPE_FLOAT) >= 4.1 && $this->is('AndroidOS') && $this->version('Android', self::VERSION_TYPE_FLOAT) >= 2.3) ||
 
             // Opera Mobile 11.5-12: Tested on Android 2.3
-            ( $this->is('Opera') && $this->version('Opera Mobi', self::VERSION_TYPE_FLOAT) >= 11.5 && $this->is('AndroidOS') ) ||
+            ($this->is('Opera') && $this->version('Opera Mobi', self::VERSION_TYPE_FLOAT) >= 11.5 && $this->is('AndroidOS')) ||
 
             // Meego 1.2 - Tested on Nokia 950 and N9
             $this->is('MeeGoOS') ||
@@ -1620,11 +1618,11 @@ class Mobile_Detect
             $this->is('Dolfin') && $this->version('Bada', self::VERSION_TYPE_FLOAT) >= 2.0 ||
 
             // UC Browser - Tested on Android 2.3 device
-            ( ($this->is('UC Browser') || $this->is('Dolfin')) && $this->version('Android', self::VERSION_TYPE_FLOAT) >= 2.3 ) ||
+            (($this->is('UC Browser') || $this->is('Dolfin')) && $this->version('Android', self::VERSION_TYPE_FLOAT) >= 2.3) ||
 
             // Kindle 3 and Fire  - Tested on the built-in WebKit browser for each
-            ( $this->match('Kindle Fire') ||
-            $this->is('Kindle') && $this->version('Kindle', self::VERSION_TYPE_FLOAT) >= 3.0 ) ||
+            ($this->match('Kindle Fire') ||
+                $this->is('Kindle') && $this->version('Kindle', self::VERSION_TYPE_FLOAT) >= 3.0) ||
 
             // Nook Color 1.4.1 - Tested on original Nook Color, not Nook Tablet
             $this->is('AndroidOS') && $this->is('NookTablet') ||
@@ -1643,28 +1641,28 @@ class Mobile_Detect
 
             // Opera Desktop 10-12 - Tested on OS X 10.7 and Windows 7
             $this->version('Opera', self::VERSION_TYPE_FLOAT) >= 10 && !$isMobile
-        ){
+        ) {
             return self::MOBILE_GRADE_A;
         }
 
         if (
-            $this->is('iOS') && $this->version('iPad', self::VERSION_TYPE_FLOAT)<4.3 ||
-            $this->is('iOS') && $this->version('iPhone', self::VERSION_TYPE_FLOAT)<4.3 ||
-            $this->is('iOS') && $this->version('iPod', self::VERSION_TYPE_FLOAT)<4.3 ||
+            $this->is('iOS') && $this->version('iPad', self::VERSION_TYPE_FLOAT) < 4.3 ||
+            $this->is('iOS') && $this->version('iPhone', self::VERSION_TYPE_FLOAT) < 4.3 ||
+            $this->is('iOS') && $this->version('iPod', self::VERSION_TYPE_FLOAT) < 4.3 ||
 
             // Blackberry 5.0: Tested on the Storm 2 9550, Bold 9770
-            $this->is('Blackberry') && $this->version('BlackBerry', self::VERSION_TYPE_FLOAT) >= 5 && $this->version('BlackBerry', self::VERSION_TYPE_FLOAT)<6 ||
+            $this->is('Blackberry') && $this->version('BlackBerry', self::VERSION_TYPE_FLOAT) >= 5 && $this->version('BlackBerry', self::VERSION_TYPE_FLOAT) < 6 ||
 
             //Opera Mini (5.0-6.5) - Tested on iOS 3.2/4.3 and Android 2.3
             ($this->version('Opera Mini', self::VERSION_TYPE_FLOAT) >= 5.0 && $this->version('Opera Mini', self::VERSION_TYPE_FLOAT) <= 7.0 &&
-            ($this->version('Android', self::VERSION_TYPE_FLOAT) >= 2.3 || $this->is('iOS')) ) ||
+                ($this->version('Android', self::VERSION_TYPE_FLOAT) >= 2.3 || $this->is('iOS'))) ||
 
             // Nokia Symbian^3 - Tested on Nokia N8 (Symbian^3), C7 (Symbian^3), also works on N97 (Symbian^1)
             $this->match('NokiaN8|NokiaC7|N97.*Series60|Symbian/3') ||
 
             // @todo: report this (tested on Nokia N71)
             $this->version('Opera Mobi', self::VERSION_TYPE_FLOAT) >= 11 && $this->is('SymbianOS')
-        ){
+        ) {
             return self::MOBILE_GRADE_B;
         }
 
@@ -1681,7 +1679,7 @@ class Mobile_Detect
 
             // Internet Explorer 7 and older - Tested on Windows XP
             $this->version('IE', self::VERSION_TYPE_FLOAT) <= 7.0 && !$isMobile
-        ){
+        ) {
             return self::MOBILE_GRADE_C;
         }
 

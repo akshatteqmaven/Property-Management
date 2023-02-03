@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
@@ -12,6 +13,7 @@
  * @since         CakePHP CodeSniffer 0.1.24
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
+
 namespace CakePHP\Sniffs\Commenting;
 
 use PHP_CodeSniffer\Files\File;
@@ -39,7 +41,7 @@ use PHP_CodeSniffer\Util\Tokens;
  *  <li>The tag order and indentation are correct</li>
  * </ul>
  *
- * @category  PHP
+ * @property_category  PHP
  * @package   PHP_CodeSniffer
  * @author    Greg Sherwood <gsherwood@squiz.net>
  * @author    Marc McIntyre <mmcintyre@squiz.net>
@@ -290,7 +292,7 @@ class FunctionCommentSniff implements Sniff
             return;
         }
 
-        [$types, ] = explode(' ', $content);
+        [$types,] = explode(' ', $content);
         $typeNames = explode('|', $types);
 
         // If the return type is void, make sure there is

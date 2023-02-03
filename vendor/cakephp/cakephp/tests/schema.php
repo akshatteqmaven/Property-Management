@@ -358,7 +358,7 @@ return [
                 'type' => 'integer',
                 'null' => true,
             ],
-            'category_id' => [
+            'property_category_id' => [
                 'type' => 'integer',
                 'null' => true,
             ],
@@ -538,7 +538,7 @@ return [
             'id' => [
                 'type' => 'integer',
             ],
-            'category' => [
+            'property_category' => [
                 'type' => 'integer',
                 'null' => false,
             ],
@@ -554,7 +554,7 @@ return [
             'primary' => [
                 'type' => 'primary',
                 'columns' => [
-                    'category',
+                    'property_category',
                     'id',
                 ],
             ],
@@ -566,7 +566,7 @@ return [
             'id' => [
                 'type' => 'integer',
             ],
-            'product_category' => [
+            'product_property_category' => [
                 'type' => 'integer',
                 'null' => false,
             ],
@@ -582,16 +582,16 @@ return [
                     'id',
                 ],
             ],
-            'product_category_fk' => [
+            'product_property_category_fk' => [
                 'type' => 'foreign',
                 'columns' => [
-                    'product_category',
+                    'product_property_category',
                     'product_id',
                 ],
                 'references' => [
                     'products',
                     [
-                        'category',
+                        'property_category',
                         'id',
                     ],
                 ],
@@ -600,10 +600,10 @@ return [
             ],
         ],
         'indexes' => [
-            'product_category' => [
+            'product_property_category' => [
                 'type' => 'index',
                 'columns' => [
-                    'product_category',
+                    'product_property_category',
                     'product_id',
                 ],
             ],
@@ -1567,12 +1567,12 @@ return [
         ],
     ],
     [
-        'table' => 'counter_cache_user_category_posts',
+        'table' => 'counter_cache_user_property_category_posts',
         'columns' => [
             'id' => [
                 'type' => 'integer',
             ],
-            'category_id' => [
+            'property_category_id' => [
                 'type' => 'integer',
             ],
             'user_id' => [

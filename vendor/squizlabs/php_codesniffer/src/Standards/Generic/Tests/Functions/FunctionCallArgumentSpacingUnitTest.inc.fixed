@@ -130,7 +130,7 @@ my_function_call(
     'b',
      'c', // Comment.
     'd',
-    'e', // phpcs:ignore Standard.Category.Sniff -- for reasons.
+    'e', // phpcs:ignore Standard.property_category.Sniff -- for reasons.
      'f'
 );
 

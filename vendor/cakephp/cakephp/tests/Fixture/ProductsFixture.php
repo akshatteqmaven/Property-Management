@@ -33,10 +33,10 @@ class ProductsFixture extends TestFixture
      */
     public $fields = [
         'id' => ['type' => 'integer'],
-        'category' => ['type' => 'integer', 'null' => false],
+        'property_category' => ['type' => 'integer', 'null' => false],
         'name' => ['type' => 'string', 'null' => false],
         'price' => ['type' => 'integer'],
-        '_constraints' => ['primary' => ['type' => 'primary', 'columns' => ['category', 'id']]],
+        '_constraints' => ['primary' => ['type' => 'primary', 'columns' => ['property_category', 'id']]],
     ];
 
     /**
@@ -45,8 +45,8 @@ class ProductsFixture extends TestFixture
      * @var array
      */
     public $records = [
-        ['id' => 1, 'category' => 1, 'name' => 'First product', 'price' => 10],
-        ['id' => 2, 'category' => 2, 'name' => 'Second product', 'price' => 20],
-        ['id' => 3, 'category' => 3, 'name' => 'Third product', 'price' => 30],
+        ['id' => 1, 'property_category' => 1, 'name' => 'First product', 'price' => 10],
+        ['id' => 2, 'property_category' => 2, 'name' => 'Second product', 'price' => 20],
+        ['id' => 3, 'property_category' => 3, 'name' => 'Third product', 'price' => 30],
     ];
 }

@@ -80,7 +80,7 @@ class   CorrectClassDeclaration
 class CorrectClassDeclaration extends CorrectClassDeclaration2 implements ICorrectClassDeclaration
 {
 
-} // phpcs:enable Standard.Category.Sniff
+} // phpcs:enable Standard.property_category.Sniff
 
 class File implements \Zend_Auth_Storage_Interface,\Zend_Auth_Storage,  \Zend_Foo
 {

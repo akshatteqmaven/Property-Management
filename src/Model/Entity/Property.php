@@ -13,7 +13,7 @@ use Cake\ORM\Entity;
  * @property int $user_id
  * @property string $property_title
  * @property string $property_description
- * @property string $property_category
+ * @property string property_category
  * @property string $property_image
  * @property string $property_tags
  * @property string $status
@@ -48,7 +48,6 @@ class Property extends Entity
         'property_comments' => true,
         'user' => true,
         'users_profile' => true,
-
 
     ];
 }

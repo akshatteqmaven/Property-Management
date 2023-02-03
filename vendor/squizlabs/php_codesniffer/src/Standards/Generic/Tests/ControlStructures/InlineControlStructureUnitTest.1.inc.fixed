@@ -253,17 +253,17 @@ if ($this) {
     }
 }
 
-while (!$this->readLine($tokens, $tag)); //phpcs:ignore Standard.Category.Sniff
+while (!$this->readLine($tokens, $tag)); //phpcs:ignore Standard.property_category.Sniff
 
 while (!$this->readLine($tokens, $tag)); // comment
 
 while (!$this->readLine($tokens, $tag)); /* comment */
 
 foreach ($stringParade as $hit) {
-    $hitParade[] = $hit + 0; // phpcs:ignore Standard.Category.Sniff
+    $hitParade[] = $hit + 0; // phpcs:ignore Standard.property_category.Sniff
 }
 if ($bar) {
-    if ($foo) { echo 'hi'; /* @phpcs:ignore Standard.Category.Sniff */
+    if ($foo) { echo 'hi'; /* @phpcs:ignore Standard.property_category.Sniff */
     }
 }
 if (true) { $callable = function () {

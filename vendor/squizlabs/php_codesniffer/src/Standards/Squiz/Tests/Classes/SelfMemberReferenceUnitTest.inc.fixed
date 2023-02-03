@@ -130,7 +130,7 @@ class Nested_Anon_Class {
         
         /* some comment */
 
-        self::// phpcs:ignore Standard.Category.SniffName -- for reasons.
+        self::// phpcs:ignore Standard.property_category.SniffName -- for reasons.
         Bar();
 
         // Anonymous class is a different scope.

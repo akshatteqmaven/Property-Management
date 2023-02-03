@@ -44,7 +44,7 @@ CREATE TABLE `properties` (
 -- Dumping data for table `properties`
 --
 
-INSERT INTO `properties` (`id`, `user_id`, `property_title`, `property_description`, `property_category`, `property_image`, `property_tags`, `status`, `created_date`, `modified_date`) VALUES
+INSERT INTO `properties` (`id`, `user_id`, `property_title`, `property_description`, `property_category `, `property_image`, `property_tags`, `status`, `created_date`, `modified_date`) VALUES
 (1, 1, 'The home', 'This home is designed by the best achitectures', 'Residential', 'pexels-i̇lknur-kayahan-8349787.jpg', '1BHK,South facing,near to market.', 1, '2023-02-03 05:45:28', '2023-02-03 05:45:28'),
 (2, 1, 'town homes', 'good place', 'Residential', 'pexels-emrah-i̇nci-13563062.jpg', '1BHK,South facing,near to market.', 1, '2023-02-03 05:46:51', '2023-02-03 05:46:51'),
 (3, 1, 'The Urben homes', 'perimium homes', 'Residential', 'test.png', '1BHK,South facing,near to market.', 0, '2023-02-03 05:48:06', '2023-02-03 05:48:06');
@@ -57,7 +57,7 @@ INSERT INTO `properties` (`id`, `user_id`, `property_title`, `property_descripti
 
 CREATE TABLE `property_categories` (
   `id` int NOT NULL,
-  `category_name` varchar(155) NOT NULL,
+  `property_category_name` varchar(155) NOT NULL,
   `status` varchar(155) NOT NULL,
   `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modified_date` datetime DEFAULT NULL

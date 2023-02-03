@@ -54,8 +54,8 @@ class FixturizedTestCase extends TestCase
         $this->loadFixtures();
         $article = $this->getTableLocator()->get('Articles')->get(1);
         $this->assertSame(1, $article->id);
-        $category = $this->getTableLocator()->get('Categories')->get(1);
-        $this->assertSame(1, $category->id);
+        $property_category = $this->getTableLocator()->get('Categories')->get(1);
+        $this->assertSame(1, $property_category->id);
     }
 
     /**

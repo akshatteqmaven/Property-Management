@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Test\Fixture;
@@ -23,7 +24,7 @@ class PropertiesFixture extends TestFixture
                 'user_id' => 1,
                 'property_title' => 'Lorem ipsum dolor sit amet',
                 'property_description' => 'Lorem ipsum dolor sit amet',
-                'property_category' => 'Lorem ipsum dolor sit amet',
+                'property_category ' => 'Lorem ipsum dolor sit amet',
                 'property_image' => 'Lorem ipsum dolor sit amet',
                 'property_tags' => 'Lorem ipsum dolor sit amet',
                 'status' => 'Lorem ipsum dolor sit amet',

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 /**
@@ -14,6 +15,7 @@ declare(strict_types=1);
  * @since         3.0.0
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
+
 namespace Cake\ORM;
 
 use ArrayObject;
@@ -589,9 +591,9 @@ class Table implements RepositoryInterface, EventListenerInterface, EventDispatc
                 $nameLength = $maxLength - 2;
                 throw new RuntimeException(
                     'ORM queries generate field aliases using the table name/alias and column name. ' .
-                    "The table alias `{$table}` and column `{$name}` create an alias longer than ({$nameLength}). " .
-                    'You must change the table schema in the database and shorten either the table or column ' .
-                    'identifier so they fit within the database alias limits.'
+                        "The table alias `{$table}` and column `{$name}` create an alias longer than ({$nameLength}). " .
+                        'You must change the table schema in the database and shorten either the table or column ' .
+                        'identifier so they fit within the database alias limits.'
                 );
             }
         }
@@ -1338,7 +1340,7 @@ class Table implements RepositoryInterface, EventListenerInterface, EventDispatc
      *
      * ```
      * $table->find('list', [
-     *  'groupField' => 'category_id',
+     *  'groupField' => 'property_category_id',
      * ]);
      * ```
      *
@@ -1761,11 +1763,11 @@ class Table implements RepositoryInterface, EventListenerInterface, EventDispatc
     {
         return (bool)count(
             $this->find('all')
-            ->select(['existing' => 1])
-            ->where($conditions)
-            ->limit(1)
-            ->disableHydration()
-            ->toArray()
+                ->select(['existing' => 1])
+                ->where($conditions)
+                ->limit(1)
+                ->disableHydration()
+                ->toArray()
         );
     }
 
@@ -2416,10 +2418,10 @@ class Table implements RepositoryInterface, EventListenerInterface, EventDispatc
     protected function _deleteMany(iterable $entities, $options = []): ?EntityInterface
     {
         $options = new ArrayObject((array)$options + [
-                'atomic' => true,
-                'checkRules' => true,
-                '_primary' => true,
-            ]);
+            'atomic' => true,
+            'checkRules' => true,
+            '_primary' => true,
+        ]);
 
         $failed = $this->_executeTransaction(function () use ($entities, $options) {
             foreach ($entities as $entity) {
@@ -2672,7 +2674,7 @@ class Table implements RepositoryInterface, EventListenerInterface, EventDispatc
         if (!$association) {
             throw new RuntimeException(sprintf(
                 'Undefined property `%s`. ' .
-                'You have not defined the `%s` association on `%s`.',
+                    'You have not defined the `%s` association on `%s`.',
                 $property,
                 $property,
                 static::class

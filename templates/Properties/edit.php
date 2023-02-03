@@ -54,3 +54,10 @@
         </div>
     </div>
 </div>
+<!-- <label for="property_category">Categories</label>
+                        <select name="property_category ">
+                            <?php foreach ($propertyCategories as $property) : ?>
+                                <option value=<?= h($property->category_name) ?>><?= h($property->category_name) ?></option>
+                            <?php endforeach; ?>
+
+                        </select> -->

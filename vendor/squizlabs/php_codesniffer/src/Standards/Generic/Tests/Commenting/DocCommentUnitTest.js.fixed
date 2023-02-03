@@ -134,7 +134,7 @@
  *
  * PHP version 5
  *
- * @category  PHP
+ * @property_category  PHP
  * @package   PHP_CodeSniffer
  * @author    Greg Sherwood <gsherwood@squiz.net>
  * @author    Marc McIntyre <mmcintyre@squiz.net>
@@ -232,7 +232,7 @@
  * Verify and document sniff behaviour when the "tag value" is indented with a mix of tabs and spaces.
  * The below is "correctly" aligned.
  *
- * @category  PHP
+ * @property_category  PHP
  * @package	  PHP_CodeSniffer
  * @author	  Greg Sherwood <gsherwood@squiz.net>
  * @author	  Marc McIntyre <mmcintyre@squiz.net>
@@ -245,7 +245,7 @@
  * Verify and document sniff behaviour when the "tag value" is indented with a mix of tabs and spaces.
  * The below is incorrectly aligned.
  *
- * @category  PHP
+ * @property_category  PHP
  * @package   PHP_CodeSniffer
  * @author	  Greg Sherwood <gsherwood@squiz.net>
  * @author    Marc McIntyre <mmcintyre@squiz.net>

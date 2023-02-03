@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 /*
  * This file is part of phpunit/php-code-coverage.
  *
@@ -7,6 +9,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+
 namespace SebastianBergmann\CodeCoverage\Report;
 
 use function count;
@@ -118,10 +121,10 @@ final class Clover
                     );
                 }
 
-                if (!empty($class['package']['category'])) {
+                if (!empty($class['package']['property_category'])) {
                     $xmlClass->setAttribute(
-                        'category',
-                        $class['package']['category']
+                        'property_category',
+                        $class['package']['property_category']
                     );
                 }
 

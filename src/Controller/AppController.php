@@ -67,7 +67,6 @@ class AppController extends Controller
         $this->set(compact('loginUser'));
 
 
-        $this->set('users_profile.first_name', $this->Auth->user('users_profile.first_name'));
 
         /*
          * Enable the following component for recommended CakePHP form protection settings.

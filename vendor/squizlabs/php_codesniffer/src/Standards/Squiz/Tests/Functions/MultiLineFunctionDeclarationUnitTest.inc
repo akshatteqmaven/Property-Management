@@ -174,7 +174,7 @@ function __construct(
 ) {}
 
 function __construct(
-    $foo,   // phpcs:ignore Standard.Category.Sniff -- for reasons.
+    $foo,   // phpcs:ignore Standard.property_category.Sniff -- for reasons.
     $bar
 ) {}
 
@@ -186,7 +186,7 @@ public function hello(string $greeting // cant fix this
 ) {
 }
 
-public function hello(string $greeting // phpcs:ignore Standard.Category.Sniff -- for reasons.
+public function hello(string $greeting // phpcs:ignore Standard.property_category.Sniff -- for reasons.
 ) {
 }
 

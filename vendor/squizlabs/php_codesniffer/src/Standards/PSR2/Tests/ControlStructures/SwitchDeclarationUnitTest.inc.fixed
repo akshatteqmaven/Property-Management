@@ -126,7 +126,7 @@ switch ($foo) {
         // some comment
         echo 'bar';
         break;
-    case 'baz': // phpcs:ignore Standard.Category.Sniff
+    case 'baz': // phpcs:ignore Standard.property_category.Sniff
         echo 'baz';
         break;
     case 'boo':

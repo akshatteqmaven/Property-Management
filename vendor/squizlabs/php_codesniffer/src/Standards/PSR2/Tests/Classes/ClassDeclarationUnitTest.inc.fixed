@@ -160,7 +160,7 @@ class A extends B implements C
 class C2
 {
 
-} // phpcs:ignore Standard.Category.Sniff
+} // phpcs:ignore Standard.property_category.Sniff
 
 interface I1 extends
     Foo

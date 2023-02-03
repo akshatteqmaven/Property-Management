@@ -212,10 +212,10 @@ interface MyInterface
 // phpcs:set Squiz.WhiteSpace.MemberVarSpacing spacingBeforeFirst 0
 
 class phpcsCommentTest {
-    // phpcs:disable Standard.Category.Sniff
+    // phpcs:disable Standard.property_category.Sniff
 
     public $var1 = 'value';
-    // phpcs:enable Standard.Category.Sniff
+    // phpcs:enable Standard.property_category.Sniff
 
     public $var1 = 'value';
 
@@ -226,11 +226,11 @@ class phpcsCommentTest {
 
 class phpcsCommentTest {
 
-    // phpcs:disable Standard.Category.Sniff
+    // phpcs:disable Standard.property_category.Sniff
 
     public $var1 = 'value';
 
-    // phpcs:enable Standard.Category.Sniff
+    // phpcs:enable Standard.property_category.Sniff
 
     public $var1 = 'value';
 

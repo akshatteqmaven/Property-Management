@@ -121,9 +121,9 @@ abstract class AbstractSniffUnitTest extends TestCase
         }
 
         $sniffCode = Common::getSniffCode(get_class($this));
-        list($standardName, $categoryName, $sniffName) = explode('.', $sniffCode);
+        list($standardName, $property_categoryName, $sniffName) = explode('.', $sniffCode);
 
-        $testFileBase = $this->testsDir.$categoryName.DIRECTORY_SEPARATOR.$sniffName.'UnitTest.';
+        $testFileBase = $this->testsDir.$property_categoryName.DIRECTORY_SEPARATOR.$sniffName.'UnitTest.';
 
         // Get a list of all test files to check.
         $testFiles = $this->getTestFiles($testFileBase);
@@ -152,7 +152,7 @@ abstract class AbstractSniffUnitTest extends TestCase
 
         $ruleset = $GLOBALS['PHP_CODESNIFFER_RULESETS'][$standardName];
 
-        $sniffFile = $this->standardsDir.DIRECTORY_SEPARATOR.'Sniffs'.DIRECTORY_SEPARATOR.$categoryName.DIRECTORY_SEPARATOR.$sniffName.'Sniff.php';
+        $sniffFile = $this->standardsDir.DIRECTORY_SEPARATOR.'Sniffs'.DIRECTORY_SEPARATOR.$property_categoryName.DIRECTORY_SEPARATOR.$sniffName.'Sniff.php';
 
         $sniffClassName = substr(get_class($this), 0, -8).'Sniff';
         $sniffClassName = str_replace('\Tests\\', '\Sniffs\\', $sniffClassName);

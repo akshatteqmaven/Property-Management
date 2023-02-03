@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 /*
  * This file is part of PHPUnit.
  *
@@ -7,6 +9,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+
 namespace PHPUnit\Framework;
 
 use const LC_ALL;
@@ -760,10 +763,12 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
             $this->setTestResultObject($result);
         }
 
-        if (!$this instanceof ErrorTestCase &&
+        if (
+            !$this instanceof ErrorTestCase &&
             !$this instanceof WarningTestCase &&
             !$this instanceof SkippedTestCase &&
-            !$this->handleDependencies()) {
+            !$this->handleDependencies()
+        ) {
             return $result;
         }
 
@@ -1675,9 +1680,9 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
             throw new Exception;
         }
 
-        [$category, $locale] = $args;
+        [$property_category, $locale] = $args;
 
-        if (!in_array($category, self::LOCALE_CATEGORIES, true)) {
+        if (!in_array($property_category, self::LOCALE_CATEGORIES, true)) {
             throw new Exception;
         }
 
@@ -1685,15 +1690,15 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
             throw new Exception;
         }
 
-        $this->locale[$category] = setlocale($category, 0);
+        $this->locale[$property_category] = setlocale($property_category, 0);
 
         $result = setlocale(...$args);
 
         if ($result === false) {
             throw new Exception(
                 'The locale functionality is not implemented on your platform, ' .
-                'the specified locale does not exist or the category name is ' .
-                'invalid.'
+                    'the specified locale does not exist or the property_category name is ' .
+                    'invalid.'
             );
         }
     }
@@ -1773,8 +1778,7 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
 
         $mockedMethodsThatDontExist = array_filter(
             $methods,
-            static function (string $method) use ($reflector)
-            {
+            static function (string $method) use ($reflector) {
                 return !$reflector->hasMethod($method);
             }
         );
@@ -1790,12 +1794,12 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
         }
 
         return $this->getMockBuilder($originalClassName)
-                    ->disableOriginalConstructor()
-                    ->disableOriginalClone()
-                    ->disableArgumentCloning()
-                    ->disallowMockingUnknownTypes()
-                    ->setMethods(empty($methods) ? null : $methods)
-                    ->getMock();
+            ->disableOriginalConstructor()
+            ->disableOriginalClone()
+            ->disableArgumentCloning()
+            ->disallowMockingUnknownTypes()
+            ->setMethods(empty($methods) ? null : $methods)
+            ->getMock();
     }
 
     /**
@@ -1810,9 +1814,9 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
     protected function createTestProxy(string $originalClassName, array $constructorArguments = []): MockObject
     {
         return $this->getMockBuilder($originalClassName)
-                    ->setConstructorArgs($constructorArguments)
-                    ->enableProxyingToOriginalMethods()
-                    ->getMock();
+            ->setConstructorArgs($constructorArguments)
+            ->enableProxyingToOriginalMethods()
+            ->getMock();
     }
 
     /**
@@ -1894,14 +1898,12 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
         }
 
         if (!class_exists($originalClassName)) {
-            eval(
-                $this->getMockObjectGenerator()->generateClassFromWsdl(
+            eval($this->getMockObjectGenerator()->generateClassFromWsdl(
                     $wsdlFile,
                     $originalClassName,
                     $methods,
                     $options
-                )
-            );
+                ));
         }
 
         $mockObject = $this->getMockObjectGenerator()->getMock(
@@ -2117,9 +2119,11 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
             }
 
             if (isset($passed[$dependencyTarget])) {
-                if ($passed[$dependencyTarget]['size'] != \PHPUnit\Util\Test::UNKNOWN &&
+                if (
+                    $passed[$dependencyTarget]['size'] != \PHPUnit\Util\Test::UNKNOWN &&
                     $this->getSize() != \PHPUnit\Util\Test::UNKNOWN &&
-                    $passed[$dependencyTarget]['size'] > $this->getSize()) {
+                    $passed[$dependencyTarget]['size'] > $this->getSize()
+                ) {
                     $this->result->addError(
                         $this,
                         new SkippedTestError(
@@ -2255,8 +2259,10 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
 
     private function snapshotGlobalState(): void
     {
-        if ($this->runTestInSeparateProcess || $this->inIsolation ||
-            (!$this->backupGlobals && !$this->backupStaticAttributes)) {
+        if (
+            $this->runTestInSeparateProcess || $this->inIsolation ||
+            (!$this->backupGlobals && !$this->backupStaticAttributes)
+        ) {
             return;
         }
 
@@ -2504,8 +2510,8 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
 
     private function cleanupLocaleSettings(): void
     {
-        foreach ($this->locale as $category => $locale) {
-            setlocale($category, $locale);
+        foreach ($this->locale as $property_category => $locale) {
+            setlocale($property_category, $locale);
         }
 
         $this->locale = [];
@@ -2539,9 +2545,11 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
             }
             // @codeCoverageIgnoreEnd
 
-            if ($this->expectedException === 'PHPUnit\Framework\Exception' ||
+            if (
+                $this->expectedException === 'PHPUnit\Framework\Exception' ||
                 $this->expectedException === '\PHPUnit\Framework\Exception' ||
-                $reflector->isSubclassOf(Exception::class)) {
+                $reflector->isSubclassOf(Exception::class)
+            ) {
                 $result = true;
             }
         }
@@ -2596,10 +2604,10 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
     private function createMockObject(string $originalClassName): MockObject
     {
         return $this->getMockBuilder($originalClassName)
-                    ->disableOriginalConstructor()
-                    ->disableOriginalClone()
-                    ->disableArgumentCloning()
-                    ->disallowMockingUnknownTypes()
-                    ->getMock();
+            ->disableOriginalConstructor()
+            ->disableOriginalClone()
+            ->disableArgumentCloning()
+            ->disallowMockingUnknownTypes()
+            ->getMock();
     }
 }

@@ -844,7 +844,7 @@ EOD;
             ],
 
             // Selectiveness variations.
-            'disable: complete category'                   => [
+            'disable: complete property_category'                   => [
                 'before'         => '// phpcs:disable Generic.Commenting',
                 'expectedErrors' => 1,
             ],
@@ -853,20 +853,20 @@ EOD;
                 'before'         => '# @phpcs:disable Generic.Commenting.Todo.TaskFound',
                 'expectedErrors' => 1,
             ],
-            'disable: single errorcode and a category'     => ['before' => '// phpcs:disable Generic.PHP.LowerCaseConstant.Found,Generic.Commenting'],
+            'disable: single errorcode and a property_category'     => ['before' => '// phpcs:disable Generic.PHP.LowerCaseConstant.Found,Generic.Commenting'],
 
-            // Wrong category/sniff/code.
-            'disable: wrong error code and category'       => [
+            // Wrong property_category/sniff/code.
+            'disable: wrong error code and property_category'       => [
                 'before'           => '/**'.PHP_EOL.' * phpcs:disable Generic.PHP.LowerCaseConstant.Upper,Generic.Comments'.PHP_EOL.' */ ',
                 'expectedErrors'   => 1,
                 'expectedWarnings' => 1,
             ],
-            'disable: wrong category, docblock'            => [
+            'disable: wrong property_category, docblock'            => [
                 'before'           => '/**'.PHP_EOL.' * phpcs:disable Generic.Files'.PHP_EOL.' */ ',
                 'expectedErrors'   => 1,
                 'expectedWarnings' => 1,
             ],
-            'disable: wrong category, docblock, with @'    => [
+            'disable: wrong property_category, docblock, with @'    => [
                 'before'           => '/**'.PHP_EOL.' * @phpcs:disable Generic.Files'.PHP_EOL.' */ ',
                 'expectedErrors'   => 1,
                 'expectedWarnings' => 1,
@@ -958,7 +958,7 @@ EOD;
                 'expectedErrors'   => 0,
                 'expectedWarnings' => 1,
             ],
-            'disable/enable: complete category'                                                                             => [
+            'disable/enable: complete property_category'                                                                             => [
                 'code'             => '
                     // phpcs:disable Generic.Commenting
                     $var = FALSE;
@@ -978,7 +978,7 @@ EOD;
                 'expectedErrors'   => 0,
                 'expectedWarnings' => 1,
             ],
-            'disable: whole standard; enable: category from the standard'                                                   => [
+            'disable: whole standard; enable: property_category from the standard'                                                   => [
                 'code'             => '
                     // phpcs:disable Generic
                     $var = FALSE;
@@ -988,7 +988,7 @@ EOD;
                 'expectedErrors'   => 0,
                 'expectedWarnings' => 1,
             ],
-            'disable: a category; enable: the whole standard containing the category'                                       => [
+            'disable: a property_category; enable: the whole standard containing the property_category'                                       => [
                 'code'             => '
                     # phpcs:disable Generic.Commenting
                     $var = FALSE;
@@ -998,7 +998,7 @@ EOD;
                 'expectedErrors'   => 1,
                 'expectedWarnings' => 1,
             ],
-            'disable: single sniff; enable: the category containing the sniff'                                              => [
+            'disable: single sniff; enable: the property_category containing the sniff'                                              => [
                 'code'             => '
                     // phpcs:disable Generic.Commenting.Todo
                     $var = FALSE;
@@ -1128,7 +1128,7 @@ EOD;
                 'expectedErrors'   => 1,
                 'expectedWarnings' => 0,
             ],
-            'ignore: category of sniffs'                  => [
+            'ignore: property_category of sniffs'                  => [
                 'before'           => '# phpcs:ignore Generic.Commenting',
                 'expectedErrors'   => 2,
                 'expectedWarnings' => 1,

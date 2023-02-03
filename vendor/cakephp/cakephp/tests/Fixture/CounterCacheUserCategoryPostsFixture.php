@@ -19,19 +19,19 @@ use Cake\TestSuite\Fixture\TestFixture;
 /**
  * CounterCache test fixture for testing binding keys.
  */
-class CounterCacheUserCategoryPostsFixture extends TestFixture
+class CounterCacheUserproperty_categoryPostsFixture extends TestFixture
 {
     public $fields = [
         'id' => ['type' => 'integer'],
-        'category_id' => ['type' => 'integer'],
+        'property_category_id' => ['type' => 'integer'],
         'user_id' => ['type' => 'integer'],
         'post_count' => ['type' => 'integer', 'null' => true],
         '_constraints' => ['primary' => ['type' => 'primary', 'columns' => ['id']]],
     ];
 
     public $records = [
-        ['category_id' => 1, 'user_id' => 1, 'post_count' => 1],
-        ['category_id' => 2, 'user_id' => 1, 'post_count' => 1],
-        ['category_id' => 2, 'user_id' => 2, 'post_count' => 1],
+        ['property_category_id' => 1, 'user_id' => 1, 'post_count' => 1],
+        ['property_category_id' => 2, 'user_id' => 1, 'post_count' => 1],
+        ['property_category_id' => 2, 'user_id' => 2, 'post_count' => 1],
     ];
 }

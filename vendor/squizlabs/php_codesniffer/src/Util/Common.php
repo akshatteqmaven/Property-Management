@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Basic util functions.
  *
@@ -44,8 +45,7 @@ class Common
         }
 
         return false;
-
-    }//end isPharFile()
+    } //end isPharFile()
 
 
     /**
@@ -72,8 +72,7 @@ class Common
         }
 
         return false;
-
-    }//end isReadable()
+    } //end isReadable()
 
 
     /**
@@ -91,7 +90,7 @@ class Common
         if (substr($path, 0, 2) === '~/') {
             $homeDir = getenv('HOME');
             if ($homeDir !== false) {
-                $path = $homeDir.substr($path, 1);
+                $path = $homeDir . substr($path, 1);
             }
         }
 
@@ -113,20 +112,19 @@ class Common
         }
 
         $phar  = \Phar::running(false);
-        $extra = str_replace('phar://'.$phar, '', $path);
+        $extra = str_replace('phar://' . $phar, '', $path);
         $path  = realpath($phar);
         if ($path === false) {
             return false;
         }
 
-        $path = 'phar://'.$path.$extra;
+        $path = 'phar://' . $path . $extra;
         if (file_exists($path) === true) {
             return $path;
         }
 
         return false;
-
-    }//end realpath()
+    } //end realpath()
 
 
     /**
@@ -155,8 +153,7 @@ class Common
         }
 
         return $path;
-
-    }//end stripBasepath()
+    } //end stripBasepath()
 
 
     /**
@@ -176,8 +173,7 @@ class Common
         }
 
         return $eolChar;
-
-    }//end detectLineEndings()
+    } //end detectLineEndings()
 
 
     /**
@@ -235,8 +231,7 @@ class Common
         $isTTY = ($mode !== $type['S_IFIFO']);
 
         return $isTTY;
-
-    }//end isStdinATTY()
+    } //end isStdinATTY()
 
 
     /**
@@ -257,8 +252,7 @@ class Common
         }
 
         return $cmd;
-
-    }//end escapeshellcmd()
+    } //end escapeshellcmd()
 
 
     /**
@@ -273,7 +267,7 @@ class Common
      *
      * @return string
      */
-    public static function prepareForOutput($content, $exclude=[])
+    public static function prepareForOutput($content, $exclude = [])
     {
         if (stripos(PHP_OS, 'WIN') === 0) {
             if (in_array("\r", $exclude, true) === false) {
@@ -303,11 +297,10 @@ class Common
             if (in_array(' ', $exclude, true) === false) {
                 $content = str_replace(' ', "\033[30;1m·\033[0m", $content);
             }
-        }//end if
+        } //end if
 
         return $content;
-
-    }//end prepareForOutput()
+    } //end prepareForOutput()
 
 
     /**
@@ -332,9 +325,9 @@ class Common
      */
     public static function isCamelCaps(
         $string,
-        $classFormat=false,
-        $public=true,
-        $strict=true
+        $classFormat = false,
+        $public = true,
+        $strict = true
     ) {
         // Check the first character first.
         if ($classFormat === false) {
@@ -388,11 +381,10 @@ class Common
 
                 $lastCharWasCaps = $isCaps;
             }
-        }//end if
+        } //end if
 
         return true;
-
-    }//end isCamelCaps()
+    } //end isCamelCaps()
 
 
     /**
@@ -429,8 +421,7 @@ class Common
         }
 
         return $validName;
-
-    }//end isUnderscoreName()
+    } //end isUnderscoreName()
 
 
     /**
@@ -454,20 +445,20 @@ class Common
         } else {
             $lowerVarType = strtolower($varType);
             switch ($lowerVarType) {
-            case 'bool':
-            case 'boolean':
-                return 'boolean';
-            case 'double':
-            case 'real':
-            case 'float':
-                return 'float';
-            case 'int':
-            case 'integer':
-                return 'integer';
-            case 'array()':
-            case 'array':
-                return 'array';
-            }//end switch
+                case 'bool':
+                case 'boolean':
+                    return 'boolean';
+                case 'double':
+                case 'real':
+                case 'float':
+                    return 'float';
+                case 'int':
+                case 'integer':
+                    return 'integer';
+                case 'array()':
+                case 'array':
+                    return 'array';
+            } //end switch
 
             if (strpos($lowerVarType, 'array(') !== false) {
                 // Valid array declaration:
@@ -488,23 +479,23 @@ class Common
                     $type1 = self::suggestType($type1);
                     $type2 = self::suggestType($type2);
                     if ($type2 !== '') {
-                        $type2 = ' => '.$type2;
+                        $type2 = ' => ' . $type2;
                     }
 
                     return "array($type1$type2)";
                 } else {
                     return 'array';
-                }//end if
+                } //end if
             } else if (in_array($lowerVarType, self::$allowedTypes, true) === true) {
                 // A valid type, but not lower cased.
                 return $lowerVarType;
             } else {
                 // Must be a custom type name.
                 return $varType;
-            }//end if
-        }//end if
+            } //end if
+        } //end if
 
-    }//end suggestType()
+    } //end suggestType()
 
 
     /**
@@ -527,13 +518,12 @@ class Common
             $sniff = substr($sniff, 0, -8);
         }
 
-        $category = array_pop($parts);
+        $property_category = array_pop($parts);
         $sniffDir = array_pop($parts);
         $standard = array_pop($parts);
-        $code     = $standard.'.'.$category.'.'.$sniff;
+        $code     = $standard . '.' . $property_category . '.' . $sniff;
         return $code;
-
-    }//end getSniffCode()
+    } //end getSniffCode()
 
 
     /**
@@ -563,8 +553,7 @@ class Common
 
         $newName = substr($newName, ($start + 1));
         return $newName;
-
-    }//end cleanSniffClass()
+    } //end cleanSniffClass()
 
 
 }//end class

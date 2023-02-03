@@ -28,10 +28,10 @@ class CategoriesProductsFixture extends TestFixture
      */
     // phpcs:disable
     public $fields = [
-        'category_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+        'property_category_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'product_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         '_constraints' => [
-            'primary' => ['type' => 'primary', 'columns' => ['category_id', 'product_id'], 'length' => []],
+            'primary' => ['type' => 'primary', 'columns' => ['property_category_id', 'product_id'], 'length' => []],
         ],
         '_options' => [
             'engine' => 'InnoDB',
@@ -47,7 +47,7 @@ class CategoriesProductsFixture extends TestFixture
      */
     public $records = [
         [
-            'category_id' => 1,
+            'property_category_id' => 1,
             'product_id' => 1,
         ],
     ];

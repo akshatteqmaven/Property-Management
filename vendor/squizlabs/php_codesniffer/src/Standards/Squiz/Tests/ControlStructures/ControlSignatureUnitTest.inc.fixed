@@ -261,14 +261,14 @@ endif;
 // Issue #1857/#1927.
 if ($something) {
 }
-// phpcs:ignore Standard.Category.Sniff
+// phpcs:ignore Standard.property_category.Sniff
 elseif ($something) {
 } // comment
 else {
 }
 
 if ($something) {
-} // phpcs:ignore Standard.Category.Sniff
+} // phpcs:ignore Standard.property_category.Sniff
 elseif ($something) {
 }
 // comment
@@ -281,7 +281,7 @@ try {
 catch (CustomException $exception) {
     $x = 2;
 }
-// phpcs:ignore Standard.Category.Sniff
+// phpcs:ignore Standard.property_category.Sniff
 catch (Exception $exception) {
     $x = 2;
 } finally {

@@ -133,11 +133,11 @@ WHERE
 	OR
 	id_hook = (SELECT id_hook FROM `PREFIX_hook` WHERE name = 'actionSearch') AND id_module = (SELECT id_module FROM `PREFIX_module` WHERE name = 'statssearch')
 	OR
-	id_hook = (SELECT id_hook FROM `PREFIX_hook` WHERE name = 'actionCategoryAdd') AND id_module = (SELECT id_module FROM `PREFIX_module` WHERE name = 'blockcategories')
+	id_hook = (SELECT id_hook FROM `PREFIX_hook` WHERE name = 'actionproperty_categoryAdd') AND id_module = (SELECT id_module FROM `PREFIX_module` WHERE name = 'blockcategories')
 	OR
-	id_hook = (SELECT id_hook FROM `PREFIX_hook` WHERE name = 'actionCategoryUpdate') AND id_module = (SELECT id_module FROM `PREFIX_module` WHERE name = 'blockcategories')
+	id_hook = (SELECT id_hook FROM `PREFIX_hook` WHERE name = 'actionproperty_categoryUpdate') AND id_module = (SELECT id_module FROM `PREFIX_module` WHERE name = 'blockcategories')
 	OR
-	id_hook = (SELECT id_hook FROM `PREFIX_hook` WHERE name = 'actionCategoryDelete') AND id_module = (SELECT id_module FROM `PREFIX_module` WHERE name = 'blockcategories')
+	id_hook = (SELECT id_hook FROM `PREFIX_hook` WHERE name = 'actionproperty_categoryDelete') AND id_module = (SELECT id_module FROM `PREFIX_module` WHERE name = 'blockcategories')
 	OR
 	id_hook = (SELECT id_hook FROM `PREFIX_hook` WHERE name = 'actionAdminMetaSave') AND id_module = (SELECT id_module FROM `PREFIX_module` WHERE name = 'blockcategories')
 	OR
@@ -147,11 +147,11 @@ WHERE
 
 ALTER TABLE `PREFIX_employee` ADD `bo_color` varchar(32) default NULL AFTER `stats_date_to`
 
-INSERT INTO `PREFIX_cms_category_lang` VALUES(1, 3, 'Inicio', '', 'home', NULL, NULL, NULL)
+INSERT INTO `PREFIX_cms_property_category_lang` VALUES(1, 3, 'Inicio', '', 'home', NULL, NULL, NULL)
 
-INSERT INTO `PREFIX_cms_category` VALUES(1, 0, 0, 1, NOW(), NOW(),0)
+INSERT INTO `PREFIX_cms_property_category` VALUES(1, 0, 0, 1, NOW(), NOW(),0)
 
-UPDATE `PREFIX_cms_category` SET `position` = 0
+UPDATE `PREFIX_cms_property_category` SET `position` = 0
 
 ALTER TABLE `PREFIX_customer` ADD `note` text AFTER `secure_key`
 

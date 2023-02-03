@@ -97,17 +97,17 @@ function myFunction()
 /*
 function myFunction( $param )
 {
-	// phpcs:disable Standard.Category.Sniff -- for reasons.
+	// phpcs:disable Standard.property_category.Sniff -- for reasons.
 	if ( preg_match( '`[abc]`', $param ) > 0 ) {
 		do_something();
 	}
-	// phpcs:enable Standard.Category.Sniff -- for reasons.
+	// phpcs:enable Standard.property_category.Sniff -- for reasons.
 
 }//end myFunction()
 */
 
 	/*
-	 * function myFunction( $param ) // @phpcs:ignore Standard.Category.Sniff -- for reasons.
+	 * function myFunction( $param ) // @phpcs:ignore Standard.property_category.Sniff -- for reasons.
 	 * {
 	 *
 	 * }//end myFunction()
@@ -116,20 +116,20 @@ function myFunction( $param )
     /*
      * function myFunction( $param )
      * {
-     *  // phpcs:disable Standard.Category.Sniff -- for reasons.
+     *  // phpcs:disable Standard.property_category.Sniff -- for reasons.
      *  if ( preg_match( '`[abc]`', $param ) > 0 ) {
      *      do_something();
      *  }
-     *  // phpcs:enable Standard.Category.Sniff -- for reasons.
+     *  // phpcs:enable Standard.property_category.Sniff -- for reasons.
      *
      * }//end myFunction()
      */
 
     // function myFunction( $param )
     // {
-          // phpcs:disable Standard.Category.Sniff -- for reasons.
+          // phpcs:disable Standard.property_category.Sniff -- for reasons.
     //    do_something();
-          // phpcs:enable Standard.Category.Sniff -- for reasons.
+          // phpcs:enable Standard.property_category.Sniff -- for reasons.
     // }//end myFunction()
     //
 

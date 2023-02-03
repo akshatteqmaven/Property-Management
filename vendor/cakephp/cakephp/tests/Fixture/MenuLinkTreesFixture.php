@@ -148,7 +148,7 @@ class MenuLinkTreesFixture extends TestFixture
             'lft' => '2',
             'rght' => '9',
             'parent_id' => '9',
-            'url' => '/category/televisions.html',
+            'url' => '/property_category/televisions.html',
             'title' => 'televisions',
         ],
         [
@@ -156,7 +156,7 @@ class MenuLinkTreesFixture extends TestFixture
             'lft' => '3',
             'rght' => '4',
             'parent_id' => '10',
-            'url' => '/category/tube.html',
+            'url' => '/property_category/tube.html',
             'title' => 'tube',
         ],
         [
@@ -164,7 +164,7 @@ class MenuLinkTreesFixture extends TestFixture
             'lft' => '5',
             'rght' => '8',
             'parent_id' => '10',
-            'url' => '/category/lcd.html',
+            'url' => '/property_category/lcd.html',
             'title' => 'lcd',
         ],
         [
@@ -172,7 +172,7 @@ class MenuLinkTreesFixture extends TestFixture
             'lft' => '6',
             'rght' => '7',
             'parent_id' => '12',
-            'url' => '/category/plasma.html',
+            'url' => '/property_category/plasma.html',
             'title' => 'plasma',
         ],
         [
@@ -180,7 +180,7 @@ class MenuLinkTreesFixture extends TestFixture
             'lft' => '11',
             'rght' => '20',
             'parent_id' => null,
-            'url' => '/category/portable.html',
+            'url' => '/property_category/portable.html',
             'title' => 'portable',
         ],
         [
@@ -188,7 +188,7 @@ class MenuLinkTreesFixture extends TestFixture
             'lft' => '12',
             'rght' => '15',
             'parent_id' => '14',
-            'url' => '/category/mp3.html',
+            'url' => '/property_category/mp3.html',
             'title' => 'mp3',
         ],
         [
@@ -196,7 +196,7 @@ class MenuLinkTreesFixture extends TestFixture
             'lft' => '13',
             'rght' => '14',
             'parent_id' => '15',
-            'url' => '/category/flash.html',
+            'url' => '/property_category/flash.html',
             'title' => 'flash',
         ],
         [
@@ -204,7 +204,7 @@ class MenuLinkTreesFixture extends TestFixture
             'lft' => '16',
             'rght' => '17',
             'parent_id' => '14',
-            'url' => '/category/cd.html',
+            'url' => '/property_category/cd.html',
             'title' => 'cd',
         ],
         [
@@ -212,7 +212,7 @@ class MenuLinkTreesFixture extends TestFixture
             'lft' => '18',
             'rght' => '19',
             'parent_id' => '14',
-            'url' => '/category/radios.html',
+            'url' => '/property_category/radios.html',
             'title' => 'radios',
         ],
     ];

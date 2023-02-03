@@ -1,4 +1,10 @@
+<style>
+    .button.float-right {
+        margin-right: 19px;
+    }
+</style>
 <?php
+
 
 /**
  * @var \App\View\AppView $this

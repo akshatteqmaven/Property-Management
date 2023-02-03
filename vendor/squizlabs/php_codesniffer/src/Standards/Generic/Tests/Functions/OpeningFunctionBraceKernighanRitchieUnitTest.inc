@@ -199,12 +199,12 @@ function myFunction($a, $lot, $of, $params)
 }
 
 function myFunction($a, $lot, $of, $params)
-    : array // phpcs:ignore Standard.Category.Sniff -- for reasons.
+    : array // phpcs:ignore Standard.property_category.Sniff -- for reasons.
 {
     return null;
 }
 
 function myFunction($a, $lot, $of, $params)
-    : array { // phpcs:ignore Standard.Category.Sniff -- for reasons.
+    : array { // phpcs:ignore Standard.property_category.Sniff -- for reasons.
     return null;
 }

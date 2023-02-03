@@ -66,10 +66,10 @@ class ClassName9
 {
     use A, B, C {
         B::smallTalk insteadof A; /* cant fix */ A::bigTalk insteadof C;
-        B::smallTalk  // phpcs:ignore Standard.Category.Sniff
-        insteadof     // phpcs:ignore Standard.Category.Sniff
+        B::smallTalk  // phpcs:ignore Standard.property_category.Sniff
+        insteadof     // phpcs:ignore Standard.property_category.Sniff
         A;
-        C::mediumTalk // phpcs:ignore Standard.Category.Sniff
+        C::mediumTalk // phpcs:ignore Standard.property_category.Sniff
         as FooBar;
     }
 }

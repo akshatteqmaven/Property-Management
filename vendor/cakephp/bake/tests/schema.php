@@ -305,13 +305,13 @@ return [
     [
         'table' => 'categories_products',
         'columns' => [
-            'category_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+            'property_category_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
             'product_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         ],
-        'constraints' => ['primary' => ['type' => 'primary', 'columns' => ['category_id', 'product_id'], 'length' => []]],
+        'constraints' => ['primary' => ['type' => 'primary', 'columns' => ['property_category_id', 'product_id'], 'length' => []]],
     ],
     [
-        'table' => 'category_threads',
+        'table' => 'property_category_threads',
         'columns' => [
             'id' => ['type' => 'integer'],
             'parent_id' => ['type' => 'integer'],

@@ -31,10 +31,10 @@ $a = function() {
 
 $array = [
 	function($a) {
-	}, // phpcs:ignore Standard.Category.SniffName -- for reasons.
+	}, // phpcs:ignore Standard.property_category.SniffName -- for reasons.
 	'key' => function($b) {
 	}, // comment.
-	'key' => 'value', // phpcs:ignore Standard.Category.SniffName -- for reasons.
+	'key' => 'value', // phpcs:ignore Standard.property_category.SniffName -- for reasons.
 	'key' => 'value', 
 // comment.
 ];
@@ -42,7 +42,7 @@ $array = [
 // Verify that multi-line control structure with comments and annotations are left alone.
 for (
     $i = 0; /* Start */
-    $i < 10; /* phpcs:ignore Standard.Category.SniffName -- for reasons. */
+    $i < 10; /* phpcs:ignore Standard.property_category.SniffName -- for reasons. */
     $i++ // comment
 
 ) {}

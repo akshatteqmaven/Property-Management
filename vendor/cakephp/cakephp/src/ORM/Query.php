@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 /**
@@ -14,6 +15,7 @@ declare(strict_types=1);
  * @since         3.0.0
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
+
 namespace Cake\ORM;
 
 use ArrayObject;
@@ -336,8 +338,8 @@ class Query extends DatabaseQuery implements JsonSerializable, QueryInterface
      * // Bring articles' author information
      * $query->contain('Author');
      *
-     * // Also bring the category and tags associated to each article
-     * $query->contain(['Category', 'Tag']);
+     * // Also bring the property_category and tags associated to each article
+     * $query->contain(['property_category', 'Tag']);
      * ```
      *
      * Associations can be arbitrarily nested using dot notation or nested arrays,
@@ -946,8 +948,7 @@ class Query extends DatabaseQuery implements JsonSerializable, QueryInterface
             return (int)$counter($query);
         }
 
-        $complex = (
-            $query->clause('distinct') ||
+        $complex = ($query->clause('distinct') ||
             count($query->clause('group')) ||
             count($query->clause('union')) ||
             $query->clause('having')

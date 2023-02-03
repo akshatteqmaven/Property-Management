@@ -308,7 +308,7 @@ function foo() {
 }
 
 
-// phpcs:disable Standard.Category.Sniff -- for reasons.
+// phpcs:disable Standard.property_category.Sniff -- for reasons.
 function bar() {
 }
 
@@ -409,7 +409,7 @@ class MyClass
      * @return boolean
      */
     function func1() {}
-    // phpcs:disable Standard.Category.Sniff -- for reasons.
+    // phpcs:disable Standard.property_category.Sniff -- for reasons.
     /**
      * Function comment.
      *

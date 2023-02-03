@@ -261,7 +261,7 @@ $foo = array(
 $barbar = 'bar';
 
 $foo = [
-    // phpcs:ignore Standard.Category.Sniff.Code -- for reasons.
+    // phpcs:ignore Standard.property_category.Sniff.Code -- for reasons.
     'a' => 'b',
 ];
 $barbar = 'bar';

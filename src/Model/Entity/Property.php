@@ -39,6 +39,7 @@ class Property extends Entity
         'property_title' => true,
         'property_description' => true,
         'property_category' => true,
+        'property_categorie_id' => true,
         'property_image' => true,
         'property_tags' => true,
         'status' => true,

@@ -16,6 +16,10 @@
             <h3><?= h($usersProfile->first_name) ?></h3>
             <table>
                 <tr>
+                    <th><?= __('Profile Image') ?></th>
+                    <td><?= $this->Html->image(h($usersProfile->profile_image), array('width' => '220px', 'class' => 'test')) ?></td>
+                </tr>
+                <tr>
                     <th><?= __('First Name') ?></th>
                     <td><?= h($usersProfile->first_name) ?></td>
                 </tr>
@@ -42,10 +46,6 @@
                         ?>
 
                     </td>
-                </tr>
-                <tr>
-                    <th><?= __('Profile Image') ?></th>
-                    <td><?= $this->Html->image(h($usersProfile->profile_image), array('width' => '220px', 'class' => 'test')) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Created Date') ?></th>

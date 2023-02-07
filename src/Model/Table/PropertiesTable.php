@@ -51,6 +51,11 @@ class PropertiesTable extends Table
         ]);
         $this->hasMany('PropertyComments', [
             'foreignKey' => 'property_id',
+            'joinType' => 'INNER'
+        ]);
+        $this->belongsTo('PropertyCategories', [
+            'foreignKey' => 'property_categorie_id',
+            'joinType' => 'INNER'
         ]);
         $this->hasOne('UsersProfile');
     }
@@ -76,11 +81,7 @@ class PropertiesTable extends Table
             ->requirePresence('property_description', 'create')
             ->notEmptyString('property_description');
 
-        $validator
-            ->scalar('property_category')
-            ->maxLength('property_category', 255)
-            ->requirePresence('property_category', 'create')
-            ->notEmptyString('property_category');
+
 
         $validator
             ->scalar('property_image')

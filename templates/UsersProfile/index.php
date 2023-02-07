@@ -8,15 +8,15 @@
 
 <div class="usersProfile index content">
     <!-- <?= $this->Html->link(__('New Users Profile'), ['action' => 'add'], ['class' => 'button float-right']) ?> -->
-    <h3><?= __('Users Profile') ?></h3>
+    <h3><?= __('Users list') ?></h3>
     <div class="table-responsive">
         <table>
             <thead>
                 <tr>
                     <th><?= $this->Paginator->sort('id') ?></th>
-                    <!-- <th><?= $this->Paginator->sort('user_id') ?></th> -->
                     <th><?= $this->Paginator->sort('first_name') ?></th>
                     <th><?= $this->Paginator->sort('last_name') ?></th>
+                    <th><?= $this->Paginator->sort('email') ?></th>
                     <th><?= $this->Paginator->sort('contact') ?></th>
                     <th><?= $this->Paginator->sort('address') ?></th>
                     <th><?= $this->Paginator->sort('profile_image') ?></th>
@@ -25,12 +25,18 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($usersProfile as $userProfile) : ?>
+                <?php
+                $i = 1;
+                foreach ($usersProfile as $userProfile) :
+                    if ($userProfile->id == $uid) {
+                        continue;
+                    }
+                ?>
                     <tr>
-                        <td><?= $this->Number->format($userProfile->id) ?></td>
-                        <!-- <td><?= $userProfile->has('user') ? $this->Html->link($userProfile->user->id, ['controller' => 'Users', 'action' => 'view', $userProfile->user->id]) : '' ?></td> -->
+                        <td><?= $i++ ?></td>
                         <td><?= h($userProfile->first_name) ?></td>
                         <td><?= h($userProfile->last_name) ?></td>
+                        <td><?= h($userProfile->user->email) ?></td>
                         <td><?= h($userProfile->contact) ?></td>
                         <td><?= h($userProfile->address) ?></td>
                         <td><?= $this->Html->image(h($userProfile->profile_image), (array('width' => '50px'))) ?></td>

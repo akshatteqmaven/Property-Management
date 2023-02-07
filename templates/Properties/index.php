@@ -36,7 +36,7 @@
                         <td><?= $this->Number->format($property->id) ?></td>
                         <td><?= h($property->property_title) ?></td>
                         <td><?= h($property->property_description) ?></td>
-                        <td><?= h($property->property_category) ?></td>
+                        <td><?= h($property->property_category->category_name) ?></td>
                         <td><?= $this->Html->image(h($property->property_image)) ?></td>
                         <td><?= h($property->property_tags) ?></td>
                         <td>

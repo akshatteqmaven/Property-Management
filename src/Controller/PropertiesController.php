@@ -20,10 +20,10 @@ class PropertiesController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Users'],
+            'contain' => ['Users', 'PropertyCategories'],
         ];
         $properties = $this->paginate($this->Properties);
-
+        // dd($properties);
         $this->set(compact('properties'));
     }
 
@@ -61,14 +61,22 @@ class PropertiesController extends AppController
     public function add()
 
     {
+        $this->loadModel('PropertyCategories');
+        $uid = $this->Auth->user('id');
+        $propertycategory = $this->paginate($this->PropertyCategories);
         $property = $this->Properties->newEmptyEntity();
+
         if ($this->request->is('post')) {
             $data = $this->request->getData();
+            // echo  $data['property_categorie_id'];
+            // die;
             $propertyimage = $this->request->getData("property_image");
             $filename = $propertyimage->getClientFilename();
             $fileSize = $propertyimage->getSize();
             $data["property_image"] = $filename;
+            $data["user_id"] = $uid;
             $property = $this->Properties->patchEntity($property, $data);
+            // dd($property);
             if ($this->Properties->save($property)) {
                 $this->Flash->success(__('The property has been saved.'));
                 return $this->redirect(['action' => 'index']);
@@ -77,7 +85,7 @@ class PropertiesController extends AppController
             }
         }
         $users = $this->Properties->Users->find('list', ['limit' => 200])->all();
-        $this->set(compact('property', 'users'));
+        $this->set(compact('property', 'users', 'propertycategory'));
     }
 
     /**
@@ -91,10 +99,13 @@ class PropertiesController extends AppController
     {
         // $propertyCategories = $this->paginate($this->PropertyCategories);
         // $this->set(compact('propertyCategories'));
+        $this->loadModel('PropertyCategories');
 
         $property = $this->Properties->get($id, [
             'contain' => [],
         ]);
+        $propertycategory = $this->paginate($this->PropertyCategories);
+
         $fileName2 = $property['property_image'];
 
         if ($this->request->is(['patch', 'post', 'put'])) {
@@ -115,7 +126,7 @@ class PropertiesController extends AppController
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }
         $users = $this->Properties->Users->find('list', ['limit' => 200])->all();
-        $this->set(compact('property', 'users'));
+        $this->set(compact('property', 'users', 'propertycategory'));
     }
 
     /**

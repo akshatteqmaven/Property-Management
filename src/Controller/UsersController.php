@@ -261,6 +261,7 @@ class UsersController extends AppController
     //index for users
     public function propertyListing()
     {
+
         $this->load = $this->loadModel('Properties');
 
         $this->paginate = [
@@ -358,45 +359,4 @@ class UsersController extends AppController
     }
     // ----------------------------------ended-------------------------------------------------//
 
-
-    public function home6($id = null)
-    {
-
-        $this->Model = $this->loadModel('PropertyComments');
-        $this->Model = $this->loadModel('Properties');
-
-        $property = $this->Properties->get($id, [
-            'contain' => ['Users', 'PropertyCategories', 'PropertyComments'],
-        ]);
-        $this->paginate = [
-            'contain' => ['Properties', 'Users'],
-        ];
-        $propertyComments = $this->paginate($this->PropertyComments);
-
-        $this->set(compact('propertyComments'));
-
-
-
-        $propertyComment = $this->PropertyComments->newEmptyEntity();
-
-        if ($this->request->is(['patch', 'post', 'put'])) {
-
-            $propertyComment = $this->PropertyComments->patchEntity($propertyComment, $this->request->getData());
-
-            if ($this->PropertyComments->save($propertyComment)) {
-                print_r($this->PropertyComments->save($propertyComment));
-                // die;
-                // $this->Flash->success(__('The property comment has been saved.'));
-
-                return $this->redirect(['action' => 'propertyListing']);
-            }
-            $this->Flash->error(__('The property comment could not be saved. Please, try again.'));
-        }
-        $properties = $this->PropertyComments->Properties->find('list', ['limit' => 200])->all();
-        $users = $this->PropertyComments->Users->find('list', ['limit' => 200])->all();
-
-
-
-        $this->set(compact('property', 'propertyComment', 'properties', 'users'));
-    }
 }

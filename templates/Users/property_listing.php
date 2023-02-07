@@ -10,6 +10,7 @@
  * @var iterable<\App\Model\Entity\Property> $properties
  */
 ?>
+
 <div class="properties index content">
     <h3><?= __('Properties') ?></h3>
     <div class="table-responsive">

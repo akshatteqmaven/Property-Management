@@ -41,6 +41,11 @@ class PropertyCategoriesTable extends Table
         $this->setTable('property_categories');
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
+
+        $this->hasMany('Properties', [
+            'foreignKey' => 'property_categorie_id',
+            'joinType' => 'INNER'
+        ]);
     }
 
     /**

@@ -432,4 +432,7 @@ return [
     'Session' => [
         'defaults' => 'php',
     ],
+    'Datetime' => [
+        'defaultTimezone' => 'Asia/Kolkata',
+    ],
 ];

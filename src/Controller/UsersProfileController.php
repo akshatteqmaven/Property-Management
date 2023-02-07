@@ -19,11 +19,14 @@ class UsersProfileController extends AppController
      */
     public function index()
     {
+        $uid = $this->Auth->user('id');
+        // dd($uid);
+
         $this->paginate = [
             'contain' => ['Users'],
         ];
         $usersProfile = $this->paginate($this->UsersProfile);
-        $this->set(compact('usersProfile'));
+        $this->set(compact('usersProfile', 'uid'));
     }
 
     /**

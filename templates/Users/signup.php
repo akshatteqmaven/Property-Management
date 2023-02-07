@@ -4,7 +4,7 @@
 
 <div class="panel_reg">
     <h2 class="text-center">Registration Form</h2>
-    <?= $this->Form->create($user, ['enctype' => 'multipart/form-data']); ?>
+    <?= $this->Form->create($user, ['enctype' => 'multipart/form-data', 'id' => 'form']); ?>
     <div class="row">
         <div class="col">
             <?= $this->Form->control('users_profile.first_name', ['required' => false]); ?>

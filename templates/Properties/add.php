@@ -9,7 +9,6 @@
 <div class="row">
     <aside class="column">
         <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
             <?= $this->Html->link(__('Go back'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
@@ -18,6 +17,7 @@
             <?= $this->Form->create($property, ['enctype' => 'multipart/form-data']) ?>
             <fieldset>
                 <legend><?= __('Add Property') ?></legend>
+                <?= $this->Form->control('property_image', ['type' => 'file', 'required' => false]); ?>
                 <div class="row">
                     <div class="col">
                         <?= $this->Form->control('property_title'); ?>
@@ -28,22 +28,19 @@
                 </div>
                 <div class="row">
                     <div class="col">
+                        <label for="property_categorie_id">Property Categorie</label>
+                        <select name="property_categorie_id" id="property_categorie_id">
 
-                        <?= $this->Form->control('property_category', [
-                            'options' => [
-                                'Residential' => 'Residential',
-                                'Industrial' => 'Industrial',
-                                'Commercial' => 'Commercial',
-                                'Institutional' => 'Institutional',
-                                'Other' => 'Other'
-                            ]
-                        ]); ?>
+                            <option value="">choose one</option>
+                            <?php foreach ($propertycategory as $category) : ?>
+                                <option value="<?= h($category->id) ?>"><?= h($category->category_name) ?></option>
+                            <?php endforeach; ?>
+                        </select>
                     </div>
                     <div class="col">
                         <?= $this->Form->control('property_tags'); ?>
                     </div>
                 </div>
-                <?= $this->Form->control('property_image', ['type' => 'file', 'required' => false]); ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>
             <?= $this->Form->end() ?>

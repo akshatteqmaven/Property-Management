@@ -27,7 +27,7 @@ class Propertyproperty_category extends Entity
      * @var array<string, bool>
      */
     protected $_accessible = [
-        'property_category_name' => true,
+        'category_name' => true,
         'status' => true,
         'created_date' => true,
         'modified_date' => true,

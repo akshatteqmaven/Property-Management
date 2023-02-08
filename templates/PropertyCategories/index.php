@@ -22,9 +22,12 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($propertyCategories as $propertyproperty_category) : ?>
+                <?php
+                $i = 1;
+
+                foreach ($propertyCategories as $propertyproperty_category) : ?>
                     <tr>
-                        <td><?= $this->Number->format($propertyproperty_category->id) ?></td>
+                        <td><?= $i++ ?></td>
                         <td><?= h($propertyproperty_category->property_category_name) ?></td>
                         <td><?= h($propertyproperty_category->status) ?></td>
                         <td><?= h($propertyproperty_category->created_date) ?></td>

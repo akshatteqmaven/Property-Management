@@ -265,9 +265,11 @@ class UsersController extends AppController
         $this->load = $this->loadModel('Properties');
 
         $this->paginate = [
-            'contain' => ['Users'],
+            'contain' => ['Users', 'PropertyCategories'],
         ];
         $properties = $this->paginate($this->Properties);
+
+        // dd($properties);
 
         $this->set(compact('properties'));
     }
@@ -280,7 +282,7 @@ class UsersController extends AppController
         $this->Model = $this->loadModel('Properties');
 
         $property = $this->Properties->get($id, [
-            'contain' => ['Users', 'PropertyComments'],
+            'contain' => ['Users', 'PropertyComments', 'PropertyCategories'],
         ]);
         $this->paginate = [
             'contain' => ['Properties', 'Users'],

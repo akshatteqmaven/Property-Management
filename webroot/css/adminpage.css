@@ -1,0 +1,41 @@
+ body {
+     /* background: linear-gradient(to left, #0f3443, #34e89e); */
+
+     background: linear-gradient(to left, #2657eb, #de6161);
+
+ }
+
+ .button {
+     padding: 62px 44px 48px;
+     width: 500px;
+     margin: 59px;
+     height: 150px;
+     font-size: x-large;
+     border-radius: 65px;
+ }
+
+ .button:hover {
+     width: 550px;
+     height: 178px;
+     border-radius: 80px;
+     padding: 75px 44px 48px;
+     font-size: 3.2rem;
+     border: 0px;
+     background: linear-gradient(-45deg, #d51212, #c6148d, #23a6d5, #23d5ab);
+     background-size: 400% 400%;
+     animation: gradient 4.5s ease infinite;
+ }
+
+ @keyframes gradient {
+     0% {
+         background-position: 0% 50%;
+     }
+
+     50% {
+         background-position: 100% 50%;
+     }
+
+     100% {
+         background-position: 0% 50%;
+     }
+ }

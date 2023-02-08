@@ -34,8 +34,8 @@
                     <td><?= $this->Html->image(h($property->property_image), array('width' => '320px')) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Property property_category') ?></th>
-                    <td><?= h($property->property_category) ?></td>
+                    <th><?= __('Property Category') ?></th>
+                    <td><?= h($property->property_category->category_name) ?></td>
                 </tr>
                 <!-- <tr>
                     <th><?= __('Property Tags') ?></th>

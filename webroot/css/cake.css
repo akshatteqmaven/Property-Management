@@ -295,3 +295,7 @@ label {
     border-radius: 5rem;
     padding: 3px 23px;
 }
+
+body {
+    background: linear-gradient(to left, #6A82FB, #FC5C7D);
+}

@@ -28,16 +28,18 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($properties as $property) : ?>
+                <?php
+                $i = 1;
+                foreach ($properties as $property) : ?>
                     <?php
                     if ($property->status == 1) {
                     ?>
                         <tr>
-                            <td><?= $this->Number->format($property->id) ?></td>
+                            <td><?= $i++ ?></td>
                             <td><?= h($property->property_title) ?></td>
                             <td><?= h($property->property_description) ?></td>
                             <td><?= $this->Html->image(h($property->property_image)) ?></td>
-                            <td><?= h($property->property_category) ?></td>
+                            <td><?= h($property->property_category->category_name) ?></td>
                             <td><?= h($property->property_tags) ?></td>
                             <td><?= h($property->created_date) ?></td>
                             <td class="actions">

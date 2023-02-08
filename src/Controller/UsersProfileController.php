@@ -20,13 +20,36 @@ class UsersProfileController extends AppController
     public function index()
     {
         $uid = $this->Auth->user('id');
-        // dd($uid);
-
         $this->paginate = [
             'contain' => ['Users'],
         ];
         $usersProfile = $this->paginate($this->UsersProfile);
+
         $this->set(compact('usersProfile', 'uid'));
+
+        $status = $this->request->getQuery('status');
+        //  dd($status);
+        if ($status == null) {
+            $usersProfile = $this->UsersProfile->find('all')->contain(['Users']);
+        } else {
+            $usersProfile = $this->UsersProfile->find('all')->contain(['Users'])->where(['status' => $status]);
+        }
+
+        if ($this->request->is('ajax')) {
+            //$usersProfile = $this->paginate($this->users);
+            $this->set(compact('usersProfile'));
+            // start code will work in case of json return from here
+            //     echo json_encode($users);
+            //    die;
+            // end code will work in case of json return from here
+
+            // start code will work in case of element rander from here
+            $this->autoRender = false;
+
+            $this->layout = false;
+            $this->render('/element/flash/userlist');
+            // end code will work in case of element rander from here
+        }
     }
 
     /**
@@ -41,56 +64,8 @@ class UsersProfileController extends AppController
         $usersProfile = $this->UsersProfile->get($id, [
             'contain' => ['Users'],
         ]);
-
-
         $this->set(compact('usersProfile'));
     }
-
-    /**
-     * Add method
-     *
-     * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
-     */
-    // public function add()
-    // {
-    //     $usersProfile = $this->UsersProfile->newEmptyEntity();
-    //     if ($this->request->is('post')) {
-    //         $usersProfile = $this->UsersProfile->patchEntity($usersProfile, $this->request->getData());
-    //         if ($this->UsersProfile->save($usersProfile)) {
-    //             $this->Flash->success(__('The users profile has been saved.'));
-
-    //             return $this->redirect(['action' => 'index']);
-    //         }
-    //         $this->Flash->error(__('The users profile could not be saved. Please, try again.'));
-    //     }
-    //     $users = $this->UsersProfile->Users->find('list', ['limit' => 200])->all();
-    //     $this->set(compact('usersProfile', 'users'));
-    // }
-
-    /**
-     * Edit method
-     *
-     * @param string|null $id Users Profile id.
-     * @return \Cake\Http\Response|null|void Redirects on successful edit, renders view otherwise.
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    // public function edit($id = null)
-    // {
-    //     $usersProfile = $this->UsersProfile->get($id, [
-    //         'contain' => [],
-    //     ]);
-    //     if ($this->request->is(['patch', 'post', 'put'])) {
-    //         $usersProfile = $this->UsersProfile->patchEntity($usersProfile, $this->request->getData());
-    //         if ($this->UsersProfile->save($usersProfile)) {
-    //             $this->Flash->success(__('The users profile has been saved.'));
-
-    //             return $this->redirect(['action' => 'index']);
-    //         }
-    //         $this->Flash->error(__('The users profile could not be saved. Please, try again.'));
-    //     }
-    //     $users = $this->UsersProfile->Users->find('list', ['limit' => 200])->all();
-    //     $this->set(compact('usersProfile', 'users'));
-    // }
 
     /**
      * Delete method
@@ -117,10 +92,11 @@ class UsersProfileController extends AppController
         $this->loadModel('Users');
         $user = $this->Users->get($id);
 
-        if ($status == 1)
+        if ($status == 1) {
             $status = 0;
-        else
+        } else {
             $status = 1;
+        }
 
         $data = array();
         $data['status'] = $status;

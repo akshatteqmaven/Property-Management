@@ -12,8 +12,7 @@
  */
 ?>
 <div class="properties index content">
-    <?= $this->Html->link(__('New Property'), ['action' => 'add'], ['class' => 'button float-right']) ?>
-    <h3><?= __('Properties') ?></h3>
+    <h3><?= __('Property List') ?></h3>
     <div class="table-responsive">
         <table>
             <thead>
@@ -31,9 +30,12 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($properties as $property) : ?>
+                <?php
+                $i = 1;
+
+                foreach ($properties as $property) : ?>
                     <tr>
-                        <td><?= $this->Number->format($property->id) ?></td>
+                        <td><?= $i++ ?></td>
                         <td><?= h($property->property_title) ?></td>
                         <td><?= h($property->property_description) ?></td>
                         <td><?= h($property->property_category->category_name) ?></td>

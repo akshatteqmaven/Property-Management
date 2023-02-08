@@ -15,7 +15,7 @@
  * @var \App\View\AppView $this
  */
 
-$cakeDescription = 'CakePHP: the rapid development php framework';
+$cakeDescription = 'Property';
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,7 +36,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.js" integrity="sha512-nO7wgHUoWPYGCNriyGzcFwPSF+bPDOR+NvtOYy2wMcWkrnCNPKBcFEkU80XIN14UVja0Gdnff9EmydyLlOL7mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <?= $this->Html->css(['normalize.min', 'milligram.min', 'cake']) ?>
-    <!-- <?= $this->Html->script(['form', 'jquery', 'validate']) ?> -->
+    <?= $this->Html->script(['form', 'jquery', 'validate']) ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
